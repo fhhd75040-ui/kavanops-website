@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +28,11 @@
       <span class="logo-text">OPS</span>
     </div>
 
-    <ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </div>
+
+    <ul id="navMenu">
       <li><a href="index.html">Home</a></li>
       <li><a href="monitoring.html">Monitoring</a></li>
       <li><a href="audit.html">Audit</a></li>
@@ -44,16 +47,12 @@
   </nav>
 
   <section class="hero">
-    <h1 class="hero-title">
-      KA OPS Enterprise Infrastructure Monitoring Platform
-    </h1>
-
+    <h1>KAVANOPS</h1>
     <p>
-      Monitor Linux, AIX, Security Compliance,
-      Patch Management, Reporting and Automation
-      from a centralized dashboard.
+      Enterprise Infrastructure Monitoring Platform
+      for Linux, IBM AIX, Audit, Compliance,
+      Reporting, Patching and Automation.
     </p>
-
     <div class="buttons">
       <a href="monitoring.html">Explore Platform</a>
       <a href="download.html">Download</a>
@@ -65,17 +64,14 @@
       <h2>500+</h2>
       <p>Servers Monitored</p>
     </div>
-
     <div class="card">
       <h2>99.99%</h2>
       <p>Availability</p>
     </div>
-
     <div class="card">
       <h2>24x7</h2>
       <p>Monitoring</p>
     </div>
-
     <div class="card">
       <h2>100+</h2>
       <p>Reports Generated</p>
@@ -84,71 +80,57 @@
 
   <section class="features">
     <h2>Platform Modules</h2>
-
     <div class="feature-grid">
-
       <div class="feature-card">
         <h3>Monitoring</h3>
         <p>Monitor Linux, AIX and enterprise infrastructure.</p>
       </div>
-
       <div class="feature-card">
         <h3>Audit</h3>
         <p>Track compliance and security posture.</p>
       </div>
-
       <div class="feature-card">
         <h3>Reports</h3>
         <p>Generate operational and audit reports.</p>
       </div>
-
       <div class="feature-card">
-        <h3>Patch Management</h3>
-        <p>Track patch compliance and maintenance activities.</p>
+        <h3>Patching</h3>
+        <p>Track enterprise patch compliance.</p>
       </div>
-
       <div class="feature-card">
         <h3>Automation</h3>
-        <p>Automate monitoring and operational workflows.</p>
+        <p>Automate operational workflows.</p>
       </div>
-
       <div class="feature-card">
-        <h3>Settings</h3>
-        <p>Manage users, notifications and platform settings.</p>
+        <h3>Security</h3>
+        <p>Security audit and compliance visibility.</p>
       </div>
-
     </div>
   </section>
 
   <section class="inventory">
     <h2>Supported Platforms</h2>
-
     <table>
       <tr>
         <th>Platform</th>
         <th>Status</th>
       </tr>
-
       <tr>
         <td>IBM AIX 7.1</td>
         <td><span class="online">Supported</span></td>
       </tr>
-
       <tr>
         <td>IBM AIX 7.2</td>
         <td><span class="online">Supported</span></td>
       </tr>
-
       <tr>
         <td>IBM AIX 7.3</td>
         <td><span class="online">Supported</span></td>
       </tr>
-
       <tr>
         <td>RHEL 7 / 8 / 9</td>
         <td><span class="online">Supported</span></td>
       </tr>
-
       <tr>
         <td>PowerVM / VIOS</td>
         <td><span class="online">Supported</span></td>
@@ -156,14 +138,12 @@
     </table>
   </section>
 
-  <section class="hero" style="min-height:250px;">
+  <section class="hero community">
     <h1>KAVANOPS Community Edition</h1>
-
     <p>
-      FREE Infrastructure Monitoring Platform
-      for Linux, AIX, Audit, Reporting and Automation.
+      Free Infrastructure Monitoring Platform
+      for Linux, AIX, Audit, Reports and Automation.
     </p>
-
     <div class="buttons">
       <a href="download.html">Download Now</a>
     </div>
@@ -172,9 +152,15 @@
   <footer>
     <h2>KAVANOPS Community Edition</h2>
     <p>Enterprise Infrastructure Monitoring Platform</p>
-    <p>Linux | AIX | Security | Audit | Automation</p>
+    <p>Linux | IBM AIX | Audit | Reports | Automation</p>
     <p>FREE TO USE</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
