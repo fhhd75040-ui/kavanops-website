@@ -389,6 +389,30 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  #navMenu {
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100vh;
+    background: #07152d;
+    padding-top: 80px;
+    z-index: 999;
+    transition: 0.3s;
+  }
+
+  nav ul.show {
+    left: 0;
+  }
+
+}
+
 
   nav {
     position: relative;
