@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KavanOps Monitoring</title>
+  <title>KAOPS Monitoring Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <div class="logo">
       <span class="logo-icon">KA</span>
@@ -28,91 +29,77 @@
     </ul>
   </nav>
 
-  <section class="hero" style="padding:120px 10%;min-height:350px;">
-    <h1>Monitoring Modules</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Infrastructure Monitoring Dashboard</h1>
     <p>
-      Enterprise Infrastructure Monitoring for Linux, AIX and Cloud Platforms
+      Monitor Linux, AIX, Virtual Machines,
+      Storage and Enterprise Infrastructure
+      from a centralized platform.
     </p>
   </section>
 
-  <section class="features">
-    <h2>Monitoring Modules</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h3>Server Inventory</h3>
-        <p>Centralized Linux, AIX and Cloud Asset Management</p>
-      </div>
-      <div class="feature-card">
-        <h3>Health Monitoring</h3>
-        <p>CPU, Memory, Filesystem and Process Monitoring</p>
-      </div>
-      <div class="feature-card">
-        <h3>Alert Center</h3>
-        <p>Email, SMS and Dashboard Alert Engine</p>
-      </div>
-      <div class="feature-card">
-        <h3>Audit Dashboard</h3>
-        <p>Infrastructure Compliance and Security Reporting</p>
-      </div>
-      <div class="feature-card">
-        <h3>Patch Management</h3>
-        <p>Track Monthly OS Patching Activities</p>
-      </div>
-      <div class="feature-card">
-        <h3>Reports</h3>
-        <p>Automated PDF, Excel and Health Reports</p>
-      </div>
-      <div class="feature-card">
-        <h3>AIX Monitoring</h3>
-        <p>LPAR, VIOS, Power9 and Power10 Monitoring</p>
-      </div>
-      <div class="feature-card">
-        <h3>Linux Monitoring</h3>
-        <p>RHEL, Rocky Linux and Ubuntu Monitoring</p>
-      </div>
+  <!-- Stats -->
+  <section class="stats">
+    <div class="card"><h2>265</h2><p>Total Servers</p></div>
+    <div class="card"><h2>248</h2><p>Healthy Servers</p></div>
+    <div class="card"><h2>12</h2><p>Warnings</p></div>
+    <div class="card"><h2>5</h2><p>Critical Alerts</p></div>
+  </section>
+
+  <!-- Infrastructure Overview -->
+  <section class="server-details">
+    <h2>Infrastructure Overview</h2>
+    <div class="details-grid">
+      <div class="detail-card"><h3>Linux Servers</h3><p>150</p></div>
+      <div class="detail-card"><h3>AIX Servers</h3><p>75</p></div>
+      <div class="detail-card"><h3>Virtual Machines</h3><p>30</p></div>
+      <div class="detail-card"><h3>Storage Systems</h3><p>10</p></div>
     </div>
   </section>
 
+  <!-- Alerts -->
+  <section class="alerts">
+    <h2>Infrastructure Alerts</h2>
+    <div class="alerts-grid">
+      <div class="alert-card critical"><h3>Critical Alerts</h3><h1>5</h1><p>Immediate Attention Required</p></div>
+      <div class="alert-card warning-card"><h3>Warnings</h3><h1>12</h1><p>Review Recommended</p></div>
+      <div class="alert-card success"><h3>Healthy Servers</h3><h1>248</h1><p>Operating Normally</p></div>
+      <div class="alert-card info"><h3>Total Servers</h3><h1>265</h1><p>Monitored Assets</p></div>
+    </div>
+  </section>
+
+  <!-- Monitoring Modules -->
+  <section class="features">
+    <h2>Monitoring Modules</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Linux Monitoring</h3><p>Monitor CPU, Memory, Filesystem and Services.</p></div>
+      <div class="feature-card"><h3>AIX Monitoring</h3><p>Monitor IBM AIX, LPAR and VIOS infrastructure.</p></div>
+      <div class="feature-card"><h3>Server Inventory</h3><p>Centralized infrastructure inventory management.</p></div>
+      <div class="feature-card"><h3>Storage Monitoring</h3><p>Track storage utilization and performance.</p></div>
+      <div class="feature-card"><h3>Network Monitoring</h3><p>Monitor network devices and connectivity.</p></div>
+      <div class="feature-card"><h3>Alert Management</h3><p>Receive alerts for infrastructure issues.</p></div>
+    </div>
+  </section>
+
+  <!-- Server Inventory -->
   <section class="inventory">
     <h2>Server Inventory</h2>
     <table>
-      <tr>
-        <th>Hostname</th>
-        <th>IP Address</th>
-        <th>OS</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td>aixprd01</td>
-        <td>10.10.10.11</td>
-        <td>AIX 7.3</td>
-        <td><span class="online">Online</span></td>
-      </tr>
-      <tr>
-        <td>aixprd02</td>
-        <td>10.10.10.12</td>
-        <td>AIX 7.2</td>
-        <td><span class="online">Online</span></td>
-      </tr>
-      <tr>
-        <td>rhelprd01</td>
-        <td>10.10.10.21</td>
-        <td>RHEL 9</td>
-        <td><span class="online">Online</span></td>
-      </tr>
-      <tr>
-        <td>rhelprd02</td>
-        <td>10.10.10.22</td>
-        <td>RHEL 8</td>
-        <td><span class="warning">Warning</span></td>
-      </tr>
+      <tr><th>Hostname</th><th>IP Address</th><th>OS</th><th>Status</th></tr>
+      <tr><td>aixprd01</td><td>10.10.10.11</td><td>AIX 7.3</td><td><span class="online">Online</span></td></tr>
+      <tr><td>aixprd02</td><td>10.10.10.12</td><td>AIX 7.2</td><td><span class="online">Online</span></td></tr>
+      <tr><td>rhelprd01</td><td>10.10.10.21</td><td>RHEL 9</td><td><span class="online">Online</span></td></tr>
+      <tr><td>rhelprd02</td><td>10.10.10.22</td><td>RHEL 8</td><td><span class="warning">Warning</span></td></tr>
     </table>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <h2>KavanOps</h2>
+    <h2>KAOPS Community Edition</h2>
     <p>Enterprise Infrastructure Monitoring Platform</p>
-    <p>Linux | AIX | Cloud | Audit | Automation</p>
+    <p>Linux | AIX | Security | Audit | Automation</p>
+    <p>FREE TO USE</p>
   </footer>
 
 </body>
