@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KavanOps Patch Management</title>
+  <title>KAOPS Patch Management</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <div class="logo">
       <span class="logo-icon">KA</span>
@@ -21,76 +22,96 @@
       <li><a href="reports.html">Reports</a></li>
       <li><a href="patch.html">Patching</a></li>
       <li><a href="automation.html">Automation</a></li>
+      <li><a href="settings.html">Settings</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="hero" style="padding:120px 10%;min-height:350px;">
-    <h1>Patch Management Dashboard</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Patch Management & Compliance</h1>
     <p>
-      Track Linux and AIX Patch Compliance Across Enterprise Infrastructure
+      Centralized Linux and AIX Patch Management Platform
+      with Security Compliance and Vulnerability Tracking.
     </p>
+    <div class="buttons">
+      <a href="#">Request Demo</a>
+      <a href="#">View Dashboard</a>
+    </div>
   </section>
 
+  <!-- Stats -->
   <section class="stats">
-    <div class="card">
-      <h2>250</h2>
-      <p>Patched Servers</p>
-    </div>
-    <div class="card">
-      <h2>15</h2>
-      <p>Pending Patches</p>
-    </div>
-    <div class="card">
-      <h2>98%</h2>
-      <p>Compliance</p>
-    </div>
-    <div class="card">
-      <h2>12</h2>
-      <p>Failed Jobs</p>
+    <div class="card"><h2>250</h2><p>Total Servers</p></div>
+    <div class="card"><h2>220</h2><p>Patched</p></div>
+    <div class="card"><h2>20</h2><p>Pending</p></div>
+    <div class="card"><h2>92%</h2><p>Compliance</p></div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Patch Management Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Linux Patching</h3><p>Manage and monitor Linux patch deployment activities.</p></div>
+      <div class="feature-card"><h3>AIX Patching</h3><p>Track TL, SP and Firmware compliance across AIX servers.</p></div>
+      <div class="feature-card"><h3>Security Scanning</h3><p>Identify security risks and vulnerable systems.</p></div>
+      <div class="feature-card"><h3>Patch Compliance</h3><p>Generate compliance and patch audit reports.</p></div>
+      <div class="feature-card"><h3>Maintenance Tracking</h3><p>Track monthly patching and maintenance activities.</p></div>
+      <div class="feature-card"><h3>Automated Reports</h3><p>Generate patch status and compliance reports automatically.</p></div>
     </div>
   </section>
 
+  <!-- Patch Status Dashboard -->
   <section class="inventory">
-    <h2>Patch Status</h2>
+    <h2>Patch Status Dashboard</h2>
     <table>
       <tr>
         <th>Hostname</th>
-        <th>OS</th>
+        <th>Operating System</th>
         <th>Last Patch Date</th>
         <th>Status</th>
       </tr>
-      <tr>
-        <td>aixprd01</td>
-        <td>AIX 7.3</td>
-        <td>15-Jun-2026</td>
-        <td><span class="online">Patched</span></td>
-      </tr>
-      <tr>
-        <td>aixprd02</td>
-        <td>AIX 7.2</td>
-        <td>12-Jun-2026</td>
-        <td><span class="online">Patched</span></td>
-      </tr>
-      <tr>
-        <td>rhelprd01</td>
-        <td>RHEL 9</td>
-        <td>18-Jun-2026</td>
-        <td><span class="online">Patched</span></td>
-      </tr>
-      <tr>
-        <td>rhelprd02</td>
-        <td>RHEL 8</td>
-        <td>01-Jun-2026</td>
-        <td><span class="warning">Pending</span></td>
-      </tr>
+      <tr><td>aixprd01</td><td>AIX 7.3</td><td>15-Jun-2026</td><td><span class="online">Patched</span></td></tr>
+      <tr><td>aixprd02</td><td>AIX 7.2</td><td>12-Jun-2026</td><td><span class="online">Patched</span></td></tr>
+      <tr><td>rhelprd01</td><td>RHEL 9</td><td>18-Jun-2026</td><td><span class="online">Patched</span></td></tr>
+      <tr><td>rhelprd02</td><td>RHEL 8</td><td>01-Jun-2026</td><td><span class="warning">Pending</span></td></tr>
+      <tr><td>rheldb01</td><td>RHEL 9</td><td>20-Jun-2026</td><td><span class="online">Patched</span></td></tr>
     </table>
   </section>
 
+  <!-- Security & Vulnerability Dashboard -->
+  <section class="inventory">
+    <h2>Security & Vulnerability Dashboard</h2>
+    <table>
+      <tr>
+        <th>Server</th>
+        <th>VA Issues</th>
+        <th>Critical</th>
+        <th>Status</th>
+      </tr>
+      <tr><td>aixprd01</td><td>0</td><td>0</td><td><span class="online">Secure</span></td></tr>
+      <tr><td>aixprd02</td><td>1</td><td>0</td><td><span class="online">Secure</span></td></tr>
+      <tr><td>rhelprd01</td><td>3</td><td>1</td><td><span class="warning">Review Required</span></td></tr>
+      <tr><td>rhelprd02</td><td>7</td><td>2</td><td><span class="warning">Action Required</span></td></tr>
+    </table>
+  </section>
+
+  <!-- Security Compliance Hero -->
+  <section class="hero" style="min-height:250px;">
+    <h1>Security Compliance Platform</h1>
+    <p>
+      Monitor Patch Compliance, Security Vulnerabilities,
+      Audit Findings and Infrastructure Health from a
+      single dashboard.
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <h2>KavanOps</h2>
+    <h2>KAOPS Community Edition</h2>
     <p>Enterprise Infrastructure Monitoring Platform</p>
-    <p>Linux | AIX | Cloud | Audit | Automation</p>
+    <p>Linux | AIX | Security | Audit | Patch Management | Automation</p>
+    <p>FREE TO USE</p>
   </footer>
 
 </body>
