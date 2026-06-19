@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,11 +29,7 @@
       <span class="logo-text">OPS</span>
     </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-      ☰
-    </div>
-
-    <ul id="navMenu">
+    <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="monitoring.html">Monitoring</a></li>
       <li><a href="audit.html">Audit</a></li>
@@ -47,11 +44,13 @@
   </nav>
 
   <section class="hero">
-    <h1>KAVANOPS</h1>
+    <h1 class="hero-title">
+      KAVANOPS Enterprise Infrastructure Monitoring Platform
+    </h1>
     <p>
-      Enterprise Infrastructure Monitoring Platform
-      for Linux, IBM AIX, Audit, Compliance,
-      Reporting, Patching and Automation.
+      Monitor Linux, AIX, Security Compliance,
+      Patch Management, Reporting and Automation
+      from a centralized dashboard.
     </p>
     <div class="buttons">
       <a href="monitoring.html">Explore Platform</a>
@@ -94,16 +93,16 @@
         <p>Generate operational and audit reports.</p>
       </div>
       <div class="feature-card">
-        <h3>Patching</h3>
-        <p>Track enterprise patch compliance.</p>
+        <h3>Patch Management</h3>
+        <p>Track patch compliance and maintenance activities.</p>
       </div>
       <div class="feature-card">
         <h3>Automation</h3>
-        <p>Automate operational workflows.</p>
+        <p>Automate monitoring and operational workflows.</p>
       </div>
       <div class="feature-card">
-        <h3>Security</h3>
-        <p>Security audit and compliance visibility.</p>
+        <h3>Settings</h3>
+        <p>Manage users, notifications and platform settings.</p>
       </div>
     </div>
   </section>
@@ -138,11 +137,11 @@
     </table>
   </section>
 
-  <section class="hero community">
+  <section class="hero" style="min-height:250px;">
     <h1>KAVANOPS Community Edition</h1>
     <p>
-      Free Infrastructure Monitoring Platform
-      for Linux, AIX, Audit, Reports and Automation.
+      FREE Infrastructure Monitoring Platform
+      for Linux, AIX, Audit, Reporting and Automation.
     </p>
     <div class="buttons">
       <a href="download.html">Download Now</a>
@@ -152,15 +151,9 @@
   <footer>
     <h2>KAVANOPS Community Edition</h2>
     <p>Enterprise Infrastructure Monitoring Platform</p>
-    <p>Linux | IBM AIX | Audit | Reports | Automation</p>
+    <p>Linux | AIX | Security | Audit | Automation</p>
     <p>FREE TO USE</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navMenu").classList.toggle("show");
-    }
-  </script>
 
 </body>
 </html>
