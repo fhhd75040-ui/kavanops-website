@@ -272,3 +272,83 @@ td {
   border-radius: 20px;
 }
 
+.server-details {
+  padding: 80px 10%;
+}
+
+.server-details h2 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.detail-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.detail-card h3 {
+  margin-bottom: 15px;
+  color: #001845;
+}
+
+.detail-card p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.alerts {
+  padding: 80px 10%;
+  background: #f8fafc;
+}
+
+.alerts h2 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.alerts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.alert-card {
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.alert-card h1 {
+  font-size: 50px;
+  margin: 15px 0;
+}
+
+.critical {
+  background: #dc2626;
+}
+
+.warning-card {
+  background: #f59e0b;
+}
+
+.success {
+  background: #16a34a;
+}
+
+.info {
+  background: #2563eb;
+}
+
+
