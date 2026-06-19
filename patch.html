@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KavanOps Patch Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">KavanOps</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="monitoring.html">Monitoring</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="patch.html">Patching</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="padding:120px 10%;min-height:350px;">
+    <h1>Patch Management Dashboard</h1>
+    <p>
+      Track Linux and AIX Patch Compliance Across Enterprise Infrastructure
+    </p>
+  </section>
+
+  <section class="stats">
+    <div class="card">
+      <h2>250</h2>
+      <p>Patched Servers</p>
+    </div>
+    <div class="card">
+      <h2>15</h2>
+      <p>Pending Patches</p>
+    </div>
+    <div class="card">
+      <h2>98%</h2>
+      <p>Compliance</p>
+    </div>
+    <div class="card">
+      <h2>12</h2>
+      <p>Failed Jobs</p>
+    </div>
+  </section>
+
+  <section class="inventory">
+    <h2>Patch Status</h2>
+    <table>
+      <tr>
+        <th>Hostname</th>
+        <th>OS</th>
+        <th>Last Patch Date</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>aixprd01</td>
+        <td>AIX 7.3</td>
+        <td>15-Jun-2026</td>
+        <td><span class="online">Patched</span></td>
+      </tr>
+      <tr>
+        <td>aixprd02</td>
+        <td>AIX 7.2</td>
+        <td>12-Jun-2026</td>
+        <td><span class="online">Patched</span></td>
+      </tr>
+      <tr>
+        <td>rhelprd01</td>
+        <td>RHEL 9</td>
+        <td>18-Jun-2026</td>
+        <td><span class="online">Patched</span></td>
+      </tr>
+      <tr>
+        <td>rhelprd02</td>
+        <td>RHEL 8</td>
+        <td>01-Jun-2026</td>
+        <td><span class="warning">Pending</span></td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <h2>KavanOps</h2>
+    <p>Enterprise Infrastructure Monitoring Platform</p>
+    <p>Linux | AIX | Cloud | Audit | Automation</p>
+  </footer>
+
+</body>
+</html>
