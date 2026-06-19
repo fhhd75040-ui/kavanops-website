@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KavanOps - Enterprise Infrastructure Monitoring Platform</title>
+  <title>KAOPS - Enterprise Infrastructure Monitoring Platform</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <div class="logo">
       <span class="logo-icon">KA</span>
@@ -19,46 +20,39 @@
       <li><a href="monitoring.html">Monitoring</a></li>
       <li><a href="audit.html">Audit</a></li>
       <li><a href="reports.html">Reports</a></li>
+      <li><a href="patch.html">Patching</a></li>
       <li><a href="automation.html">Automation</a></li>
-      <li><a href="#">Roadmap</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="settings.html">Settings</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Enterprise Infrastructure Monitoring Platform</h1>
     <p>
-      Monitor Linux, AIX, Cloud and Enterprise Infrastructure
-      from a single unified dashboard.
+      Monitor Linux, AIX, Security Compliance,
+      Patch Management and Automation
+      from a single centralized dashboard.
     </p>
     <div class="buttons">
-      <a href="#">Request Demo</a>
-      <a href="monitoring.html">View Features</a>
+      <a href="monitoring.html">Explore Platform</a>
+      <a href="about.html">Learn More</a>
     </div>
   </section>
 
+  <!-- Stats -->
   <section class="stats">
-    <div class="card">
-      <h2>500+</h2>
-      <p>Servers Monitored</p>
-    </div>
-    <div class="card">
-      <h2>99.99%</h2>
-      <p>Availability</p>
-    </div>
-    <div class="card">
-      <h2>24x7</h2>
-      <p>Monitoring</p>
-    </div>
-    <div class="card">
-      <h2>100+</h2>
-      <p>Reports Generated</p>
-    </div>
+    <div class="card"><h2>500+</h2><p>Servers Monitored</p></div>
+    <div class="card"><h2>99.99%</h2><p>Availability</p></div>
+    <div class="card"><h2>24x7</h2><p>Monitoring</p></div>
+    <div class="card"><h2>100+</h2><p>Reports Generated</p></div>
   </section>
 
+  <!-- Infrastructure Overview -->
   <section class="dashboard">
-    <h2>Live Infrastructure Dashboard</h2>
+    <h2>Infrastructure Overview</h2>
     <div class="dashboard-grid">
       <div class="box">
         <h3>CPU Usage</h3>
@@ -82,54 +76,47 @@
     </div>
   </section>
 
+  <!-- Features -->
   <section class="features">
-    <h2>Core Features</h2>
+    <h2>Why KAOPS?</h2>
     <div class="feature-grid">
-      <div class="feature-card">
-        <h3>Linux Monitoring</h3>
-        <p>CPU, Memory, Filesystem and Service Monitoring</p>
-      </div>
-      <div class="feature-card">
-        <h3>AIX Monitoring</h3>
-        <p>LPAR, VIOS and Power Systems Monitoring</p>
-      </div>
-      <div class="feature-card">
-        <h3>Audit Dashboard</h3>
-        <p>Compliance and Security Reporting</p>
-      </div>
-      <div class="feature-card">
-        <h3>Patch Management</h3>
-        <p>Track patching and maintenance activities</p>
-      </div>
-      <div class="feature-card">
-        <h3>Alert Engine</h3>
-        <p>Email and Dashboard Alerts</p>
-      </div>
-      <div class="feature-card">
-        <h3>Reports</h3>
-        <p>Automated Health and PDF Reports</p>
-      </div>
+      <div class="feature-card"><h3>Linux Monitoring</h3><p>Monitor Linux servers, services and resources.</p></div>
+      <div class="feature-card"><h3>AIX Monitoring</h3><p>Monitor IBM Power Systems and AIX infrastructure.</p></div>
+      <div class="feature-card"><h3>Patch Management</h3><p>Track patch compliance and maintenance activities.</p></div>
+      <div class="feature-card"><h3>Security Scanning</h3><p>Identify vulnerabilities and compliance issues.</p></div>
+      <div class="feature-card"><h3>Audit Dashboard</h3><p>Centralized compliance and audit reporting.</p></div>
+      <div class="feature-card"><h3>Automation</h3><p>Automate monitoring, reporting and operational tasks.</p></div>
     </div>
   </section>
 
-  <section class="roadmap">
-    <h2>Product Roadmap</h2>
-    <div class="version">v0.1 - Dashboard</div>
-    <div class="version">v0.2 - Infrastructure</div>
-    <div class="version">v0.3 - Monitoring</div>
-    <div class="version">v0.4 - Alerts & Logs</div>
-    <div class="version">v0.5 - Reports</div>
-    <div class="version">v0.6 - Audit Dashboard</div>
-    <div class="version">v0.7 - Patch Management</div>
-    <div class="version">v0.8 - User Management</div>
-    <div class="version">v0.9 - Email & Scheduler</div>
-    <div class="version">v1.0 - Enterprise Release</div>
+  <!-- Supported Platforms -->
+  <section class="inventory">
+    <h2>Supported Platforms</h2>
+    <table>
+      <tr><th>Platform</th><th>Status</th></tr>
+      <tr><td>IBM AIX 7.1</td><td><span class="online">Supported</span></td></tr>
+      <tr><td>IBM AIX 7.2</td><td><span class="online">Supported</span></td></tr>
+      <tr><td>IBM AIX 7.3</td><td><span class="online">Supported</span></td></tr>
+      <tr><td>RHEL 7 / 8 / 9</td><td><span class="online">Supported</span></td></tr>
+      <tr><td>PowerVM / VIOS</td><td><span class="online">Supported</span></td></tr>
+    </table>
   </section>
 
+  <!-- Community Edition Hero -->
+  <section class="hero" style="min-height:250px;">
+    <h1>KAOPS Community Edition</h1>
+    <p>
+      Enterprise Infrastructure Monitoring,
+      Security Compliance and Automation Platform.
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <h2>KavanOps</h2>
+    <h2>KAOPS Community Edition</h2>
     <p>Enterprise Infrastructure Monitoring Platform</p>
-    <p>Linux | AIX | Cloud | Audit | Automation</p>
+    <p>Linux | AIX | Security | Audit | Automation</p>
+    <p>FREE TO USE</p>
   </footer>
 
 </body>
