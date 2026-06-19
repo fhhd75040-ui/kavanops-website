@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://your-domain/index.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/monitoring.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/audit.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/reports.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/patch.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/automation.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/settings.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/download.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://your-domain/contact.html</loc>
+  </url>
+
+</urlset>
