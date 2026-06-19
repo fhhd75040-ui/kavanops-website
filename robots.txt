@@ -1,5 +1,4 @@
 User-agent: *
-
 Allow: /
 
-Sitemap: https://your-domain/sitemap.xml
+Sitemap: https://kavanops.in/sitemap.xml
