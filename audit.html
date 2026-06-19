@@ -3,91 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KavanOps - Enterprise Infrastructure Monitoring Platform</title>
+  <title>KAOPS Audit Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <div class="logo">
       <span class="logo-icon">KA</span>
       <span class="logo-text">OPS</span>
     </div>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="monitoring.html">Monitoring</a></li>
-        <li><a href="audit.html">Audit</a></li>
-        <li><a href="reports.html">Reports</a></li>
-        <li><a href="patch.html">Patching</a></li>
-        <li><a href="automation.html">Automation</a></li>
-        <li><a href="settings.html">Settings</a></li>
-        <li><a href="download.html">Download</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="monitoring.html">Monitoring</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="patch.html">Patching</a></li>
+      <li><a href="automation.html">Automation</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="hero" style="padding:120px 10%;min-height:350px;">
-    <h1>Audit Dashboard</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Security Audit Dashboard</h1>
     <p>
-      Infrastructure Compliance, Security and Audit Reporting
+      Track Security Compliance, Vulnerability Findings,
+      Patch Compliance and Infrastructure Audit Status
+      from a centralized platform.
     </p>
   </section>
 
+  <!-- Stats -->
   <section class="stats">
-    <div class="card">
-      <h2>150</h2>
-      <p>Servers Audited</p>
-    </div>
-    <div class="card">
-      <h2>98%</h2>
-      <p>Compliance Score</p>
-    </div>
-    <div class="card">
-      <h2>25</h2>
-      <p>Security Findings</p>
-    </div>
-    <div class="card">
-      <h2>12</h2>
-      <p>Critical Issues</p>
+    <div class="card"><h2>120</h2><p>Audit Checks</p></div>
+    <div class="card"><h2>98%</h2><p>Compliance Score</p></div>
+    <div class="card"><h2>15</h2><p>Security Findings</p></div>
+    <div class="card"><h2>5</h2><p>Critical Issues</p></div>
+  </section>
+
+  <!-- Security Findings Overview -->
+  <section class="alerts">
+    <h2>Security Findings Overview</h2>
+    <div class="alerts-grid">
+      <div class="alert-card critical"><h3>Critical</h3><h1>5</h1><p>Immediate Action Required</p></div>
+      <div class="alert-card warning-card"><h3>High Risk</h3><h1>10</h1><p>Review Required</p></div>
+      <div class="alert-card info"><h3>Medium Risk</h3><h1>20</h1><p>Monitor and Remediate</p></div>
+      <div class="alert-card success"><h3>Low Risk</h3><h1>35</h1><p>Informational Findings</p></div>
     </div>
   </section>
 
+  <!-- Audit Modules -->
   <section class="features">
     <h2>Audit Modules</h2>
     <div class="feature-grid">
-      <div class="feature-card">
-        <h3>User Audit</h3>
-        <p>Track user activities and login history</p>
-      </div>
-      <div class="feature-card">
-        <h3>Security Audit</h3>
-        <p>Monitor vulnerabilities and risks</p>
-      </div>
-      <div class="feature-card">
-        <h3>Patch Compliance</h3>
-        <p>Verify OS patch compliance status</p>
-      </div>
-      <div class="feature-card">
-        <h3>Password Policy</h3>
-        <p>Validate password standards</p>
-      </div>
-      <div class="feature-card">
-        <h3>Filesystem Audit</h3>
-        <p>Monitor critical file changes</p>
-      </div>
-      <div class="feature-card">
-        <h3>Audit Reports</h3>
-        <p>Generate PDF and Excel audit reports</p>
-      </div>
+      <div class="feature-card"><h3>Security Compliance</h3><p>Monitor enterprise security compliance status.</p></div>
+      <div class="feature-card"><h3>Vulnerability Assessment</h3><p>Track and manage security findings.</p></div>
+      <div class="feature-card"><h3>Patch Compliance</h3><p>Validate patch levels across infrastructure.</p></div>
+      <div class="feature-card"><h3>Configuration Audit</h3><p>Review server and platform configurations.</p></div>
+      <div class="feature-card"><h3>User Access Review</h3><p>Audit users and privilege assignments.</p></div>
+      <div class="feature-card"><h3>Infrastructure Audit</h3><p>Review infrastructure compliance posture.</p></div>
     </div>
   </section>
 
+  <!-- Audit Findings -->
+  <section class="inventory">
+    <h2>Audit Findings</h2>
+    <table>
+      <tr><th>Finding ID</th><th>Category</th><th>Severity</th><th>Status</th></tr>
+      <tr><td>AUD-001</td><td>Security Policy</td><td>Critical</td><td><span class="warning">Open</span></td></tr>
+      <tr><td>AUD-002</td><td>Patch Compliance</td><td>High</td><td><span class="warning">Review</span></td></tr>
+      <tr><td>AUD-003</td><td>User Access</td><td>Medium</td><td><span class="online">Resolved</span></td></tr>
+      <tr><td>AUD-004</td><td>System Configuration</td><td>Low</td><td><span class="online">Closed</span></td></tr>
+    </table>
+  </section>
+
+  <!-- Compliance Dashboard -->
+  <section class="inventory">
+    <h2>Compliance Dashboard</h2>
+    <table>
+      <tr><th>Compliance Area</th><th>Status</th></tr>
+      <tr><td>Linux Compliance</td><td><span class="online">98%</span></td></tr>
+      <tr><td>AIX Compliance</td><td><span class="online">97%</span></td></tr>
+      <tr><td>Patch Compliance</td><td><span class="online">96%</span></td></tr>
+      <tr><td>Security Compliance</td><td><span class="online">99%</span></td></tr>
+    </table>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <h2>KavanOps</h2>
+    <h2>KAOPS Community Edition</h2>
     <p>Enterprise Infrastructure Monitoring Platform</p>
-    <p>Linux | AIX | Cloud | Audit | Automation</p>
+    <p>Linux | AIX | Security | Audit | Automation</p>
+    <p>FREE TO USE</p>
   </footer>
 
 </body>
