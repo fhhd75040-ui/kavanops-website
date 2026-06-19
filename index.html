@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KavanOps - Enterprise Infrastructure Monitoring Platform</title>
+  <title>KavanOps Monitoring</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,69 +12,19 @@
   <nav>
     <div class="logo">KavanOps</div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Features</a></li>
-      <li><a href="#">Monitoring</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="monitoring.html">Monitoring</a></li>
       <li><a href="#">Audit</a></li>
       <li><a href="#">Roadmap</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="hero">
-    <h1>Enterprise Infrastructure Monitoring Platform</h1>
+  <section class="hero" style="padding:120px 10%;min-height:350px;">
+    <h1>Monitoring Modules</h1>
     <p>
-      Monitor Linux, AIX, Cloud and Enterprise Infrastructure
-      from a single unified dashboard.
+      Enterprise Infrastructure Monitoring for Linux, AIX and Cloud Platforms
     </p>
-    <div class="buttons">
-      <a href="#">Request Demo</a>
-      <a href="#">View Features</a>
-    </div>
-  </section>
-
-  <section class="stats">
-    <div class="card">
-      <h2>500+</h2>
-      <p>Servers Monitored</p>
-    </div>
-    <div class="card">
-      <h2>99.99%</h2>
-      <p>Availability</p>
-    </div>
-    <div class="card">
-      <h2>24x7</h2>
-      <p>Monitoring</p>
-    </div>
-    <div class="card">
-      <h2>100+</h2>
-      <p>Reports Generated</p>
-    </div>
-  </section>
-
-  <section class="dashboard">
-    <h2>Live Infrastructure Dashboard</h2>
-    <div class="dashboard-grid">
-      <div class="box">
-        <h3>CPU Usage</h3>
-        <div class="bar"><span style="width:72%"></span></div>
-        <p>72%</p>
-      </div>
-      <div class="box">
-        <h3>Memory Usage</h3>
-        <div class="bar"><span style="width:65%"></span></div>
-        <p>65%</p>
-      </div>
-      <div class="box">
-        <h3>Filesystem Usage</h3>
-        <div class="bar"><span style="width:58%"></span></div>
-        <p>58%</p>
-      </div>
-      <div class="box">
-        <h3>Availability</h3>
-        <h2>99.99%</h2>
-      </div>
-    </div>
   </section>
 
   <section class="features">
@@ -115,13 +65,40 @@
     </div>
   </section>
 
-  <section class="roadmap">
-    <h2>Product Roadmap</h2>
-    <div class="version">v0.6 - PDF Reports & Graphs</div>
-    <div class="version">v0.7 - Patch Management</div>
-    <div class="version">v0.8 - User Management</div>
-    <div class="version">v0.9 - Email & Scheduler</div>
-    <div class="version">v1.0 - Enterprise Release</div>
+  <section class="inventory">
+    <h2>Server Inventory</h2>
+    <table>
+      <tr>
+        <th>Hostname</th>
+        <th>IP Address</th>
+        <th>OS</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>aixprd01</td>
+        <td>10.10.10.11</td>
+        <td>AIX 7.3</td>
+        <td><span class="online">Online</span></td>
+      </tr>
+      <tr>
+        <td>aixprd02</td>
+        <td>10.10.10.12</td>
+        <td>AIX 7.2</td>
+        <td><span class="online">Online</span></td>
+      </tr>
+      <tr>
+        <td>rhelprd01</td>
+        <td>10.10.10.21</td>
+        <td>RHEL 9</td>
+        <td><span class="online">Online</span></td>
+      </tr>
+      <tr>
+        <td>rhelprd02</td>
+        <td>10.10.10.22</td>
+        <td>RHEL 8</td>
+        <td><span class="warning">Warning</span></td>
+      </tr>
+    </table>
   </section>
 
   <footer>
