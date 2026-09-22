@@ -5,43 +5,60 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>KAVAN BAZAAR | Fashion & Fancy Store</title>
 <meta name="description" content="KAVAN BAZAAR - Fashion, Fancy, Beauty and Kids Accessories">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --pink:#e9166e;
-  --pink2:#ff4b91;
-  --dark:#a3084b;
-  --light:#fff2f7;
-  --text:#241d22;
-  --muted:#766c72;
-  --line:#eadde4;
-  --green:#159957;
-  --shadow:0 5px 20px rgba(174,25,91,.08);
+  --wine:#7a0f3d;
+  --wine-dark:#570a2b;
+  --rose:#c81457;
+  --rose2:#e34a80;
+  --gold:#b8862c;
+  --gold-light:#e9cd93;
+  --cream:#fffaf5;
+  --blush:#fbe7ee;
+  --text:#2a1420;
+  --muted:#8a6b76;
+  --line:#f0dce4;
+  --green:#12795a;
+  --shadow:0 10px 28px rgba(122,15,61,.09);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Manrope',Arial,Helvetica,sans-serif;
+
+  /* legacy aliases kept so existing rules below keep working */
+  --pink:var(--rose);
+  --pink2:var(--rose2);
+  --dark:var(--wine);
+  --light:var(--blush);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:var(--sans);
   color:var(--text);
-  background:#fff;
+  background:var(--cream);
 }
 button,input,select{font:inherit}
 button{cursor:pointer}
+h1,h2,h3{font-family:var(--serif)}
 
 .topbar{
   height:38px;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:linear-gradient(90deg,#c50759,#f52d82);
-  color:#fff;
-  font-size:13px;
-  font-weight:700;
+  background:var(--wine-dark);
+  color:var(--gold-light);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.2px;
 }
 
 .header{
-  background:#fff;
+  background:var(--cream);
   border-bottom:1px solid var(--line);
   position:sticky;
   top:0;
@@ -51,9 +68,9 @@ button{cursor:pointer}
   max-width:1300px;
   margin:auto;
   padding:13px 20px;
-  min-height:82px;
+  min-height:86px;
   display:grid;
-  grid-template-columns:260px 1fr auto;
+  grid-template-columns:280px 1fr auto;
   align-items:center;
   gap:25px;
 }
@@ -61,42 +78,47 @@ button{cursor:pointer}
 .logo{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
   text-decoration:none;
-  color:var(--dark);
+  color:var(--wine);
 }
 .logoIcon{
-  width:48px;
-  height:48px;
-  border-radius:15px;
-  background:linear-gradient(145deg,#ff5b9e,#df0d65);
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--wine);
+  border:1px solid var(--gold-light);
   display:grid;
   place-items:center;
-  color:white;
-  font-size:25px;
-  box-shadow:0 7px 18px #ef9cbd;
+  color:var(--gold-light);
+  font-size:21px;
+  box-shadow:0 7px 16px rgba(122,15,61,.25);
 }
 .logoText strong{
   display:block;
+  font-family:var(--serif);
   font-size:23px;
-  letter-spacing:-1px;
+  font-weight:600;
+  letter-spacing:.3px;
 }
 .logoText small{
   font-size:10px;
-  color:#94526d;
+  color:var(--muted);
+  letter-spacing:.2px;
 }
 
 .search{
   height:46px;
-  border:1px solid #efc8d8;
-  border-radius:25px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
   display:flex;
   align-items:center;
   padding:0 16px;
 }
 .search span{
-  font-size:23px;
-  color:var(--pink);
+  font-size:19px;
+  color:var(--rose);
   margin-right:9px;
 }
 .search input{
@@ -104,6 +126,8 @@ button{cursor:pointer}
   outline:0;
   width:100%;
   font-size:14px;
+  font-family:var(--sans);
+  background:transparent;
 }
 
 .headerActions{
@@ -114,13 +138,14 @@ button{cursor:pointer}
 .headBtn{
   position:relative;
   border:0;
-  background:#fff;
-  color:#4a4046;
+  background:transparent;
+  color:var(--text);
   min-width:55px;
 }
 .headBtn span{
   display:block;
-  font-size:22px;
+  font-size:20px;
+  color:var(--wine);
 }
 .headBtn small{
   font-size:10px;
@@ -130,7 +155,7 @@ button{cursor:pointer}
   position:absolute;
   top:-4px;
   right:3px;
-  background:var(--pink);
+  background:var(--rose);
   color:#fff;
   min-width:18px;
   height:18px;
@@ -142,7 +167,8 @@ button{cursor:pointer}
 }
 
 .nav{
-  background:linear-gradient(90deg,#b40655,#ed2177);
+  background:var(--wine);
+  border-top:1px solid rgba(233,205,147,.25);
 }
 .navInner{
   max-width:1300px;
@@ -151,16 +177,51 @@ button{cursor:pointer}
   overflow:auto;
 }
 .nav a{
-  color:#fff;
+  color:var(--gold-light);
   text-decoration:none;
   white-space:nowrap;
-  padding:12px 18px;
+  padding:13px 20px;
   font-size:13px;
-  font-weight:800;
+  font-weight:600;
+  font-family:var(--sans);
+  border-bottom:2px solid transparent;
 }
 .nav a:hover,
 .nav a.active{
-  background:#0002;
+  color:#fff;
+  border-bottom-color:var(--gold-light);
+}
+
+.subnav{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+.subnavInner{
+  max-width:1300px;
+  margin:auto;
+  display:flex;
+  gap:6px;
+  overflow:auto;
+  padding:9px 20px;
+}
+.subnav button{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--text);
+  border-radius:20px;
+  padding:6px 14px;
+  font-size:11.5px;
+  font-weight:600;
+  white-space:nowrap;
+  transition:.15s;
+}
+.subnav button:hover{
+  border-color:var(--gold);
+}
+.subnav button.active{
+  background:var(--wine);
+  border-color:var(--wine);
+  color:#fff;
 }
 
 .mobileHeader{display:none}
@@ -172,82 +233,118 @@ button{cursor:pointer}
 }
 
 .hero{
-  margin:18px 0;
-  min-height:310px;
-  border-radius:20px;
+  margin:22px 0;
+  min-height:340px;
+  border-radius:6px;
   overflow:hidden;
-  background:linear-gradient(105deg,#ffe5ef,#ffd0e0);
+  background:var(--wine);
   display:grid;
-  grid-template-columns:42% 58%;
+  grid-template-columns:44% 56%;
 }
 .heroText{
-  padding:45px;
+  padding:50px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.heroText span.kicker{
+  color:var(--gold-light);
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.3px;
+  margin-bottom:14px;
 }
 .heroText h1{
-  margin:0 0 12px;
-  color:#970743;
-  font-family:Georgia,serif;
-  font-size:44px;
-  line-height:1.05;
+  margin:0 0 16px;
+  color:#fff;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:46px;
+  line-height:1.08;
+}
+.heroText h1 em{
+  font-style:italic;
+  color:var(--gold-light);
+  font-weight:500;
 }
 .heroText p{
-  color:#74324f;
-  line-height:1.5;
-  font-weight:600;
+  color:#f0d9e2;
+  line-height:1.6;
+  font-weight:500;
+  font-size:14px;
+  max-width:34ch;
 }
 .primaryBtn{
   border:0;
-  border-radius:24px;
-  padding:12px 23px;
-  color:#fff;
-  background:linear-gradient(90deg,#e70e68,#ff438b);
-  font-weight:900;
-  box-shadow:0 8px 20px #d9156835;
+  border-radius:3px;
+  padding:14px 26px;
+  color:var(--wine-dark);
+  background:var(--gold-light);
+  font-weight:700;
+  font-family:var(--sans);
+  font-size:13px;
+  margin-top:22px;
+  width:fit-content;
+  transition:.2s;
 }
+.primaryBtn:hover{
+  background:#fff;
+}
+
 .heroVisual{
   position:relative;
   background:
-    radial-gradient(circle at 25% 35%,#fff 0 12%,transparent 13%),
-    radial-gradient(circle at 70% 65%,#f4aaca 0 12%,transparent 13%);
+    linear-gradient(105deg,#8c1548,#6a0c33);
+  overflow:hidden;
+}
+.heroVisual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(233,205,147,.18), transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(233,205,147,.12), transparent 45%);
 }
 .circle{
   position:absolute;
   border-radius:50%;
   display:grid;
   place-items:center;
-  font-size:45px;
-  box-shadow:0 10px 25px #a75d7a33;
+  font-size:38px;
+  box-shadow:0 10px 22px rgba(0,0,0,.18);
 }
-.c1{width:105px;height:105px;left:12%;top:25%;background:#fff0f6}
-.c2{width:90px;height:90px;left:40%;top:12%;background:#ead9fa}
-.c3{width:115px;height:115px;left:62%;top:34%;background:#d9f2ec}
-.c4{width:75px;height:75px;left:30%;top:64%;background:#fff2c8}
-.c5{width:85px;height:85px;left:77%;top:67%;background:#ffe0ea}
+.c1{width:100px;height:100px;left:10%;top:22%;background:#fff0f6}
+.c2{width:80px;height:80px;left:42%;top:10%;background:#ead9fa}
+.c3{width:120px;height:120px;left:60%;top:36%;background:#d9f2ec}
+.c4{width:70px;height:70px;left:28%;top:62%;background:#fff2c8}
+.c5{width:88px;height:88px;left:76%;top:64%;background:#ffe0ea}
 
 .trust{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   border:1px solid var(--line);
-  border-radius:15px;
-  margin:20px 0 30px;
-  box-shadow:var(--shadow);
+  background:#fff;
+  border-radius:6px;
+  margin:22px 0 34px;
 }
 .trustItem{
-  padding:16px 10px;
+  padding:18px 10px;
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:10px;
+  gap:11px;
   border-right:1px solid var(--line);
 }
 .trustItem:last-child{border:0}
 .trustIcon{
-  font-size:25px;
-  color:var(--pink);
+  font-size:21px;
+  color:var(--gold);
 }
 .trustItem strong{
   display:block;
   font-size:12px;
+  font-weight:700;
 }
 .trustItem small{
   color:var(--muted);
@@ -256,50 +353,59 @@ button{cursor:pointer}
 
 .sectionTitle{
   display:flex;
-  align-items:center;
+  align-items:baseline;
   justify-content:space-between;
-  margin:28px 0 15px;
+  margin:36px 0 16px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:12px;
 }
 .sectionTitle h2{
   margin:0;
-  font-size:24px;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:26px;
+  color:var(--wine-dark);
 }
 .sectionTitle a{
-  color:var(--pink);
+  color:var(--rose);
   text-decoration:none;
-  font-size:13px;
-  font-weight:900;
+  font-size:12px;
+  font-weight:700;
 }
 
 .categories{
   display:grid;
-  grid-template-columns:repeat(8,1fr);
-  gap:12px;
+  grid-template-columns:repeat(3,1fr);
+  max-width:560px;
+  gap:14px;
 }
 .category{
   border:1px solid var(--line);
   background:#fff;
-  border-radius:14px;
-  padding:8px;
+  border-radius:6px;
+  padding:10px;
   text-align:center;
   transition:.2s;
 }
 .category:hover{
-  transform:translateY(-3px);
+  border-color:var(--gold);
   box-shadow:var(--shadow);
 }
 .categoryImage{
-  height:95px;
-  border-radius:11px;
-  background:linear-gradient(145deg,#fff0f6,#ffe3ed);
+  height:100px;
+  border-radius:4px;
+  background:var(--blush);
   display:grid;
   place-items:center;
-  font-size:40px;
+  font-size:38px;
 }
 .category b{
   display:block;
-  font-size:11px;
-  margin-top:7px;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:14px;
+  margin-top:9px;
+  color:var(--wine-dark);
 }
 
 .shopLayout{
@@ -311,9 +417,8 @@ button{cursor:pointer}
 
 .filters{
   border:1px solid var(--line);
-  border-radius:12px;
+  border-radius:6px;
   background:#fff;
-  box-shadow:var(--shadow);
   position:sticky;
   top:140px;
   overflow:hidden;
@@ -324,14 +429,20 @@ button{cursor:pointer}
   align-items:center;
   padding:15px;
   border-bottom:1px solid var(--line);
+  background:var(--blush);
 }
-.filterTitle strong{font-size:17px}
+.filterTitle strong{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:17px;
+  color:var(--wine-dark);
+}
 .filterTitle button{
   border:0;
   background:none;
-  color:var(--pink);
+  color:var(--rose);
   font-size:11px;
-  font-weight:800;
+  font-weight:700;
 }
 .filterGroup{
   padding:14px;
@@ -339,8 +450,11 @@ button{cursor:pointer}
 }
 .filterGroup strong{
   display:block;
-  font-size:13px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
   margin-bottom:9px;
+  color:var(--wine-dark);
 }
 .filterGroup label{
   display:flex;
@@ -349,51 +463,95 @@ button{cursor:pointer}
   font-size:11px;
   color:#5e555a;
 }
-.filterGroup input{accent-color:var(--pink)}
+.filterGroup input{accent-color:var(--rose)}
+
+.filterCat{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  width:100%;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:4px;
+  padding:9px 11px;
+  margin-bottom:7px;
+  font-size:12px;
+  font-weight:600;
+  font-family:var(--sans);
+  color:var(--text);
+  transition:.15s;
+}
+.filterCat:last-child{margin-bottom:0}
+.filterCat:hover{
+  border-color:var(--gold);
+}
+.filterCat span:last-child{
+  color:var(--muted);
+  font-size:11px;
+  font-weight:700;
+  min-width:20px;
+  text-align:right;
+}
+.filterCat.active{
+  background:var(--wine);
+  border-color:var(--wine);
+  color:#fff;
+}
+.filterCat.active span:last-child{
+  color:var(--gold-light);
+}
 
 .shopBar{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 12px;
+  padding:11px 14px;
   border:1px solid var(--line);
-  border-radius:8px;
+  border-radius:6px;
+  background:#fff;
   margin-bottom:14px;
 }
-.shopBar strong{font-size:13px}
+.shopBar strong{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:15px;
+  color:var(--wine-dark);
+}
 .shopBar small{
   color:var(--muted);
   margin-left:5px;
 }
 .shopBar select{
-  border:1px solid #ead6df;
-  border-radius:6px;
-  padding:7px 10px;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:8px 10px;
   background:#fff;
   font-size:11px;
   font-weight:700;
+  color:var(--text);
 }
 
 .products{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  gap:10px;
 }
 .product{
   border:1px solid var(--line);
-  border-radius:9px;
+  border-radius:6px;
   overflow:hidden;
   background:#fff;
   transition:.2s;
 }
 .product:hover{
-  transform:translateY(-3px);
+  border-color:var(--gold);
   box-shadow:var(--shadow);
 }
 .productImage{
   height:210px;
   position:relative;
-  background:#fff0f6;
+  background:var(--blush);
 }
 .productImage img{
   width:100%;
@@ -406,53 +564,57 @@ button{cursor:pointer}
   right:8px;
   top:8px;
   z-index:2;
-  width:34px;
-  height:34px;
+  width:32px;
+  height:32px;
   border:0;
   border-radius:50%;
   background:#fff;
-  color:var(--pink);
-  font-size:19px;
-  box-shadow:0 3px 12px #0002;
+  color:var(--rose);
+  font-size:17px;
+  box-shadow:0 3px 10px rgba(0,0,0,.12);
 }
 .heart.active{
-  background:var(--pink);
+  background:var(--rose);
   color:#fff;
 }
 .offer{
   position:absolute;
   left:8px;
   top:8px;
-  background:#f45c3c;
-  color:#fff;
-  padding:4px 7px;
-  border-radius:8px;
+  background:var(--wine-dark);
+  color:var(--gold-light);
+  padding:4px 8px;
+  border-radius:3px;
   font-size:9px;
-  font-weight:900;
+  font-weight:700;
+  letter-spacing:.3px;
 }
 .productBody{
-  padding:11px;
+  padding:10px;
 }
 .productCategory{
-  color:var(--pink);
+  color:var(--gold);
   font-size:9px;
-  font-weight:900;
+  font-weight:700;
+  letter-spacing:.4px;
   text-transform:uppercase;
 }
 .productName{
+  font-family:var(--serif);
   font-size:13px;
-  font-weight:800;
-  line-height:1.3;
-  min-height:35px;
-  margin:5px 0;
+  font-weight:600;
+  line-height:1.28;
+  min-height:33px;
+  margin:4px 0;
+  color:var(--text);
 }
 .price{
-  color:var(--pink);
+  color:var(--wine-dark);
   font-size:17px;
-  font-weight:950;
+  font-weight:700;
 }
 .mrp{
-  color:#999;
+  color:#a99298;
   font-size:11px;
   text-decoration:line-through;
   margin-left:5px;
@@ -460,65 +622,90 @@ button{cursor:pointer}
 .discount{
   display:inline-block;
   color:var(--green);
-  background:#e2f7eb;
+  background:#e2f5ec;
   padding:3px 6px;
-  border-radius:4px;
+  border-radius:3px;
   font-size:9px;
-  font-weight:900;
+  font-weight:700;
   margin:5px 0;
 }
 .rating{
-  color:#766d72;
+  color:var(--muted);
   font-size:10px;
 }
-.rating b{color:#ffad00}
+.rating b{color:var(--gold)}
 .addBtn{
   width:100%;
-  margin-top:8px;
-  border:0;
-  border-radius:5px;
+  margin-top:9px;
+  border:1px solid var(--wine);
+  border-radius:4px;
   padding:9px;
-  background:linear-gradient(90deg,#ed116d,#ff3c87);
-  color:#fff;
+  background:#fff;
+  color:var(--wine);
   font-size:11px;
-  font-weight:900;
+  font-weight:700;
+  transition:.2s;
 }
-
-.promo{
-  margin:32px 0;
-  padding:22px 27px;
-  border-radius:16px;
-  background:linear-gradient(100deg,#ffe9f2,#ffd4e2);
+.addBtn:hover{
+  background:var(--wine);
+  color:#fff;
+}
+  .promo{
+  margin:36px 0;
+  padding:26px 30px;
+  border-radius:6px;
+  background:var(--blush);
+  border:1px solid var(--line);
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
+
 .promo h3{
   margin:0;
-  color:#990746;
+  color:var(--wine-dark);
+  font-family:var(--serif);
+  font-weight:600;
   font-size:25px;
 }
+
 .promo p{
   margin:5px 0 0;
-  color:#74334f;
+  color:var(--muted);
   font-size:12px;
 }
 
-.footer{
-  margin-top:45px;
-  background:#fff0f6;
-  padding:28px 20px;
+.promo .primaryBtn{
+  color:#fff;
+  background:var(--wine);
 }
+.promo .primaryBtn:hover{
+  background:var(--wine-dark);
+}
+
+.footer{
+  margin-top:50px;
+  background:var(--wine-dark);
+  color:#f0d9e2;
+  padding:34px 20px;
+}
+
 .footerInner{
   max-width:1300px;
   margin:auto;
   display:flex;
   justify-content:space-between;
 }
+
+.footerInner small{
+  color:#cf9fb2;
+}
+
 .footerBrand{
-  color:#a0094b;
-  font-size:21px;
-  font-weight:950;
+  color:var(--gold-light);
+  font-family:var(--serif);
+  font-size:22px;
+  font-weight:600;
 }
 
 .modal{
@@ -530,7 +717,11 @@ button{cursor:pointer}
   align-items:flex-end;
   justify-content:center;
 }
-.modal.open{display:flex}
+
+.modal.open{
+  display:flex;
+}
+
 .sheet{
   width:min(620px,100%);
   max-height:85vh;
@@ -539,11 +730,13 @@ button{cursor:pointer}
   border-radius:24px 24px 0 0;
   padding:20px;
 }
+
 .modalHead{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
+
 .close{
   width:36px;
   height:36px;
@@ -553,6 +746,7 @@ button{cursor:pointer}
   color:var(--pink);
   font-size:20px;
 }
+
 .cartRow{
   display:grid;
   grid-template-columns:65px 1fr auto;
@@ -561,6 +755,7 @@ button{cursor:pointer}
   border-bottom:1px solid #eee;
   align-items:center;
 }
+
 .cartImg{
   width:65px;
   height:65px;
@@ -568,17 +763,20 @@ button{cursor:pointer}
   overflow:hidden;
   background:#fff0f6;
 }
+
 .cartImg img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
+
 .qty{
   display:flex;
   align-items:center;
   gap:8px;
   margin-top:5px;
 }
+
 .qty button{
   width:25px;
   height:25px;
@@ -587,6 +785,7 @@ button{cursor:pointer}
   background:#ffe5ef;
   color:var(--pink);
 }
+
 .remove{
   border:0;
   background:none;
@@ -601,13 +800,18 @@ button{cursor:pointer}
   background:#180b1299;
   z-index:110;
 }
-.drawer.open{display:block}
+
+.drawer.open{
+  display:block;
+}
+
 .drawerPanel{
   height:100%;
   width:min(320px,88vw);
   background:#fff;
   padding:20px;
 }
+
 .drawerPanel a{
   display:block;
   color:var(--text);
@@ -631,29 +835,45 @@ button{cursor:pointer}
   transition:.2s;
   z-index:200;
 }
+
 .toast.show{
   opacity:1;
   transform:translate(-50%,0);
 }
 
-.mobileBottom{display:none}
+.mobileBottom{
+  display:none;
+}
 
 @media(max-width:1100px){
-  .headerInner{grid-template-columns:220px 1fr auto}
-  .products{grid-template-columns:repeat(3,1fr)}
-  .categories{grid-template-columns:repeat(6,1fr)}
+  .headerInner{
+    grid-template-columns:220px 1fr auto;
+  }
+
+  .products{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .categories{
+    grid-template-columns:repeat(6,1fr);
+  }
 }
 
 @media(max-width:900px){
-  .header{display:none}
+
+  .header{
+    display:none;
+  }
+
   .mobileHeader{
     display:block;
     position:sticky;
     top:0;
     z-index:60;
-    background:#fff;
+    background:var(--cream);
     border-bottom:1px solid var(--line);
   }
+
   .mobileTop{
     height:65px;
     display:grid;
@@ -661,28 +881,36 @@ button{cursor:pointer}
     align-items:center;
     padding:6px 13px;
   }
+
   .menuBtn{
     border:0;
     background:#fff;
     color:var(--dark);
     font-size:26px;
   }
+
   .mobileLogo{
     text-align:center;
   }
+
   .mobileLogo strong{
-    color:var(--dark);
+    color:var(--wine);
+    font-family:var(--serif);
+    font-weight:600;
     font-size:19px;
   }
+
   .mobileLogo small{
     display:block;
     color:#966078;
     font-size:9px;
   }
+
   .mobileActions{
     display:flex;
     gap:4px;
   }
+
   .mobileActions button{
     position:relative;
     border:0;
@@ -690,6 +918,7 @@ button{cursor:pointer}
     color:var(--dark);
     font-size:21px;
   }
+
   .mobileSearch{
     margin:0 13px 11px;
     height:43px;
@@ -699,10 +928,12 @@ button{cursor:pointer}
     align-items:center;
     padding:0 13px;
   }
+
   .mobileSearch span{
     color:var(--pink);
     margin-right:8px;
   }
+
   .mobileSearch input{
     width:100%;
     border:0;
@@ -710,54 +941,109 @@ button{cursor:pointer}
     font-size:13px;
   }
 
-  .container{padding:0 13px}
+  .container{
+    padding:0 13px;
+  }
+
   .hero{
     min-height:240px;
     grid-template-columns:48% 52%;
     border-radius:15px;
     margin:12px 0;
   }
-  .heroText{padding:25px 15px}
-  .heroText h1{font-size:28px}
-  .heroText p{font-size:10px}
-  .primaryBtn{padding:10px 15px;font-size:11px}
-  .circle{font-size:30px}
-  .c1{width:70px;height:70px}
-  .c2{width:65px;height:65px}
-  .c3{width:75px;height:75px}
-  .c4{width:55px;height:55px}
-  .c5{width:60px;height:60px}
+
+  .heroText{
+    padding:25px 15px;
+  }
+
+  .heroText h1{
+    font-size:28px;
+  }
+
+  .heroText p{
+    font-size:10px;
+  }
+
+  .primaryBtn{
+    padding:10px 15px;
+    font-size:11px;
+  }
+
+  .circle{
+    font-size:30px;
+  }
+
+  .c1{
+    width:70px;
+    height:70px;
+  }
+
+  .c2{
+    width:65px;
+    height:65px;
+  }
+
+  .c3{
+    width:75px;
+    height:75px;
+  }
+
+  .c4{
+    width:55px;
+    height:55px;
+  }
+
+  .c5{
+    width:60px;
+    height:60px;
+  }
 
   .trust{
     grid-template-columns:repeat(4,1fr);
     margin-bottom:22px;
   }
+
   .trustItem{
     display:block;
     text-align:center;
     padding:10px 2px;
   }
-  .trustIcon{font-size:20px}
+
+  .trustIcon{
+    font-size:20px;
+  }
+
   .trustItem strong{
     font-size:8px;
   }
-  .trustItem small{display:none}
+
+  .trustItem small{
+    display:none;
+  }
 
   .categories{
     display:flex;
     overflow:auto;
     gap:8px;
   }
+
   .category{
     min-width:85px;
   }
+
   .categoryImage{
     height:70px;
     font-size:30px;
   }
-  .category b{font-size:9px}
 
-  .shopLayout{display:block}
+  .category b{
+    font-size:9px;
+  }
+
+  .shopLayout{
+    display:block;
+  }
+
   .filters{
     display:none;
     position:fixed;
@@ -769,42 +1055,67 @@ button{cursor:pointer}
     border-radius:0;
     overflow:auto;
   }
-  .filters.open{display:block}
+
+  .filters.open{
+    display:block;
+  }
 
   .filterMobile{
     display:block;
-    border:1px solid #f0bfd3;
-    background:#fff5f9;
-    color:var(--pink);
-    border-radius:18px;
+    border:1px solid var(--line);
+    background:var(--blush);
+    color:var(--wine);
+    border-radius:4px;
     padding:7px 12px;
     font-size:10px;
-    font-weight:900;
+    font-weight:700;
   }
 
   .shopBar{
     margin-bottom:10px;
   }
-  .shopBar small{display:none}
+
+  .shopBar small{
+    display:none;
+  }
 
   .products{
     grid-template-columns:repeat(2,1fr);
     gap:9px;
   }
-  .productImage{height:175px}
-  .productBody{padding:8px}
-  .productName{font-size:12px}
-  .price{font-size:16px}
+
+  .productImage{
+    height:175px;
+  }
+
+  .productBody{
+    padding:8px;
+  }
+
+  .productName{
+    font-size:12px;
+  }
+
+  .price{
+    font-size:16px;
+  }
 
   .promo{
     padding:17px;
   }
-  .promo h3{font-size:19px}
-  .promo p{font-size:10px}
+
+  .promo h3{
+    font-size:19px;
+  }
+
+  .promo p{
+    font-size:10px;
+  }
 
   .footer{
     margin-bottom:65px;
   }
+
   .footerInner{
     display:block;
     text-align:center;
@@ -822,6 +1133,7 @@ button{cursor:pointer}
     border-top:1px solid var(--line);
     z-index:70;
   }
+
   .mobileBottom button{
     border:0;
     background:#fff;
@@ -829,26 +1141,168 @@ button{cursor:pointer}
     font-size:9px;
     font-weight:800;
   }
+
   .mobileBottom span{
     display:block;
     font-size:21px;
     line-height:25px;
   }
+
   .mobileBottom .active{
     color:var(--pink);
   }
 }
 
 @media(min-width:901px){
-  .filterMobile{display:none}
+  .filterMobile{
+    display:none;
+  }
 }
+
+
+/* ADMIN PRODUCT MANAGEMENT */
+.adminTools{
+  margin:28px 0 12px;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:15px 18px;
+  border-radius:6px;
+}
+.adminToolsHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.adminToolsHead strong{
+  display:block;
+  color:var(--wine-dark);
+  font-family:var(--serif);
+  font-size:18px;
+}
+.adminToolsHead small{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:3px;
+}
+.adminOpenBtn{
+  margin:0;
+}
+.adminPanel{
+  display:none;
+  margin:0 0 18px;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:18px;
+  border-radius:6px;
+  box-shadow:var(--shadow);
+}
+.adminPanel.open{display:block}
+.adminPanelHead{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px;
+}
+.adminPanelHead strong{
+  display:block;
+  color:var(--wine-dark);
+  font-family:var(--serif);
+  font-size:20px;
+}
+.adminPanelHead small{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:3px;
+}
+.adminForm{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+}
+.adminForm input,
+.adminForm select{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:10px 11px;
+  outline:0;
+  background:#fff;
+  font-size:12px;
+}
+.adminForm input:focus,
+.adminForm select:focus{
+  border-color:var(--gold);
+}
+.adminFormActions{
+  grid-column:1/-1;
+  display:flex;
+  gap:8px;
+}
+.adminCancel{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--wine);
+  border-radius:4px;
+  padding:10px 18px;
+  font-weight:700;
+}
+.adminList{
+  margin-top:16px;
+  border-top:1px solid var(--line);
+  padding-top:10px;
+  max-height:300px;
+  overflow:auto;
+}
+.adminItem{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:9px 0;
+  border-bottom:1px solid #f3e7ec;
+  font-size:11px;
+}
+.adminItemName{
+  font-weight:800;
+  color:var(--text);
+}
+.adminItemMeta{
+  color:var(--muted);
+  margin-top:2px;
+}
+.adminItemActions{
+  display:flex;
+  gap:6px;
+  flex-shrink:0;
+}
+.adminItemActions button{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--wine);
+  border-radius:4px;
+  padding:5px 9px;
+  font-size:10px;
+  font-weight:800;
+}
+@media(max-width:900px){
+  .adminToolsHead{align-items:stretch;flex-direction:column}
+  .adminOpenBtn{width:100%}
+  .adminForm{grid-template-columns:1fr}
+  .adminFormActions{grid-column:auto}
+  .adminItem{align-items:flex-start}
+  .adminItemActions{flex-direction:column}
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="topbar">
-  ✨ KAVAN BAZAAR — New Collection is Live
+  New arrivals every week · Free delivery across Tamil Nadu on orders over ₹499
 </div>
 
 <header class="header">
@@ -869,6 +1323,7 @@ button{cursor:pointer}
     </label>
 
     <div class="headerActions">
+
       <button class="headBtn" onclick="openAdmin()">
         <span>♙</span>
         <small>Account</small>
@@ -885,6 +1340,7 @@ button{cursor:pointer}
         <small>Cart</small>
         <b class="badge" id="cartCount">0</b>
       </button>
+
     </div>
 
   </div>
@@ -892,11 +1348,16 @@ button{cursor:pointer}
   <nav class="nav">
     <div class="navInner" id="nav"></div>
   </nav>
+
+  <div class="subnav">
+    <div class="subnavInner" id="subnav"></div>
+  </div>
 </header>
 
 <div class="mobileHeader">
 
   <div class="mobileTop">
+
     <button class="menuBtn" onclick="openDrawer()">☰</button>
 
     <div class="mobileLogo">
@@ -905,9 +1366,17 @@ button{cursor:pointer}
     </div>
 
     <div class="mobileActions">
-      <button onclick="openWishlist()">♡<b class="badge" id="mobileWishCount">0</b></button>
-      <button onclick="openCart()">🛒<b class="badge" id="mobileCartCount">0</b></button>
+      <button onclick="openWishlist()">
+        ♡
+        <b class="badge" id="mobileWishCount">0</b>
+      </button>
+
+      <button onclick="openCart()">
+        🛒
+        <b class="badge" id="mobileCartCount">0</b>
+      </button>
     </div>
+
   </div>
 
   <label class="mobileSearch">
@@ -923,29 +1392,34 @@ button{cursor:pointer}
 <section class="hero">
 
   <div class="heroText">
+
+    <span class="kicker">New Collection · Tamil Nadu</span>
+
     <h1>
-      Small<br>
-      Accessories<br>
-      Big Happiness ♡
+      Small accessories,<br>
+      <em>big happiness</em>
     </h1>
 
     <p>
-      Trendy • Affordable • Stylish<br>
-      Fashion, Beauty & Kids Collection
+      Fashion, beauty and kids' accessories curated for everyday
+      wear and every celebration.
     </p>
 
     <button class="primaryBtn"
       onclick="scrollProducts()">
-      Shop Now →
+      Shop the collection
     </button>
+
   </div>
 
   <div class="heroVisual">
+
     <div class="circle c1">💍</div>
     <div class="circle c2">🎀</div>
     <div class="circle c3">💄</div>
     <div class="circle c4">✨</div>
     <div class="circle c5">👜</div>
+
   </div>
 
 </section>
@@ -998,71 +1472,2507 @@ button{cursor:pointer}
 </section>
 
 <section class="adminTools" id="adminTools">
-  <div>
-    <strong>Admin Product Management</strong>
-    <small>Add a new product or edit an existing product.</small>
-  </div>
-  <div class="adminActions">
-    <button onclick="newProduct()">＋ New Product</button>
-    <button onclick="editProducts()">✎ Edit Products</button>
+  <div class="adminToolsHead">
+    <div>
+      <strong>Admin Product Management</strong>
+      <small>Add, edit or delete products from the website.</small>
+    </div>
+    <button class="primaryBtn adminOpenBtn" onclick="openAdmin()">Admin / Products</button>
   </div>
 </section>
 
-<section id="products">
-
 <div class="adminPanel" id="adminPanel">
   <div class="adminPanelHead">
-    <div><strong>Product Management</strong><small>Add or edit products from the site.</small></div>
-    <button onclick="closeAdmin()">×</button>
+    <div>
+      <strong>Product Management</strong>
+      <small>Changes are saved in this browser.</small>
+    </div>
+    <button class="close" onclick="closeAdmin()">×</button>
   </div>
+
   <div class="adminForm">
     <input id="adminId" type="hidden">
     <input id="adminName" placeholder="Product name">
-    <select id="adminCategory"><option>Women</option><option>Men</option><option>Kids</option></select>
+    <select id="adminCategory">
+      <option value="Women">Women</option>
+      <option value="Men">Men</option>
+      <option value="Kids">Kids</option>
+    </select>
     <input id="adminPrice" type="number" min="0" placeholder="Selling price">
     <input id="adminMrp" type="number" min="0" placeholder="MRP">
     <input id="adminPhoto" placeholder="Actual product photo URL">
     <div class="adminFormActions">
-      <button class="primaryBtn" onclick="saveProduct()">Save Product</button>
-      <button class="adminSecondary" onclick="closeAdmin()">Cancel</button>
+      <button class="primaryBtn" onclick="saveAdminProduct()">Save Product</button>
+      <button class="adminCancel" onclick="resetAdminForm()">Cancel</button>
     </div>
   </div>
+
   <div class="adminList" id="adminList"></div>
 </div>
 
-<style>
-.adminPanel{display:none;margin:0 0 18px;border:1px solid #efc5d7;border-radius:14px;background:#fff7fa;padding:16px;box-shadow:var(--shadow)}
-.adminPanel.open{display:block}
-.adminPanelHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.adminPanelHead strong{display:block;color:var(--dark);font-size:16px}
-.adminPanelHead small{color:var(--muted);font-size:11px}
-.adminPanelHead button{border:0;background:#ffe8f1;color:var(--pink);border-radius:50%;width:30px;height:30px;font-size:18px}
-.adminForm{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
-.adminForm input,.adminForm select{border:1px solid #e8cbd7;border-radius:8px;padding:9px;background:#fff;outline:0;font-size:12px}
-.adminForm input:focus,.adminForm select:focus{border-color:var(--pink)}
-.adminFormActions{grid-column:1/-1;display:flex;gap:8px}
-.adminSecondary{border:1px solid #e7ccd8;background:#fff;color:#6b5c64;border-radius:20px;padding:10px 18px;font-weight:800}
-.adminList{margin-top:14px;border-top:1px solid #efdce5;padding-top:10px;max-height:220px;overflow:auto}
-.adminItem{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #f2e5ea;font-size:11px}
-.adminItem button{border:1px solid #efc5d7;background:#fff;color:var(--pink);border-radius:14px;padding:5px 9px;font-size:10px;font-weight:800}
-@media(max-width:900px){.adminForm{grid-template-columns:1fr}.adminFormActions{grid-column:auto}}
-</style>
+<section id="products">
+  <div class="shopLayout">
+
+  <aside class="filters" id="filters">
+
+    <div class="filterTitle">
+      <strong>Filters</strong>
+      <button onclick="clearFilters()">Clear All</button>
+    </div>
+
+    <div class="filterGroup">
+      <strong>Categories</strong>
+      <div id="filterCats"></div>
+    </div>
+
+    <div class="filterGroup">
+      <strong>Price</strong>
+
+      <label>
+        <input type="checkbox" value="0-99" onchange="applyFilters()">
+        Under ₹100
+      </label>
+
+      <label>
+        <input type="checkbox" value="100-249" onchange="applyFilters()">
+        ₹100 – ₹249
+      </label>
+
+      <label>
+        <input type="checkbox" value="250-499" onchange="applyFilters()">
+        ₹250 – ₹499
+      </label>
+
+      <label>
+        <input type="checkbox" value="500-999999" onchange="applyFilters()">
+        ₹500+
+      </label>
+    </div>
+
+    <div class="filterGroup">
+      <strong>Offers</strong>
+
+      <label>
+        <input id="offerOnly"
+               type="checkbox"
+               onchange="applyFilters()">
+        Offers only
+      </label>
+    </div>
+
+  </aside>
+
+  <div class="productArea">
+
+    <div class="shopBar">
+
+      <div>
+        <strong id="listingTitle">
+          Trending Now
+        </strong>
+
+        <small id="resultCount"></small>
+      </div>
+
+      <button
+        class="filterMobile"
+        onclick="toggleFilters()">
+        ☰ Filters
+      </button>
+
+      <select id="sortSelect"
+              onchange="render()">
+
+        <option value="default">
+          Sort: Recommended
+        </option>
+
+        <option value="low">
+          Price: Low to High
+        </option>
+
+        <option value="high">
+          Price: High to Low
+        </option>
+
+        <option value="rating">
+          Rating
+        </option>
+
+      </select>
+
+    </div>
+
+    <div
+      class="activeFilters"
+      id="activeFilters">
+    </div>
+
+    <div
+      class="products"
+      id="grid">
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="promo">
+
+  <div>
+    <h3>Special Offers Under ₹99</h3>
+
+    <p>
+      Pretty picks, everyday prices —
+      perfect for gifting too.
+    </p>
+  </div>
+
+  <button
+    class="primaryBtn"
+    onclick="under99()">
+    Shop Offers →
+  </button>
+
+</section>
+
+
+<section>
+
+  <div class="sectionTitle">
+
+    <h2>Best Sellers</h2>
+
+    <a href="#products"
+       onclick="resetAll()">
+      View All →
+    </a>
+
+  </div>
+
+  <div
+    class="products"
+    id="best">
+  </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="footerInner">
+
+    <div>
+      <div class="footerBrand">
+        Kavan Bazaar
+      </div>
+
+      <small>
+        Trendy accessories for every you.
+      </small>
+    </div>
+
+    <div style="text-align:right">
+      <strong style="color:#fff">
+        Fashion · Fancy · Beauty · Kids
+      </strong>
+
+      <br>
+
+      <small>
+        Serving Tamil Nadu with love
+      </small>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- DRAWER -->
+
+<div
+  class="drawer"
+  id="drawer">
+
+  <div class="drawerPanel">
+
+    <div class="modalHead">
+
+      <strong>
+        KAVAN BAZAAR
+      </strong>
+
+      <button
+        class="close"
+        onclick="closeDrawer()">
+        ×
+      </button>
+
+    </div>
+
+    <div id="drawerLinks"></div>
+
+  </div>
+
+</div>
+
+
+<!-- CART -->
+
+<div
+  class="modal"
+  id="cartModal">
+
+  <div class="sheet">
+
+    <div class="modalHead">
+
+      <h2>Your Cart</h2>
+
+      <button
+        class="close"
+        onclick="closeCart()">
+        ×
+      </button>
+
+    </div>
+
+    <div id="cartBody"></div>
+
+    <div id="cartFoot"></div>
+
+  </div>
+
+</div>
+
+
+<!-- WISHLIST -->
+
+<div
+  class="modal"
+  id="wishModal">
+
+  <div class="sheet">
+
+    <div class="modalHead">
+
+      <h2>Wishlist</h2>
+
+      <button
+        class="close"
+        onclick="closeWish()">
+        ×
+      </button>
+
+    </div>
+
+    <div id="wishBody"></div>
+
+  </div>
+
+</div>
+
+
+<div
+  class="toast"
+  id="toast">
+</div>
+
+
+<!-- MOBILE BOTTOM -->
+
+<nav class="mobileBottom">
+
+  <button
+    class="active"
+    onclick="home()">
+
+    <span>⌂</span>
+    Home
+
+  </button>
+
+  <button
+    onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
+
+    <span>▦</span>
+    Products
+
+  </button>
+
+  <button
+    onclick="openWishlist()">
+
+    <span>♡</span>
+    Wishlist
+
+  </button>
+
+  <button
+    onclick="openCart()">
+
+    <span>🛒</span>
+    Cart
+
+  </button>
+
+  <button
+    onclick="openAdmin()">
+
+    <span>♙</span>
+    Account
+
+  </button>
+
+</nav>
+
 
 <script>
-const GOOGLE_SHEET_API="https://script.google.com/macros/s/AKfycbzYxMh00Bv9B-dWBKZr8luEIn2PSIp2pOyWbeWSn733NUykJzNDIIWKJ6iA8ApbHyXfdw/exec";
-let adminProducts=JSON.parse(localStorage.getItem("kavan_admin_products_v1")||"[]");
-function adminAsSeed(){return adminProducts.map(p=>[p.id,p.name,p.cat,Number(p.price),Number(p.mrp)||Number(p.price),4.5,0,"New",p.photo||""])}
-function syncAdminIntoSeed(){const existing=new Set(seed.map(p=>p[0]));adminAsSeed().forEach(p=>{if(!existing.has(p[0]))seed.push(p)})}
-async function loadGoogleProducts(){if(!GOOGLE_SHEET_API||GOOGLE_SHEET_API.includes("PASTE_YOUR_")){syncAdminIntoSeed();return}try{const r=await fetch(GOOGLE_SHEET_API);const data=await r.json();if(Array.isArray(data.products)){adminProducts=data.products.map(p=>({id:String(p.ID||p.id||("sheet-"+Date.now()+Math.random())),name:p["Product Name"]||p.name||"",cat:p.Category||p.cat||"Women",price:Number(p["Selling Price"]||p.price||0),mrp:Number(p.MRP||p.mrp||p["Selling Price"]||p.price||0),photo:p["Photo URL"]||p.photo||""})).filter(p=>p.name&&p.price);localStorage.setItem("kavan_admin_products_v1",JSON.stringify(adminProducts));seed.push(...adminAsSeed().filter(p=>!seed.some(x=>x[0]===p[0])));render()}}catch(e){syncAdminIntoSeed();toast("Google Sheet unavailable — local data shown")}}
-async function saveGoogleProduct(item){if(!GOOGLE_SHEET_API||GOOGLE_SHEET_API.includes("PASTE_YOUR_"))return true;try{const r=await fetch(GOOGLE_SHEET_API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action:"save",product:item})});return r.ok}catch(e){toast("Sheet save failed");return false}}
-async function deleteGoogleProduct(id){if(!GOOGLE_SHEET_API||GOOGLE_SHEET_API.includes("PASTE_YOUR_"))return;try{await fetch(GOOGLE_SHEET_API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action:"delete",id})})}catch(e){}}
-function openAdmin(){document.getElementById("adminPanel").classList.add("open");renderAdminList();document.getElementById("adminPanel").scrollIntoView({behavior:"smooth",block:"center"})}
-function closeAdmin(){document.getElementById("adminPanel").classList.remove("open")}
-function newProduct(){openAdmin();document.getElementById("adminId").value="";document.getElementById("adminName").value="";document.getElementById("adminCategory").value="Women";document.getElementById("adminPrice").value="";document.getElementById("adminMrp").value="";document.getElementById("adminPhoto").value=""}
-function editProducts(){openAdmin();renderAdminList()}
-async function saveProduct(){let id=document.getElementById("adminId").value||("admin-"+Date.now()),name=document.getElementById("adminName").value.trim(),cat=document.getElementById("adminCategory").value,price=Number(document.getElementById("adminPrice").value),mrp=Number(document.getElementById("adminMrp").value)||price,photo=document.getElementById("adminPhoto").value.trim();if(!name||!price){toast("Enter product name and price");return}let item={id,name,cat,price,mrp,photo};let ok=await saveGoogleProduct(item);if(!ok)return;let i=adminProducts.findIndex(x=>x.id===id);i>=0?adminProducts[i]=item:adminProducts.push(item);localStorage.setItem("kavan_admin_products_v1",JSON.stringify(adminProducts));let si=seed.findIndex(x=>x[0]===id),sp=[id,name,cat,price,mrp,4.5,0,"New",photo];si>=0?seed[si]=sp:seed.push(sp);renderAdminList();newProduct();render();toast("Product saved ♡")}
-function editAdminProduct(id){let p=adminProducts.find(x=>x.id===id);if(!p)return;openAdmin();document.getElementById("adminId").value=p.id;document.getElementById("adminName").value=p.name;document.getElementById("adminCategory").value=p.cat;document.getElementById("adminPrice").value=p.price;document.getElementById("adminMrp").value=p.mrp;document.getElementById("adminPhoto").value=p.photo||""}
-async function deleteAdminProduct(id){await deleteGoogleProduct(id);adminProducts=adminProducts.filter(x=>x.id!==id);localStorage.setItem("kavan_admin_products_v1",JSON.stringify(adminProducts));let i=seed.findIndex(x=>x[0]===id);if(i>=0)seed.splice(i,1);renderAdminList();render();toast("Product removed")}
-function renderAdminList(){let el=document.getElementById("adminList");if(!el)return;el.innerHTML=adminProducts.length?adminProducts.map(p=>`<div class="adminItem"><span><b>${p.name}</b> · ${p.cat} · ₹${p.price}</span><span><button onclick="editAdminProduct('${p.id}')">Edit</button> <button onclick="deleteAdminProduct('${p.id}')">Delete</button></span></div>`).join(""):'<small style="color:#777">No manually added products yet.</small>'}
-window.addEventListener("load",()=>{syncAdminIntoSeed();loadGoogleProducts()});
+
+/* =========================================
+   KAVAN BAZAAR
+   PRODUCT DATA
+========================================= */
+
+const cats = [
+  "Women",
+  "Men",
+  "Kids"
+];
+
+
+/*
+  100 PRODUCT BASE
+
+  ID
+  Name
+  Category
+  Price
+  MRP
+  Rating
+  Reviews
+  Badge
+  Type
+*/
+
+const seed = [
+
+["1","Golden Floral Hair Clips Pack of 2","Women",100,499,4.5,275,"Bestseller","hair"],
+
+["2","Glitter Design Banana Hair Clips Pack of 12","Women",660,660,4.4,0,"Trending","hair"],
+
+["3","Nagas Antique Jhumka Earrings","Women",800,800,4.5,0,"Premium","ear"],
+
+["4","Kids Hair Accessories Set of 14","Kids",119,399,4.2,249,"Popular","kids"],
+
+["5","Plain Alligator Metal Hair Clips Pack of 50","Women",131,131,4.2,16,"Offer","hair"],
+
+["6","Golden Pearl Floral Hair Comb Clips Pack of 3","Women",299,299,4.3,0,"New","hair"],
+
+["7","Gold Plated Embellished Hair Clip","Women",320,320,4.3,0,"Premium","hair"],
+
+["8","Crystal Stone Hair Clip","Women",149,299,4.4,42,"Trending","hair"],
+
+["9","Korean Style Hair Clip Set","Women",99,199,4.5,85,"Popular","hair"],
+
+["10","Pearl Floral Hair Pin Set","Women",129,249,4.3,37,"New","hair"],
+
+["11","Fancy Stone Jhumka Earrings","Women",199,399,4.5,74,"Bestseller","ear"],
+
+["12","Gold Tone Temple Jhumka","Women",249,599,4.6,51,"Premium","ear"],
+
+["13","Korean Pearl Earrings","Women",179,349,4.4,63,"Trending","ear"],
+
+["14","Fashion Stud Earrings Set","Women",159,399,4.3,91,"Offer","ear"],
+
+["15","Leaf Design Stud Earrings","Women",176,599,4.4,32,"New","ear"],
+
+["16","Alloy Jhumki Earrings Set","Women",157,1399,4.3,28,"Popular","ear"],
+
+["17","Fashion Jewellery Earring Combo","Women",165,399,4.4,54,"Offer","ear"],
+
+["18","Gold Plated Pearl Earrings","Women",322,1699,4.5,46,"Premium","ear"],
+
+["19","Anti Tarnish Earrings Set of 6","Women",192,999,4.4,83,"Bestseller","ear"],
+
+["20","Crystal Drop Earrings","Women",189,499,4.3,40,"New","ear"],
+
+["21","Gold Plated Bracelet","Women",115,299,4.4,45,"Popular","brace"],
+
+["22","Brass Fashion Bracelet","Women",85,199,4.2,61,"Offer","brace"],
+
+["23","Gold Plated Alloy Bracelet","Women",195,499,4.4,72,"Trending","brace"],
+
+["24","Crystal Zircon Bracelet","Women",289,699,4.5,54,"Premium","brace"],
+
+["25","Beaded Crystal Bracelet","Women",386,799,4.6,31,"New","brace"],
+
+["26","Stainless Steel Gold Bracelet","Women",198,499,4.3,29,"Popular","brace"],
+
+["27","Gold Plated Fashion Bracelet","Women",173,399,4.2,67,"Offer","brace"],
+
+["28","Rudraksha Gold Plated Bracelet","Women",473,899,4.5,22,"Premium","brace"],
+
+["29","Stainless Steel Bracelet","Women",154,399,4.3,35,"New","brace"],
+
+["30","Rhodium Fashion Bracelet","Women",186,449,4.4,42,"Trending","brace"],
+
+["31","Women's Fashion Necklace","Women",299,599,4.4,56,"Popular","neck"],
+
+["32","Gold Tone Pendant Necklace","Women",349,799,4.5,34,"Premium","neck"],
+
+["33","Pearl Pendant Necklace","Women",399,899,4.6,28,"New","neck"],
+
+["34","Fashion Chain Necklace","Women",249,499,4.3,49,"Offer","neck"],
+
+["35","Traditional Temple Necklace","Women",499,999,4.5,19,"Premium","neck"],
+
+["36","Minimal Daily Wear Necklace","Women",199,399,4.2,76,"Popular","neck"],
+
+["37","Gold Plated Chain","Women",279,599,4.4,41,"Trending","neck"],
+
+["38","Stone Pendant Chain","Women",329,699,4.3,33,"New","neck"],
+
+["39","Fancy Party Necklace","Women",449,899,4.5,24,"Premium","neck"],
+
+["40","Pearl Layer Necklace","Women",389,799,4.4,39,"Bestseller","neck"],
+
+
+/* MEN — FANCY / ACCESSORIES ONLY */
+
+["41","Men's Leather Wallet","Men",299,599,4.4,85,"Popular","wallet"],
+
+["42","Men's Card Holder Wallet","Men",199,399,4.3,52,"New","wallet"],
+
+["43","Men's Metal Keychain","Men",99,199,4.4,71,"Offer","key"],
+
+["44","Men's Premium Keychain","Men",149,299,4.5,48,"Trending","key"],
+
+["45","Men's Classic Sunglasses","Men",299,699,4.3,63,"Popular","glass"],
+
+["46","Men's Fashion Sunglasses","Men",349,799,4.4,57,"New","glass"],
+
+["47","Men's Classic Belt","Men",299,599,4.5,91,"Bestseller","belt"],
+
+["48","Men's Casual Belt","Men",249,499,4.3,45,"Offer","belt"],
+
+["49","Men's Stainless Steel Bracelet","Men",199,399,4.4,38,"Trending","brace"],
+
+["50","Men's Fashion Bracelet","Men",179,349,4.2,62,"Popular","brace"],
+
+["51","Men's Pendant Chain","Men",299,599,4.4,27,"New","neck"],
+
+["52","Men's Minimal Chain","Men",249,499,4.3,36,"Popular","neck"],
+
+["53","Men's Fashion Ring","Men",149,299,4.2,58,"Offer","ring"],
+
+["54","Men's Stainless Steel Ring","Men",199,399,4.4,42,"Trending","ring"],
+
+["55","Men's Travel Wallet","Men",349,699,4.5,31,"Premium","wallet"],
+
+["56","Men's Coin Pouch","Men",159,299,4.2,23,"New","wallet"],
+
+["57","Men's Key Ring","Men",89,159,4.3,75,"Offer","key"],
+
+["58","Men's Aviator Sunglasses","Men",399,799,4.5,47,"Bestseller","glass"],
+
+["59","Men's Fashion Wallet","Men",329,699,4.4,52,"Popular","wallet"],
+
+["60","Men's Accessory Gift Set","Men",499,999,4.6,18,"Premium","combo"],
+
+
+/* KIDS */
+
+["61","Kids Cute Hair Clip Set","Kids",79,149,4.5,65,"Popular","kids"],
+
+["62","Kids Butterfly Hair Clips","Kids",89,159,4.4,51,"Trending","kids"],
+
+["63","Kids Colour Hair Clips","Kids",69,129,4.3,44,"Offer","kids"],
+
+["64","Kids Pearl Hair Clips","Kids",99,199,4.5,38,"New","kids"],
+
+["65","Kids Fancy Hair Accessories","Kids",119,249,4.4,42,"Popular","kids"],
+
+["66","Kids Bow Hair Clip Set","Kids",89,179,4.5,56,"Bestseller","kids"],
+
+["67","Kids Floral Hair Clips","Kids",99,199,4.3,33,"New","kids"],
+
+["68","Kids Crystal Hair Clips","Kids",129,249,4.5,29,"Trending","kids"],
+
+["69","Kids Cartoon Hair Clips","Kids",79,149,4.4,47,"Offer","kids"],
+
+["70","Kids Mini Hair Accessory Set","Kids",149,299,4.6,25,"Premium","kids"],
+
+["71","Kids Fancy Bracelet","Kids",79,149,4.3,34,"Popular","brace"],
+
+["72","Kids Beaded Bracelet","Kids",69,129,4.4,41,"New","brace"],
+
+["73","Kids Charm Bracelet","Kids",99,199,4.5,28,"Trending","brace"],
+
+["74","Kids Pearl Bracelet","Kids",119,229,4.4,21,"Premium","brace"],
+
+["75","Kids Cute Necklace","Kids",129,249,4.5,31,"Popular","neck"],
+
+["76","Kids Butterfly Necklace","Kids",99,199,4.3,38,"New","neck"],
+
+["77","Kids Fancy Jewellery Set","Kids",179,349,4.5,44,"Bestseller","combo"],
+
+["78","Kids Birthday Jewellery Combo","Kids",199,399,4.6,19,"Premium","combo"],
+
+["79","Kids Party Accessory Set","Kids",149,299,4.4,26,"Trending","combo"],
+
+["80","Kids Gift Accessories Set","Kids",229,449,4.5,17,"Premium","combo"],
+
+
+/* WOMEN BEAUTY */
+
+["81","Pink Lipstick","Women",149,249,4.4,67,"Popular","beauty"],
+
+["82","Matte Red Lipstick","Women",179,299,4.5,73,"Bestseller","beauty"],
+
+["83","Nude Lipstick","Women",159,279,4.3,42,"New","beauty"],
+
+["84","Glossy Lip Colour","Women",129,229,4.4,51,"Trending","beauty"],
+
+["85","Liquid Lipstick","Women",199,349,4.5,39,"Premium","beauty"],
+
+["86","Nail Polish Set","Women",199,299,4.4,88,"Popular","nail"],
+
+["87","Gloss Nail Polish","Women",79,129,4.3,54,"Offer","nail"],
+
+["88","Matte Nail Polish","Women",89,149,4.4,48,"New","nail"],
+
+["89","Beauty Accessory Combo","Women",249,499,4.5,36,"Combo","beauty"],
+
+["90","Makeup Accessory Set","Women",299,599,4.4,29,"Premium","beauty"],
+
+["91","Fancy Hair Beauty Combo","Women",199,399,4.5,57,"Bestseller","beauty"],
+
+["92","Pearl Beauty Hair Set","Women",179,349,4.3,33,"New","beauty"],
+
+["93","Fashion Hair Accessory Combo","Women",149,299,4.4,46,"Offer","beauty"],
+
+["94","Party Wear Beauty Set","Women",299,499,4.5,24,"Premium","beauty"],
+
+["95","Daily Wear Beauty Combo","Women",129,249,4.2,68,"Popular","beauty"],
+
+["96","Fancy Jewellery Combo","Women",399,799,4.6,31,"Premium","combo"],
+
+["97","Women Gift Accessory Set","Women",299,599,4.5,27,"Bestseller","combo"],
+
+["98","Fashion Accessories Combo","Women",249,499,4.4,43,"Trending","combo"],
+
+["99","Premium Fancy Combo Set","Women",499,999,4.6,18,"Premium","combo"],
+
+["100","KAVAN Special Beauty Combo","Women",349,699,4.5,35,"Bestseller","combo"]
+
+];
+
+
+/* =========================================
+   REAL PRODUCT PHOTOS
+========================================= */
+
+const verifiedProducts = {
+
+  "1":[
+    "Golden Floral Hair Clips Pack of 2",
+    100,
+    499,
+    4.5,
+    275,
+    "https://rukminim3.flixcart.com/image/824/972/xif0q/shopsy-hair-accessory/i/j/c/korean-style-women-s-and-girls-golden-hair-clips-pack-of-2-2-original-imagx8pnzvezerae.jpeg?crop=false&q=60"
+  ],
+
+  "2":[
+    "Impression Glitter Design Banana Hair Clips Pack of 12",
+    660,
+    660,
+    4.4,
+    0,
+    "https://impression4u.com/cdn/shop/files/WhatsAppImage2025-04-18at5.34.17PM.jpg?v=1744981203"
+  ],
+
+  "3":[
+    "Nagas Antique Jhumka Earrings",
+    800,
+    800,
+    4.5,
+    0,
+    "https://aspfashionjewellery.com/cdn/shop/files/Picsart_23-06-30_15-25-59-300.jpg?v=1688211968"
+  ],
+
+  "4":[
+    "Nagi jewels Set Of 14 Kid Hair Accessories",
+    119,
+    399,
+    4.2,
+    249,
+    "https://images.meesho.com/images/products/258288635/onf0g_512.webp?width=512"
+  ],
+
+  "5":[
+    "J0YJ0 Plain Alligator Metal Hair Clips Pack of 50",
+    131,
+    131,
+    4.2,
+    16,
+    "https://images.meesho.com/images/products/456057457/zjhau_512.webp"
+  ],
+
+  "6":[
+    "JMD Golden Pearl Floral Hair Comb Clips Pack of 3",
+    299,
+    299,
+    4.3,
+    0,
+    "https://images.meesho.com/images/products/714028836/liiay_512.webp?width=512"
+  ],
+
+  "7":[
+    "Vogue Panash Gold-Plated Embellished Hair Clip",
+    320,
+    320,
+    4.3,
+    0,
+    "https://assets.ajio.com/medias/sys_master/root/20240808/vCHD/66b4dac81d763220fa6a9a5c/-1117Wx1400H-700272895-gold-MODEL.jpg"
+  ]
+
+};
+
+
+/* Apply verified information */
+
+Object.entries(verifiedProducts).forEach(
+  ([id,v]) => {
+
+    const p =
+      seed.find(x => x[0] === id);
+
+    if(!p) return;
+
+    p[1] = v[0];
+    p[3] = v[1];
+    p[4] = v[2];
+    p[5] = v[3];
+    p[6] = v[4];
+    p[9] = v[5];
+
+  }
+);
+
+
+/* =========================================
+   STATE
+========================================= */
+
+let cart =
+  JSON.parse(
+    localStorage.getItem("kavan_cart") || "[]"
+  );
+
+let wish =
+  JSON.parse(
+    localStorage.getItem("kavan_wish") || "[]"
+  );
+
+let active = "All";
+let query = "";
+let only99 = false;
+
+let filterCats = [];
+let priceFilters = [];
+let ratingFilters = [];
+let offerOnly = false;
+let badgeFilter = null;
+
+const GOOGLE_SHEET_API = "https://script.google.com/macros/s/AKfycbzYxMh00Bv9B-dWBKZr8luEIn2PSIp2pOyWbeWSn733NUykJzNDIIWKJ6iA8ApbHyXfdw/exec";
+
+let adminProducts = JSON.parse(
+  localStorage.getItem("kavan_admin_products_v1") || "[]"
+);
+
+/* Base seed products are never replaced or deleted.
+   Admin/Google Sheet products are kept separately and appended. */
+function allProducts(){
+  const custom = adminProducts.map(p => [
+    p.id,
+    p.name,
+    p.category,
+    Number(p.price),
+    Number(p.mrp) || Number(p.price),
+    4.5,
+    0,
+    p.badge || "New",
+    p.type || "beauty",
+    p.photo || ""
+  ]);
+
+  return seed.concat(custom);
+}
+
+async function saveGoogleProduct(item){
+  if(!GOOGLE_SHEET_API) return true;
+
+  try{
+    const response = await fetch(
+      GOOGLE_SHEET_API,
+      {
+        method:"POST",
+        headers:{
+          "Content-Type":"text/plain;charset=utf-8"
+        },
+        body:JSON.stringify({
+          action:"save",
+          product:{
+            id:String(item.id),
+            name:item.name,
+            cat:item.category,
+            price:Number(item.price),
+            mrp:Number(item.mrp)||Number(item.price),
+            photo:item.photo||""
+          }
+        })
+      }
+    );
+
+    if(!response.ok){
+      toast("Google Sheet save failed");
+      return false;
+    }
+
+    return true;
+
+  }catch(error){
+    toast("Google Sheet unavailable");
+    return false;
+  }
+}
+
+async function loadGoogleProducts(){
+
+  if(!GOOGLE_SHEET_API) return;
+
+  try{
+
+    const response =
+      await fetch(GOOGLE_SHEET_API);
+
+    const data =
+      await response.json();
+
+    const remote =
+      Array.isArray(data.products)
+        ? data.products
+        : [];
+
+    const localMap =
+      new Map(
+        adminProducts.map(
+          p => [String(p.id),p]
+        )
+      );
+
+    /*
+      Only Sheet rows belonging to admin products are merged.
+      Existing seed IDs are deliberately ignored so old products
+      can never be replaced by a Sheet row.
+    */
+    remote.forEach(row => {
+
+      const id =
+        String(
+          row.ID ||
+          row.id ||
+          ""
+        );
+
+      if(!id || !id.startsWith("admin-"))
+        return;
+
+      const item = {
+        id,
+        name:
+          row["Product Name"] ||
+          row.name ||
+          "",
+        category:
+          row.Category ||
+          row.cat ||
+          "Women",
+        price:
+          Number(
+            row["Selling Price"] ||
+            row.price ||
+            0
+          ),
+        mrp:
+          Number(
+            row.MRP ||
+            row.mrp ||
+            row["Selling Price"] ||
+            row.price ||
+            0
+          ),
+        photo:
+          row["Photo URL"] ||
+          row.photo ||
+          "",
+        badge:"New",
+        type:"beauty"
+      };
+
+      if(item.name && item.price)
+        localMap.set(id,item);
+
+    });
+
+    adminProducts =
+      [...localMap.values()];
+
+    localStorage.setItem(
+      "kavan_admin_products_v1",
+      JSON.stringify(adminProducts)
+    );
+
+    render();
+
+  }catch(error){
+    console.log("Google Sheet load failed",error);
+  }
+}
+
+
+const badgeTabs = [
+  ["All",null],
+  ["Popular","Popular"],
+  ["New Launches","New"],
+  ["Best Sellers","Bestseller"],
+  ["Premium","Premium"],
+  ["Offers","Offer"]
+];
+
+function setBadge(b){
+
+  badgeFilter = b;
+
+  document
+    .querySelector("#products")
+    .scrollIntoView({behavior:"smooth"});
+
+  render();
+
+}
+
+function renderSubnav(){
+
+  document.getElementById("subnav").innerHTML =
+    badgeTabs.map(([label,val])=>`
+      <button
+        class="${badgeFilter===val ? "active" : ""}"
+        onclick="setBadge(${val ? `'${val}'` : "null"})">
+        ${label}
+      </button>
+    `).join("");
+
+}
+
+
+/* =========================================
+   CATEGORY ICON
+========================================= */
+
+function catIcon(c,i){
+
+  const icon = {
+
+    Women:"💄",
+    Men:"⌚",
+    Kids:"🎀"
+
+  }[c] || "✨";
+
+  return `
+    <div style="
+      font-size:42px;
+      height:95px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(
+        145deg,
+        #fff0f6,
+        #ffe3ed
+      );
+      border-radius:11px;
+    ">
+      ${icon}
+    </div>
+  `;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+function nav(){
+
+  document.getElementById("nav").innerHTML = `
+
+    <a
+      href="#"
+      class="${active==="All" ? "active" : ""}"
+      onclick="resetAll();return false">
+      Home
+    </a>
+
+    <a
+      href="#products"
+      class="${active==="Women" ? "active" : ""}"
+      onclick="setCat('Women');return false">
+      Women
+    </a>
+
+    <a
+      href="#products"
+      class="${active==="Men" ? "active" : ""}"
+      onclick="setCat('Men');return false">
+      Men
+    </a>
+
+    <a
+      href="#products"
+      class="${active==="Kids" ? "active" : ""}"
+      onclick="setCat('Kids');return false">
+      Kids
+    </a>
+
+  `;
+
+  document.getElementById("drawerLinks").innerHTML = `
+
+    <a
+      href="#"
+      onclick="resetAll();closeDrawer();return false">
+      Home
+    </a>
+
+    <a
+      href="#products"
+      onclick="setCat('Women');closeDrawer()">
+      Women
+    </a>
+
+    <a
+      href="#products"
+      onclick="setCat('Men');closeDrawer()">
+      Men
+    </a>
+
+    <a
+      href="#products"
+      onclick="setCat('Kids');closeDrawer()">
+      Kids
+    </a>
+
+  `;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+function productImage(p,i){
+
+  if(p[9]){
+
+    return `
+      <img
+        src="${p[9]}"
+        alt="${p[1]}"
+        loading="lazy"
+        onerror="this.style.display='none'">
+    `;
+
+  }
+
+  const fallback = {
+
+    Women:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",
+
+    Men:"https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=700&q=80",
+
+    Kids:"https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80"
+
+  };
+
+  return `
+    <img
+      src="${fallback[p[2]]}"
+      alt="${p[1]}"
+      loading="lazy">
+  `;
+}
+
+
+/* =========================================
+   CATEGORY CARDS
+========================================= */
+
+function renderCats(){
+
+  document.getElementById("categories").innerHTML =
+    cats.map((c,i)=>`
+
+      <button
+        class="category"
+        onclick="setCat('${c}')">
+
+        <div class="categoryImage">
+          ${catIcon(c,i)}
+        </div>
+
+        <b>${c}</b>
+
+      </button>
+
+    `).join("");
+
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+function card(p,i){
+
+  const id = p[0];
+  const name = p[1];
+  const category = p[2];
+  const price = p[3];
+  const mrp = p[4];
+  const rating = p[5];
+  const reviews = p[6];
+  const badge = p[7];
+
+  const off =
+    mrp > price
+      ? Math.round(
+          (1 - price/mrp) * 100
+        )
+      : 0;
+
+  const activeWish =
+    wish.includes(id);
+
+  return `
+
+    <article class="product">
+
+      <div class="productImage">
+
+        ${
+          badge === "Offer"
+            ? `<span class="offer">OFFER</span>`
+            : ""
+        }
+
+        <button
+          class="heart ${activeWish ? "active" : ""}"
+          onclick="toggleWish('${id}')">
+
+          ${activeWish ? "♥" : "♡"}
+
+        </button>
+
+        ${productImage(p,i)}
+
+      </div>
+
+      <div class="productBody">
+
+        <div class="productCategory">
+          ${category}
+        </div>
+
+        <div class="productName">
+          ${name}
+        </div>
+
+        <div>
+
+          <span class="price">
+            ₹${price}
+          </span>
+
+          ${
+            mrp > price
+              ? `<span class="mrp">₹${mrp}</span>`
+              : ""
+          }
+
+        </div>
+
+        ${
+          off
+            ? `<span class="discount">
+                ${off}% OFF
+              </span>`
+            : ""
+        }
+
+        <button
+          class="addBtn"
+          onclick="addCart('${id}')">
+
+          🛒 Add to Cart
+
+        </button>
+
+      </div>
+
+    </article>
+
+  `;
+}
+
+
+/* =========================================
+   FILTER CATEGORY
+========================================= */
+
+function renderFilterCats(){
+
+  document.getElementById("filterCats").innerHTML =
+    cats.map(c=>`
+
+      <button
+        class="filterCat
+        ${filterCats.includes(c) ? "active" : ""}"
+        onclick="toggleCatFilter('${c}')">
+
+        <span>
+          ${c}
+        </span>
+
+        <span>
+          ${allProducts().filter(
+            p => p[2] === c
+          ).length}
+        </span>
+
+      </button>
+
+    `).join("");
+
+}
+
+
+function toggleCatFilter(c){
+
+  const index =
+    filterCats.indexOf(c);
+
+  if(index >= 0){
+
+    filterCats.splice(index,1);
+
+  }else{
+
+    filterCats.push(c);
+
+  }
+
+  applyFilters();
+
+}
+
+
+/* =========================================
+   INPUT FILTERS
+========================================= */
+
+function selectedInputs(){
+
+  priceFilters =
+    [
+      ...document.querySelectorAll(
+        '.filterGroup input[type="checkbox"]'
+      )
+    ]
+    .filter(
+      x =>
+        x.checked &&
+        x.value.includes("-")
+    )
+    .map(x=>x.value);
+
+
+  ratingFilters =
+    [
+      ...document.querySelectorAll(
+        '.filterGroup input[type="checkbox"]'
+      )
+    ]
+    .filter(
+      x =>
+        x.checked &&
+        !x.value.includes("-")
+    )
+    .map(x=>Number(x.value));
+
+
+  offerOnly =
+    document.getElementById(
+      "offerOnly"
+    ).checked;
+
+}
+
+
+/* =========================================
+   FILTER PRODUCTS
+========================================= */
+
+function filtered(){
+
+  return allProducts().filter(p => {
+
+    const categoryMatch =
+      filterCats.length
+        ? filterCats.includes(p[2])
+        : (
+            active === "All" ||
+            p[2] === active
+          );
+
+
+    const searchMatch =
+      !query ||
+      p[1]
+        .toLowerCase()
+        .includes(query.toLowerCase()) ||
+      p[2]
+        .toLowerCase()
+        .includes(query.toLowerCase());
+
+
+    const priceMatch =
+      !only99 ||
+      p[3] < 100;
+
+
+    const selectedPriceMatch =
+      !priceFilters.length ||
+      priceFilters.some(v=>{
+
+        const [a,b] =
+          v.split("-").map(Number);
+
+        return (
+          p[3] >= a &&
+          p[3] <= b
+        );
+
+      });
+
+
+    const ratingMatch =
+      !ratingFilters.length ||
+      ratingFilters.some(
+        v => p[5] >= v
+      );
+
+
+    const offerMatch =
+      !offerOnly ||
+      p[7] === "Offer";
+
+
+    const badgeMatch =
+      !badgeFilter ||
+      p[7] === badgeFilter;
+
+
+    return (
+      categoryMatch &&
+      searchMatch &&
+      priceMatch &&
+      selectedPriceMatch &&
+      ratingMatch &&
+      offerMatch &&
+      badgeMatch
+    );
+
+  });
+
+}
+
+
+/* =========================================
+   SORT
+========================================= */
+
+function sortProducts(list){
+
+  const sort =
+    document.getElementById(
+      "sortSelect"
+    )?.value || "default";
+
+
+  if(sort === "low"){
+
+    return list.sort(
+      (a,b)=>a[3]-b[3]
+    );
+
+  }
+
+
+  if(sort === "high"){
+
+    return list.sort(
+      (a,b)=>b[3]-a[3]
+    );
+
+  }
+
+
+  if(sort === "rating"){
+
+    return list.sort(
+      (a,b)=>b[5]-a[5]
+    );
+
+  }
+
+
+  return list;
+
+}
+
+
+/* =========================================
+   MAIN RENDER
+========================================= */
+
+function render(){
+
+  let list =
+    sortProducts(
+      filtered()
+    );
+
+
+  const count =
+    filterCats.length +
+    priceFilters.length +
+    ratingFilters.length +
+    (offerOnly ? 1 : 0) +
+    (only99 ? 1 : 0);
+
+
+  if(query){
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      `Search: ${query}`;
+
+  }else if(
+    filterCats.length
+  ){
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      filterCats.join(", ");
+
+  }else if(active !== "All"){
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      active;
+
+  }else if(only99){
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      "Offers Under ₹99";
+
+  }else{
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      "Trending Now";
+
+  }
+
+
+  document.getElementById(
+    "resultCount"
+  ).textContent =
+    `${list.length} products`;
+
+
+  document.getElementById(
+    "grid"
+  ).innerHTML =
+
+    list.length
+
+      ? list
+          .slice(0,120)
+          .map(card)
+          .join("")
+
+      : `
+        <div
+          style="
+            grid-column:1/-1;
+            text-align:center;
+            padding:50px;
+            color:#777;
+          ">
+
+          No products found.
+
+        </div>
+      `;
+
+
+  document.getElementById(
+    "best"
+  ).innerHTML =
+
+    allProducts()
+      .filter(
+        p =>
+          [
+            "Bestseller",
+            "Popular",
+            "Trending"
+          ].includes(p[7])
+      )
+      .slice(0,8)
+      .map(card)
+      .join("");
+
+
+  document.getElementById(
+    "filterCount"
+  ) &&
+  (
+    document.getElementById(
+      "filterCount"
+    ).textContent = count
+  );
+
+
+  document.getElementById(
+    "activeFilters"
+  ).innerHTML = [
+
+    ...filterCats,
+
+    ...priceFilters.map(
+      x => x.replace("-", " – ")
+    ),
+
+    ...ratingFilters.map(
+      x => `★ ${x}+`
+    ),
+
+    ...(offerOnly
+      ? ["Offers only"]
+      : [])
+
+  ]
+  .map(
+    x => `
+      <span class="filterChip">
+        ${x}
+      </span>
+    `
+  )
+  .join("");
+
+
+  renderFilterCats();
+
+  update();
+
+  nav();
+
+  renderCats();
+
+  renderSubnav();
+
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+function setCat(c){
+
+  active = c;
+
+  filterCats = [];
+
+  only99 = false;
+
+  badgeFilter = null;
+
+  document
+    .querySelectorAll(
+      '.filters input'
+    )
+    .forEach(
+      x => x.checked = false
+    );
+
+
+  document
+    .querySelector(
+      "#products"
+    )
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+
+  render();
+
+}
+
+
+/* =========================================
+   UNDER ₹99
+========================================= */
+
+function under99(){
+
+  active = "All";
+
+  only99 = true;
+
+  badgeFilter = null;
+
+  document
+    .querySelector(
+      "#products"
+    )
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+  render();
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+function resetAll(){
+
+  active = "All";
+
+  filterCats = [];
+
+  priceFilters = [];
+
+  ratingFilters = [];
+
+  offerOnly = false;
+
+  only99 = false;
+
+  query = "";
+
+  badgeFilter = null;
+
+
+  document
+    .querySelectorAll(
+      '.filters input'
+    )
+    .forEach(
+      x => x.checked = false
+    );
+
+
+  const search =
+    document.getElementById(
+      "desktopSearch"
+    );
+
+  const mobileSearch =
+    document.getElementById(
+      "mobileSearchInput"
+    );
+
+
+  if(search)
+    search.value = "";
+
+  if(mobileSearch)
+    mobileSearch.value = "";
+
+
+  render();
+
+}
+
+
+/* =========================================
+   CART
+========================================= */
+
+function addCart(id){
+
+  const item =
+    cart.find(
+      x => x.id === id
+    );
+
+
+  if(item){
+
+    item.q++;
+
+  }else{
+
+    cart.push({
+      id:id,
+      q:1
+    });
+
+  }
+
+
+  update();
+
+  toast(
+    "Added to cart ♡"
+  );
+
+}
+
+
+function update(){
+
+  const cartCount =
+    cart.reduce(
+      (a,x)=>a+x.q,
+      0
+    );
+
+
+  [
+    "cartCount",
+    "mobileCartCount"
+  ]
+  .forEach(id=>{
+
+    const el =
+      document.getElementById(id);
+
+    if(el)
+      el.textContent =
+        cartCount;
+
+  });
+
+
+  [
+    "wishCount",
+    "mobileWishCount"
+  ]
+  .forEach(id=>{
+
+    const el =
+      document.getElementById(id);
+
+    if(el)
+      el.textContent =
+        wish.length;
+
+  });
+
+
+  localStorage.setItem(
+    "kavan_cart",
+    JSON.stringify(cart)
+  );
+
+
+  localStorage.setItem(
+    "kavan_wish",
+    JSON.stringify(wish)
+  );
+
+}
+
+
+/* =========================================
+   WISHLIST
+========================================= */
+
+function toggleWish(id){
+
+  const index =
+    wish.indexOf(id);
+
+
+  if(index >= 0){
+
+    wish.splice(index,1);
+
+  }else{
+
+    wish.push(id);
+
+  }
+
+
+  update();
+
+  render();
+
+}
+
+
+function openWishlist(){
+
+  document
+    .getElementById(
+      "wishModal"
+    )
+    .classList.add("open");
+
+
+  const body =
+    document.getElementById(
+      "wishBody"
+    );
+
+
+  if(!wish.length){
+
+    body.innerHTML = `
+      <div
+        style="
+          text-align:center;
+          padding:40px;
+          color:#777;
+        ">
+
+        Your wishlist is empty ♡
+
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  body.innerHTML =
+    wish.map(id=>{
+
+      const p =
+        allProducts().find(
+          x => x[0] === id
+        );
+
+
+      if(!p)
+        return "";
+
+
+      return `
+
+        <div class="cartRow">
+
+          <div class="cartImg">
+
+            ${productImage(p,1)}
+
+          </div>
+
+          <div>
+
+            <b>
+              ${p[1]}
+            </b>
+
+            <div>
+              ₹${p[3]}
+            </div>
+
+          </div>
+
+          <button
+            class="addBtn"
+            onclick="addCart('${id}')">
+
+            Add
+
+          </button>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+}
+
+
+function closeWish(){
+
+  document
+    .getElementById(
+      "wishModal"
+    )
+    .classList.remove("open");
+
+}
+
+
+/* =========================================
+   CART MODAL
+========================================= */
+
+function openCart(){
+
+  document
+    .getElementById(
+      "cartModal"
+    )
+    .classList.add("open");
+
+
+  cartRender();
+
+}
+
+
+function closeCart(){
+
+  document
+    .getElementById(
+      "cartModal"
+    )
+    .classList.remove("open");
+
+}
+
+
+function cartRender(){
+
+  const body =
+    document.getElementById(
+      "cartBody"
+    );
+
+
+  if(!cart.length){
+
+    body.innerHTML = `
+      <div
+        style="
+          text-align:center;
+          padding:40px;
+          color:#777;
+        ">
+
+        Your cart is empty.
+
+      </div>
+    `;
+
+    document.getElementById(
+      "cartFoot"
+    ).innerHTML = "";
+
+    return;
+
+  }
+
+
+  let total = 0;
+
+
+  body.innerHTML =
+    cart.map(item=>{
+
+      const p =
+        allProducts().find(
+          x => x[0] === item.id
+        );
+
+
+      if(!p)
+        return "";
+
+
+      total +=
+        p[3] * item.q;
+
+
+      return `
+
+        <div class="cartRow">
+
+          <div class="cartImg">
+
+            ${productImage(p,1)}
+
+          </div>
+
+          <div>
+
+            <b>
+              ${p[1]}
+            </b>
+
+            <div>
+              ₹${p[3]}
+            </div>
+
+            <div class="qty">
+
+              <button
+                onclick="
+                  qty('${p[0]}',-1)
+                ">
+                −
+              </button>
+
+              <span>
+                ${item.q}
+              </span>
+
+              <button
+                onclick="
+                  qty('${p[0]}',1)
+                ">
+                +
+              </button>
+
+            </div>
+
+          </div>
+
+          <button
+            class="remove"
+            onclick="
+              removeCart('${p[0]}')
+            ">
+
+            Remove
+
+          </button>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+
+  document.getElementById(
+    "cartFoot"
+  ).innerHTML = `
+
+    <h3>
+      Total: ₹${total}
+    </h3>
+
+    <button
+      class="primaryBtn"
+      style="width:100%"
+      onclick="checkout()">
+
+      Checkout
+
+    </button>
+
+  `;
+
+}
+
+
+function qty(id,d){
+
+  const item =
+    cart.find(
+      x => x.id === id
+    );
+
+
+  if(!item)
+    return;
+
+
+  item.q += d;
+
+
+  if(item.q <= 0){
+
+    cart =
+      cart.filter(
+        x => x.id !== id
+      );
+
+  }
+
+
+  update();
+
+  cartRender();
+
+}
+
+
+function removeCart(id){
+
+  cart =
+    cart.filter(
+      x => x.id !== id
+    );
+
+
+  update();
+
+  cartRender();
+
+}
+
+
+/* =========================================
+   CHECKOUT
+========================================= */
+
+function checkout(){
+
+  toast(
+    "Checkout system will be connected later"
+  );
+
+}
+
+
+/* =========================================
+   MOBILE DRAWER
+========================================= */
+
+function openDrawer(){
+
+  document
+    .getElementById(
+      "drawer"
+    )
+    .classList.add("open");
+
+}
+
+
+function closeDrawer(){
+
+  document
+    .getElementById(
+      "drawer"
+    )
+    .classList.remove("open");
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+function bindSearch(id){
+
+  const el =
+    document.getElementById(id);
+
+
+  if(!el)
+    return;
+
+
+  el.addEventListener(
+    "input",
+    e => {
+
+      query =
+        e.target.value;
+
+      active = "All";
+
+      only99 = false;
+
+
+      const other =
+        id === "desktopSearch"
+          ? "mobileSearchInput"
+          : "desktopSearch";
+
+
+      const otherEl =
+        document.getElementById(
+          other
+        );
+
+
+      if(otherEl)
+        otherEl.value =
+          query;
+
+
+      render();
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   ADMIN PRODUCT MANAGEMENT
+========================================= */
+
+function openAdmin(){
+  const panel = document.getElementById("adminPanel");
+  if(!panel) return;
+  panel.classList.add("open");
+  renderAdminList();
+  panel.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+function closeAdmin(){
+  const panel = document.getElementById("adminPanel");
+  if(panel) panel.classList.remove("open");
+}
+
+function resetAdminForm(){
+  document.getElementById("adminId").value = "";
+  document.getElementById("adminName").value = "";
+  document.getElementById("adminCategory").value = "Women";
+  document.getElementById("adminPrice").value = "";
+  document.getElementById("adminMrp").value = "";
+  document.getElementById("adminPhoto").value = "";
+}
+
+function editAdminProduct(id){
+  const p = adminProducts.find(x => x.id === id);
+  if(!p) return;
+
+  openAdmin();
+  document.getElementById("adminId").value = p.id;
+  document.getElementById("adminName").value = p.name;
+  document.getElementById("adminCategory").value = p.category;
+  document.getElementById("adminPrice").value = p.price;
+  document.getElementById("adminMrp").value = p.mrp;
+  document.getElementById("adminPhoto").value = p.photo || "";
+}
+
+async function saveAdminProduct(){
+  const id =
+    document.getElementById("adminId").value ||
+    ("admin-" + Date.now());
+
+  const name =
+    document.getElementById("adminName").value.trim();
+
+  const category =
+    document.getElementById("adminCategory").value;
+
+  const price =
+    Number(
+      document.getElementById("adminPrice").value
+    );
+
+  const mrp =
+    Number(
+      document.getElementById("adminMrp").value
+    ) || price;
+
+  const photo =
+    document.getElementById("adminPhoto").value.trim();
+
+  if(!name || !price){
+    toast("Enter product name and price");
+    return;
+  }
+
+  const item = {
+    id,
+    name,
+    category,
+    price,
+    mrp,
+    photo,
+    badge:"New",
+    type:"beauty"
+  };
+
+  /*
+    Save only the new/admin product.
+    Existing seed products are never changed.
+  */
+  const sheetSaved =
+    await saveGoogleProduct(item);
+
+  if(!sheetSaved)
+    return;
+
+  const index =
+    adminProducts.findIndex(
+      x => x.id === id
+    );
+
+  if(index >= 0){
+    adminProducts[index] = item;
+  }else{
+    adminProducts.push(item);
+  }
+
+  localStorage.setItem(
+    "kavan_admin_products_v1",
+    JSON.stringify(adminProducts)
+  );
+
+  resetAdminForm();
+  renderAdminList();
+  render();
+
+  toast("Product saved to Google Sheet ♡");
+}
+
+function deleteAdminProduct(id){
+  adminProducts =
+    adminProducts.filter(x => x.id !== id);
+
+  localStorage.setItem(
+    "kavan_admin_products_v1",
+    JSON.stringify(adminProducts)
+  );
+
+  renderAdminList();
+  render();
+  toast("Product removed");
+}
+
+function renderAdminList(){
+  const el = document.getElementById("adminList");
+  if(!el) return;
+
+  if(!adminProducts.length){
+    el.innerHTML =
+      '<small style="color:#777">No manually added products yet.</small>';
+    return;
+  }
+
+  el.innerHTML = adminProducts.map(p => `
+    <div class="adminItem">
+      <div>
+        <div class="adminItemName">${p.name}</div>
+        <div class="adminItemMeta">${p.category} · ₹${p.price} · MRP ₹${p.mrp}</div>
+      </div>
+      <div class="adminItemActions">
+        <button onclick="editAdminProduct('${p.id}')">Edit</button>
+        <button onclick="deleteAdminProduct('${p.id}')">Delete</button>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+function account(){
+  openAdmin();
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+function applyFilters(){
+
+  selectedInputs();
+
+  only99 = false;
+
+  render();
+
+  if(
+    window.innerWidth <= 900
+  ){
+
+    document
+      .getElementById(
+        "filters"
+      )
+      .classList.remove(
+        "open"
+      );
+
+  }
+
+}
+
+
+function clearFilters(){
+
+  filterCats = [];
+
+  priceFilters = [];
+
+  ratingFilters = [];
+
+  offerOnly = false;
+
+  only99 = false;
+
+  active = "All";
+
+
+  document
+    .querySelectorAll(
+      ".filters input"
+    )
+    .forEach(
+      x => x.checked = false
+    );
+
+
+  render();
+
+}
+
+
+function toggleFilters(){
+
+  document
+    .getElementById(
+      "filters"
+    )
+    .classList.toggle(
+      "open"
+    );
+
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+function toast(message){
+
+  const el =
+    document.getElementById(
+      "toast"
+    );
+
+
+  el.textContent =
+    message;
+
+  el.classList.add(
+    "show"
+  );
+
+
+  clearTimeout(
+    window.toastTimer
+  );
+
+
+  window.toastTimer =
+    setTimeout(
+      () => {
+
+        el.classList.remove(
+          "show"
+        );
+
+      },
+      1800
+    );
+
+}
+
+
+/* =========================================
+   HOME
+========================================= */
+
+function home(){
+
+  resetAll();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+function scrollProducts(){
+
+  document
+    .querySelector("#products")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================
+   INITIAL LOAD
+========================================= */
+
+bindSearch(
+  "desktopSearch"
+);
+
+bindSearch(
+  "mobileSearchInput"
+);
+
+render();
+
+/* Load only admin products from Google Sheet.
+   Existing seed products remain untouched. */
+loadGoogleProducts();
+
 </script>
+
+</body>
+</html>
