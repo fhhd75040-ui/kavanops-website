@@ -5,43 +5,60 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>KAVAN BAZAAR | Fashion & Fancy Store</title>
 <meta name="description" content="KAVAN BAZAAR - Fashion, Fancy, Beauty and Kids Accessories">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --pink:#e9166e;
-  --pink2:#ff4b91;
-  --dark:#a3084b;
-  --light:#fff2f7;
-  --text:#241d22;
-  --muted:#766c72;
-  --line:#eadde4;
-  --green:#159957;
-  --shadow:0 5px 20px rgba(174,25,91,.08);
+  --wine:#7a0f3d;
+  --wine-dark:#570a2b;
+  --rose:#c81457;
+  --rose2:#e34a80;
+  --gold:#b8862c;
+  --gold-light:#e9cd93;
+  --cream:#fffaf5;
+  --blush:#fbe7ee;
+  --text:#2a1420;
+  --muted:#8a6b76;
+  --line:#f0dce4;
+  --green:#12795a;
+  --shadow:0 10px 28px rgba(122,15,61,.09);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Manrope',Arial,Helvetica,sans-serif;
+
+  /* legacy aliases kept so existing rules below keep working */
+  --pink:var(--rose);
+  --pink2:var(--rose2);
+  --dark:var(--wine);
+  --light:var(--blush);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:var(--sans);
   color:var(--text);
-  background:#fff;
+  background:var(--cream);
 }
 button,input,select{font:inherit}
 button{cursor:pointer}
+h1,h2,h3{font-family:var(--serif)}
 
 .topbar{
   height:38px;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:linear-gradient(90deg,#c50759,#f52d82);
-  color:#fff;
-  font-size:13px;
-  font-weight:700;
+  background:var(--wine-dark);
+  color:var(--gold-light);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.2px;
 }
 
 .header{
-  background:#fff;
+  background:var(--cream);
   border-bottom:1px solid var(--line);
   position:sticky;
   top:0;
@@ -51,9 +68,9 @@ button{cursor:pointer}
   max-width:1300px;
   margin:auto;
   padding:13px 20px;
-  min-height:82px;
+  min-height:86px;
   display:grid;
-  grid-template-columns:260px 1fr auto;
+  grid-template-columns:280px 1fr auto;
   align-items:center;
   gap:25px;
 }
@@ -61,42 +78,47 @@ button{cursor:pointer}
 .logo{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
   text-decoration:none;
-  color:var(--dark);
+  color:var(--wine);
 }
 .logoIcon{
-  width:48px;
-  height:48px;
-  border-radius:15px;
-  background:linear-gradient(145deg,#ff5b9e,#df0d65);
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--wine);
+  border:1px solid var(--gold-light);
   display:grid;
   place-items:center;
-  color:white;
-  font-size:25px;
-  box-shadow:0 7px 18px #ef9cbd;
+  color:var(--gold-light);
+  font-size:21px;
+  box-shadow:0 7px 16px rgba(122,15,61,.25);
 }
 .logoText strong{
   display:block;
+  font-family:var(--serif);
   font-size:23px;
-  letter-spacing:-1px;
+  font-weight:600;
+  letter-spacing:.3px;
 }
 .logoText small{
   font-size:10px;
-  color:#94526d;
+  color:var(--muted);
+  letter-spacing:.2px;
 }
 
 .search{
   height:46px;
-  border:1px solid #efc8d8;
-  border-radius:25px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
   display:flex;
   align-items:center;
   padding:0 16px;
 }
 .search span{
-  font-size:23px;
-  color:var(--pink);
+  font-size:19px;
+  color:var(--rose);
   margin-right:9px;
 }
 .search input{
@@ -104,6 +126,8 @@ button{cursor:pointer}
   outline:0;
   width:100%;
   font-size:14px;
+  font-family:var(--sans);
+  background:transparent;
 }
 
 .headerActions{
@@ -114,13 +138,14 @@ button{cursor:pointer}
 .headBtn{
   position:relative;
   border:0;
-  background:#fff;
-  color:#4a4046;
+  background:transparent;
+  color:var(--text);
   min-width:55px;
 }
 .headBtn span{
   display:block;
-  font-size:22px;
+  font-size:20px;
+  color:var(--wine);
 }
 .headBtn small{
   font-size:10px;
@@ -130,7 +155,7 @@ button{cursor:pointer}
   position:absolute;
   top:-4px;
   right:3px;
-  background:var(--pink);
+  background:var(--rose);
   color:#fff;
   min-width:18px;
   height:18px;
@@ -142,7 +167,8 @@ button{cursor:pointer}
 }
 
 .nav{
-  background:linear-gradient(90deg,#b40655,#ed2177);
+  background:var(--wine);
+  border-top:1px solid rgba(233,205,147,.25);
 }
 .navInner{
   max-width:1300px;
@@ -151,16 +177,51 @@ button{cursor:pointer}
   overflow:auto;
 }
 .nav a{
-  color:#fff;
+  color:var(--gold-light);
   text-decoration:none;
   white-space:nowrap;
-  padding:12px 18px;
+  padding:13px 20px;
   font-size:13px;
-  font-weight:800;
+  font-weight:600;
+  font-family:var(--sans);
+  border-bottom:2px solid transparent;
 }
 .nav a:hover,
 .nav a.active{
-  background:#0002;
+  color:#fff;
+  border-bottom-color:var(--gold-light);
+}
+
+.subnav{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+.subnavInner{
+  max-width:1300px;
+  margin:auto;
+  display:flex;
+  gap:6px;
+  overflow:auto;
+  padding:9px 20px;
+}
+.subnav button{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--text);
+  border-radius:20px;
+  padding:6px 14px;
+  font-size:11.5px;
+  font-weight:600;
+  white-space:nowrap;
+  transition:.15s;
+}
+.subnav button:hover{
+  border-color:var(--gold);
+}
+.subnav button.active{
+  background:var(--wine);
+  border-color:var(--wine);
+  color:#fff;
 }
 
 .mobileHeader{display:none}
@@ -172,83 +233,118 @@ button{cursor:pointer}
 }
 
 .hero{
-  margin:18px 0;
-  min-height:310px;
-  border-radius:20px;
+  margin:22px 0;
+  min-height:340px;
+  border-radius:6px;
   overflow:hidden;
-  background:linear-gradient(105deg,#ffe5ef,#ffd0e0);
+  background:var(--wine);
   display:grid;
-  grid-template-columns:42% 58%;
+  grid-template-columns:44% 56%;
 }
 .heroText{
-  padding:45px;
+  padding:50px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.heroText span.kicker{
+  color:var(--gold-light);
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.3px;
+  margin-bottom:14px;
 }
 .heroText h1{
-  margin:0 0 12px;
-  color:#970743;
-  font-family:Georgia,serif;
-  font-size:44px;
-  line-height:1.05;
+  margin:0 0 16px;
+  color:#fff;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:46px;
+  line-height:1.08;
+}
+.heroText h1 em{
+  font-style:italic;
+  color:var(--gold-light);
+  font-weight:500;
 }
 .heroText p{
-  color:#74324f;
-  line-height:1.5;
-  font-weight:600;
+  color:#f0d9e2;
+  line-height:1.6;
+  font-weight:500;
+  font-size:14px;
+  max-width:34ch;
 }
 .primaryBtn{
   border:0;
-  border-radius:24px;
-  padding:12px 23px;
-  color:#fff;
-  background:linear-gradient(90deg,#e70e68,#ff438b);
-  font-weight:900;
-  box-shadow:0 8px 20px #d9156835;
+  border-radius:3px;
+  padding:14px 26px;
+  color:var(--wine-dark);
+  background:var(--gold-light);
+  font-weight:700;
+  font-family:var(--sans);
+  font-size:13px;
+  margin-top:22px;
+  width:fit-content;
+  transition:.2s;
+}
+.primaryBtn:hover{
+  background:#fff;
 }
 
 .heroVisual{
   position:relative;
   background:
-    radial-gradient(circle at 25% 35%,#fff 0 12%,transparent 13%),
-    radial-gradient(circle at 70% 65%,#f4aaca 0 12%,transparent 13%);
+    linear-gradient(105deg,#8c1548,#6a0c33);
+  overflow:hidden;
+}
+.heroVisual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(233,205,147,.18), transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(233,205,147,.12), transparent 45%);
 }
 .circle{
   position:absolute;
   border-radius:50%;
   display:grid;
   place-items:center;
-  font-size:45px;
-  box-shadow:0 10px 25px #a75d7a33;
+  font-size:38px;
+  box-shadow:0 10px 22px rgba(0,0,0,.18);
 }
-.c1{width:105px;height:105px;left:12%;top:25%;background:#fff0f6}
-.c2{width:90px;height:90px;left:40%;top:12%;background:#ead9fa}
-.c3{width:115px;height:115px;left:62%;top:34%;background:#d9f2ec}
-.c4{width:75px;height:75px;left:30%;top:64%;background:#fff2c8}
-.c5{width:85px;height:85px;left:77%;top:67%;background:#ffe0ea}
+.c1{width:100px;height:100px;left:10%;top:22%;background:#fff0f6}
+.c2{width:80px;height:80px;left:42%;top:10%;background:#ead9fa}
+.c3{width:120px;height:120px;left:60%;top:36%;background:#d9f2ec}
+.c4{width:70px;height:70px;left:28%;top:62%;background:#fff2c8}
+.c5{width:88px;height:88px;left:76%;top:64%;background:#ffe0ea}
 
 .trust{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   border:1px solid var(--line);
-  border-radius:15px;
-  margin:20px 0 30px;
-  box-shadow:var(--shadow);
+  background:#fff;
+  border-radius:6px;
+  margin:22px 0 34px;
 }
 .trustItem{
-  padding:16px 10px;
+  padding:18px 10px;
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:10px;
+  gap:11px;
   border-right:1px solid var(--line);
 }
 .trustItem:last-child{border:0}
 .trustIcon{
-  font-size:25px;
-  color:var(--pink);
+  font-size:21px;
+  color:var(--gold);
 }
 .trustItem strong{
   display:block;
   font-size:12px;
+  font-weight:700;
 }
 .trustItem small{
   color:var(--muted);
@@ -257,50 +353,59 @@ button{cursor:pointer}
 
 .sectionTitle{
   display:flex;
-  align-items:center;
+  align-items:baseline;
   justify-content:space-between;
-  margin:28px 0 15px;
+  margin:36px 0 16px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:12px;
 }
 .sectionTitle h2{
   margin:0;
-  font-size:24px;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:26px;
+  color:var(--wine-dark);
 }
 .sectionTitle a{
-  color:var(--pink);
+  color:var(--rose);
   text-decoration:none;
-  font-size:13px;
-  font-weight:900;
+  font-size:12px;
+  font-weight:700;
 }
 
 .categories{
   display:grid;
-  grid-template-columns:repeat(8,1fr);
-  gap:12px;
+  grid-template-columns:repeat(3,1fr);
+  max-width:560px;
+  gap:14px;
 }
 .category{
   border:1px solid var(--line);
   background:#fff;
-  border-radius:14px;
-  padding:8px;
+  border-radius:6px;
+  padding:10px;
   text-align:center;
   transition:.2s;
 }
 .category:hover{
-  transform:translateY(-3px);
+  border-color:var(--gold);
   box-shadow:var(--shadow);
 }
 .categoryImage{
-  height:95px;
-  border-radius:11px;
-  background:linear-gradient(145deg,#fff0f6,#ffe3ed);
+  height:100px;
+  border-radius:4px;
+  background:var(--blush);
   display:grid;
   place-items:center;
-  font-size:40px;
+  font-size:38px;
 }
 .category b{
   display:block;
-  font-size:11px;
-  margin-top:7px;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:14px;
+  margin-top:9px;
+  color:var(--wine-dark);
 }
 
 .shopLayout{
@@ -312,9 +417,8 @@ button{cursor:pointer}
 
 .filters{
   border:1px solid var(--line);
-  border-radius:12px;
+  border-radius:6px;
   background:#fff;
-  box-shadow:var(--shadow);
   position:sticky;
   top:140px;
   overflow:hidden;
@@ -325,14 +429,20 @@ button{cursor:pointer}
   align-items:center;
   padding:15px;
   border-bottom:1px solid var(--line);
+  background:var(--blush);
 }
-.filterTitle strong{font-size:17px}
+.filterTitle strong{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:17px;
+  color:var(--wine-dark);
+}
 .filterTitle button{
   border:0;
   background:none;
-  color:var(--pink);
+  color:var(--rose);
   font-size:11px;
-  font-weight:800;
+  font-weight:700;
 }
 .filterGroup{
   padding:14px;
@@ -340,8 +450,11 @@ button{cursor:pointer}
 }
 .filterGroup strong{
   display:block;
-  font-size:13px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
   margin-bottom:9px;
+  color:var(--wine-dark);
 }
 .filterGroup label{
   display:flex;
@@ -350,51 +463,95 @@ button{cursor:pointer}
   font-size:11px;
   color:#5e555a;
 }
-.filterGroup input{accent-color:var(--pink)}
+.filterGroup input{accent-color:var(--rose)}
+
+.filterCat{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  width:100%;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:4px;
+  padding:9px 11px;
+  margin-bottom:7px;
+  font-size:12px;
+  font-weight:600;
+  font-family:var(--sans);
+  color:var(--text);
+  transition:.15s;
+}
+.filterCat:last-child{margin-bottom:0}
+.filterCat:hover{
+  border-color:var(--gold);
+}
+.filterCat span:last-child{
+  color:var(--muted);
+  font-size:11px;
+  font-weight:700;
+  min-width:20px;
+  text-align:right;
+}
+.filterCat.active{
+  background:var(--wine);
+  border-color:var(--wine);
+  color:#fff;
+}
+.filterCat.active span:last-child{
+  color:var(--gold-light);
+}
 
 .shopBar{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 12px;
+  padding:11px 14px;
   border:1px solid var(--line);
-  border-radius:8px;
+  border-radius:6px;
+  background:#fff;
   margin-bottom:14px;
 }
-.shopBar strong{font-size:13px}
+.shopBar strong{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:15px;
+  color:var(--wine-dark);
+}
 .shopBar small{
   color:var(--muted);
   margin-left:5px;
 }
 .shopBar select{
-  border:1px solid #ead6df;
-  border-radius:6px;
-  padding:7px 10px;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:8px 10px;
   background:#fff;
   font-size:11px;
   font-weight:700;
+  color:var(--text);
 }
 
 .products{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  gap:10px;
 }
 .product{
   border:1px solid var(--line);
-  border-radius:9px;
+  border-radius:6px;
   overflow:hidden;
   background:#fff;
   transition:.2s;
 }
 .product:hover{
-  transform:translateY(-3px);
+  border-color:var(--gold);
   box-shadow:var(--shadow);
 }
 .productImage{
   height:210px;
   position:relative;
-  background:#fff0f6;
+  background:var(--blush);
 }
 .productImage img{
   width:100%;
@@ -407,53 +564,57 @@ button{cursor:pointer}
   right:8px;
   top:8px;
   z-index:2;
-  width:34px;
-  height:34px;
+  width:32px;
+  height:32px;
   border:0;
   border-radius:50%;
   background:#fff;
-  color:var(--pink);
-  font-size:19px;
-  box-shadow:0 3px 12px #0002;
+  color:var(--rose);
+  font-size:17px;
+  box-shadow:0 3px 10px rgba(0,0,0,.12);
 }
 .heart.active{
-  background:var(--pink);
+  background:var(--rose);
   color:#fff;
 }
 .offer{
   position:absolute;
   left:8px;
   top:8px;
-  background:#f45c3c;
-  color:#fff;
-  padding:4px 7px;
-  border-radius:8px;
+  background:var(--wine-dark);
+  color:var(--gold-light);
+  padding:4px 8px;
+  border-radius:3px;
   font-size:9px;
-  font-weight:900;
+  font-weight:700;
+  letter-spacing:.3px;
 }
 .productBody{
-  padding:11px;
+  padding:10px;
 }
 .productCategory{
-  color:var(--pink);
+  color:var(--gold);
   font-size:9px;
-  font-weight:900;
+  font-weight:700;
+  letter-spacing:.4px;
   text-transform:uppercase;
 }
 .productName{
+  font-family:var(--serif);
   font-size:13px;
-  font-weight:800;
-  line-height:1.3;
-  min-height:35px;
-  margin:5px 0;
+  font-weight:600;
+  line-height:1.28;
+  min-height:33px;
+  margin:4px 0;
+  color:var(--text);
 }
 .price{
-  color:var(--pink);
+  color:var(--wine-dark);
   font-size:17px;
-  font-weight:950;
+  font-weight:700;
 }
 .mrp{
-  color:#999;
+  color:#a99298;
   font-size:11px;
   text-decoration:line-through;
   margin-left:5px;
@@ -461,34 +622,40 @@ button{cursor:pointer}
 .discount{
   display:inline-block;
   color:var(--green);
-  background:#e2f7eb;
+  background:#e2f5ec;
   padding:3px 6px;
-  border-radius:4px;
+  border-radius:3px;
   font-size:9px;
-  font-weight:900;
+  font-weight:700;
   margin:5px 0;
 }
 .rating{
-  color:#766d72;
+  color:var(--muted);
   font-size:10px;
 }
-.rating b{color:#ffad00}
+.rating b{color:var(--gold)}
 .addBtn{
   width:100%;
-  margin-top:8px;
-  border:0;
-  border-radius:5px;
+  margin-top:9px;
+  border:1px solid var(--wine);
+  border-radius:4px;
   padding:9px;
-  background:linear-gradient(90deg,#ed116d,#ff3c87);
-  color:#fff;
+  background:#fff;
+  color:var(--wine);
   font-size:11px;
-  font-weight:900;
+  font-weight:700;
+  transition:.2s;
+}
+.addBtn:hover{
+  background:var(--wine);
+  color:#fff;
 }
   .promo{
-  margin:32px 0;
-  padding:22px 27px;
-  border-radius:16px;
-  background:linear-gradient(100deg,#ffe9f2,#ffd4e2);
+  margin:36px 0;
+  padding:26px 30px;
+  border-radius:6px;
+  background:var(--blush);
+  border:1px solid var(--line);
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -496,20 +663,31 @@ button{cursor:pointer}
 
 .promo h3{
   margin:0;
-  color:#990746;
+  color:var(--wine-dark);
+  font-family:var(--serif);
+  font-weight:600;
   font-size:25px;
 }
 
 .promo p{
   margin:5px 0 0;
-  color:#74334f;
+  color:var(--muted);
   font-size:12px;
 }
 
+.promo .primaryBtn{
+  color:#fff;
+  background:var(--wine);
+}
+.promo .primaryBtn:hover{
+  background:var(--wine-dark);
+}
+
 .footer{
-  margin-top:45px;
-  background:#fff0f6;
-  padding:28px 20px;
+  margin-top:50px;
+  background:var(--wine-dark);
+  color:#f0d9e2;
+  padding:34px 20px;
 }
 
 .footerInner{
@@ -519,10 +697,15 @@ button{cursor:pointer}
   justify-content:space-between;
 }
 
+.footerInner small{
+  color:#cf9fb2;
+}
+
 .footerBrand{
-  color:#a0094b;
-  font-size:21px;
-  font-weight:950;
+  color:var(--gold-light);
+  font-family:var(--serif);
+  font-size:22px;
+  font-weight:600;
 }
 
 .modal{
@@ -687,7 +870,7 @@ button{cursor:pointer}
     position:sticky;
     top:0;
     z-index:60;
-    background:#fff;
+    background:var(--cream);
     border-bottom:1px solid var(--line);
   }
 
@@ -711,7 +894,9 @@ button{cursor:pointer}
   }
 
   .mobileLogo strong{
-    color:var(--dark);
+    color:var(--wine);
+    font-family:var(--serif);
+    font-weight:600;
     font-size:19px;
   }
 
@@ -877,13 +1062,13 @@ button{cursor:pointer}
 
   .filterMobile{
     display:block;
-    border:1px solid #f0bfd3;
-    background:#fff5f9;
-    color:var(--pink);
-    border-radius:18px;
+    border:1px solid var(--line);
+    background:var(--blush);
+    color:var(--wine);
+    border-radius:4px;
     padding:7px 12px;
     font-size:10px;
-    font-weight:900;
+    font-weight:700;
   }
 
   .shopBar{
@@ -973,13 +1158,151 @@ button{cursor:pointer}
     display:none;
   }
 }
+
+
+/* ADMIN PRODUCT MANAGEMENT */
+.adminTools{
+  margin:28px 0 12px;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:15px 18px;
+  border-radius:6px;
+}
+.adminToolsHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.adminToolsHead strong{
+  display:block;
+  color:var(--wine-dark);
+  font-family:var(--serif);
+  font-size:18px;
+}
+.adminToolsHead small{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:3px;
+}
+.adminOpenBtn{
+  margin:0;
+}
+.adminPanel{
+  display:none;
+  margin:0 0 18px;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:18px;
+  border-radius:6px;
+  box-shadow:var(--shadow);
+}
+.adminPanel.open{display:block}
+.adminPanelHead{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px;
+}
+.adminPanelHead strong{
+  display:block;
+  color:var(--wine-dark);
+  font-family:var(--serif);
+  font-size:20px;
+}
+.adminPanelHead small{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:3px;
+}
+.adminForm{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+}
+.adminForm input,
+.adminForm select{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:10px 11px;
+  outline:0;
+  background:#fff;
+  font-size:12px;
+}
+.adminForm input:focus,
+.adminForm select:focus{
+  border-color:var(--gold);
+}
+.adminFormActions{
+  grid-column:1/-1;
+  display:flex;
+  gap:8px;
+}
+.adminCancel{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--wine);
+  border-radius:4px;
+  padding:10px 18px;
+  font-weight:700;
+}
+.adminList{
+  margin-top:16px;
+  border-top:1px solid var(--line);
+  padding-top:10px;
+  max-height:300px;
+  overflow:auto;
+}
+.adminItem{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:9px 0;
+  border-bottom:1px solid #f3e7ec;
+  font-size:11px;
+}
+.adminItemName{
+  font-weight:800;
+  color:var(--text);
+}
+.adminItemMeta{
+  color:var(--muted);
+  margin-top:2px;
+}
+.adminItemActions{
+  display:flex;
+  gap:6px;
+  flex-shrink:0;
+}
+.adminItemActions button{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--wine);
+  border-radius:4px;
+  padding:5px 9px;
+  font-size:10px;
+  font-weight:800;
+}
+@media(max-width:900px){
+  .adminToolsHead{align-items:stretch;flex-direction:column}
+  .adminOpenBtn{width:100%}
+  .adminForm{grid-template-columns:1fr}
+  .adminFormActions{grid-column:auto}
+  .adminItem{align-items:flex-start}
+  .adminItemActions{flex-direction:column}
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="topbar">
-  ✨ KAVAN BAZAAR — New Collection is Live
+  New arrivals every week · Free delivery across Tamil Nadu on orders over ₹499
 </div>
 
 <header class="header">
@@ -1001,7 +1324,7 @@ button{cursor:pointer}
 
     <div class="headerActions">
 
-      <button class="headBtn" onclick="account()">
+      <button class="headBtn" onclick="openAdmin()">
         <span>♙</span>
         <small>Account</small>
       </button>
@@ -1025,6 +1348,10 @@ button{cursor:pointer}
   <nav class="nav">
     <div class="navInner" id="nav"></div>
   </nav>
+
+  <div class="subnav">
+    <div class="subnavInner" id="subnav"></div>
+  </div>
 </header>
 
 <div class="mobileHeader">
@@ -1066,20 +1393,21 @@ button{cursor:pointer}
 
   <div class="heroText">
 
+    <span class="kicker">New Collection · Tamil Nadu</span>
+
     <h1>
-      Small<br>
-      Accessories<br>
-      Big Happiness ♡
+      Small accessories,<br>
+      <em>big happiness</em>
     </h1>
 
     <p>
-      Trendy • Affordable • Stylish<br>
-      Fashion, Beauty & Kids Collection
+      Fashion, beauty and kids' accessories curated for everyday
+      wear and every celebration.
     </p>
 
     <button class="primaryBtn"
       onclick="scrollProducts()">
-      Shop Now →
+      Shop the collection
     </button>
 
   </div>
@@ -1143,6 +1471,45 @@ button{cursor:pointer}
 
 </section>
 
+<section class="adminTools" id="adminTools">
+  <div class="adminToolsHead">
+    <div>
+      <strong>Admin Product Management</strong>
+      <small>Add, edit or delete products from the website.</small>
+    </div>
+    <button class="primaryBtn adminOpenBtn" onclick="openAdmin()">Admin / Products</button>
+  </div>
+</section>
+
+<div class="adminPanel" id="adminPanel">
+  <div class="adminPanelHead">
+    <div>
+      <strong>Product Management</strong>
+      <small>Changes are saved in this browser.</small>
+    </div>
+    <button class="close" onclick="closeAdmin()">×</button>
+  </div>
+
+  <div class="adminForm">
+    <input id="adminId" type="hidden">
+    <input id="adminName" placeholder="Product name">
+    <select id="adminCategory">
+      <option value="Women">Women</option>
+      <option value="Men">Men</option>
+      <option value="Kids">Kids</option>
+    </select>
+    <input id="adminPrice" type="number" min="0" placeholder="Selling price">
+    <input id="adminMrp" type="number" min="0" placeholder="MRP">
+    <input id="adminPhoto" placeholder="Actual product photo URL">
+    <div class="adminFormActions">
+      <button class="primaryBtn" onclick="saveAdminProduct()">Save Product</button>
+      <button class="adminCancel" onclick="resetAdminForm()">Cancel</button>
+    </div>
+  </div>
+
+  <div class="adminList" id="adminList"></div>
+</div>
+
 <section id="products">
   <div class="shopLayout">
 
@@ -1179,20 +1546,6 @@ button{cursor:pointer}
       <label>
         <input type="checkbox" value="500-999999" onchange="applyFilters()">
         ₹500+
-      </label>
-    </div>
-
-    <div class="filterGroup">
-      <strong>Rating</strong>
-
-      <label>
-        <input type="checkbox" value="4" onchange="applyFilters()">
-        ★ 4.0 & above
-      </label>
-
-      <label>
-        <input type="checkbox" value="4.5" onchange="applyFilters()">
-        ★ 4.5 & above
       </label>
     </div>
 
@@ -1316,7 +1669,7 @@ button{cursor:pointer}
 
     <div>
       <div class="footerBrand">
-        KAVAN BAZAAR ♡
+        Kavan Bazaar
       </div>
 
       <small>
@@ -1324,15 +1677,15 @@ button{cursor:pointer}
       </small>
     </div>
 
-    <div>
-      <strong>
-        KAVAN BAZAAR
+    <div style="text-align:right">
+      <strong style="color:#fff">
+        Fashion · Fancy · Beauty · Kids
       </strong>
 
       <br>
 
       <small>
-        Fashion • Fancy • Beauty • Kids
+        Serving Tamil Nadu with love
       </small>
     </div>
 
@@ -1470,7 +1823,7 @@ button{cursor:pointer}
   </button>
 
   <button
-    onclick="account()">
+    onclick="openAdmin()">
 
     <span>♙</span>
     Account
@@ -1837,6 +2190,62 @@ let filterCats = [];
 let priceFilters = [];
 let ratingFilters = [];
 let offerOnly = false;
+let badgeFilter = null;
+
+let adminProducts = JSON.parse(
+  localStorage.getItem("kavan_admin_products_v1") || "[]"
+);
+
+function allProducts(){
+  const custom = adminProducts.map(p => [
+    p.id,
+    p.name,
+    p.category,
+    p.price,
+    p.mrp,
+    4.5,
+    0,
+    p.badge || "New",
+    p.type || "beauty",
+    p.photo || ""
+  ]);
+  return seed.concat(custom);
+}
+
+
+const badgeTabs = [
+  ["All",null],
+  ["Popular","Popular"],
+  ["New Launches","New"],
+  ["Best Sellers","Bestseller"],
+  ["Premium","Premium"],
+  ["Offers","Offer"]
+];
+
+function setBadge(b){
+
+  badgeFilter = b;
+
+  document
+    .querySelector("#products")
+    .scrollIntoView({behavior:"smooth"});
+
+  render();
+
+}
+
+function renderSubnav(){
+
+  document.getElementById("subnav").innerHTML =
+    badgeTabs.map(([label,val])=>`
+      <button
+        class="${badgeFilter===val ? "active" : ""}"
+        onclick="setBadge(${val ? `'${val}'` : "null"})">
+        ${label}
+      </button>
+    `).join("");
+
+}
 
 
 /* =========================================
@@ -2084,12 +2493,6 @@ function card(p,i){
             : ""
         }
 
-        <div class="rating">
-          <b>★</b>
-          ${rating.toFixed(1)}
-          (${reviews})
-        </div>
-
         <button
           class="addBtn"
           onclick="addCart('${id}')">
@@ -2125,7 +2528,7 @@ function renderFilterCats(){
         </span>
 
         <span>
-          ${seed.filter(
+          ${allProducts().filter(
             p => p[2] === c
           ).length}
         </span>
@@ -2205,7 +2608,7 @@ function selectedInputs(){
 
 function filtered(){
 
-  return seed.filter(p => {
+  return allProducts().filter(p => {
 
     const categoryMatch =
       filterCats.length
@@ -2258,13 +2661,19 @@ function filtered(){
       p[7] === "Offer";
 
 
+    const badgeMatch =
+      !badgeFilter ||
+      p[7] === badgeFilter;
+
+
     return (
       categoryMatch &&
       searchMatch &&
       priceMatch &&
       selectedPriceMatch &&
       ratingMatch &&
-      offerMatch
+      offerMatch &&
+      badgeMatch
     );
 
   });
@@ -2412,7 +2821,7 @@ function render(){
     "best"
   ).innerHTML =
 
-    seed
+    allProducts()
       .filter(
         p =>
           [
@@ -2473,6 +2882,8 @@ function render(){
 
   renderCats();
 
+  renderSubnav();
+
 }
 
 
@@ -2487,6 +2898,8 @@ function setCat(c){
   filterCats = [];
 
   only99 = false;
+
+  badgeFilter = null;
 
   document
     .querySelectorAll(
@@ -2521,6 +2934,8 @@ function under99(){
 
   only99 = true;
 
+  badgeFilter = null;
+
   document
     .querySelector(
       "#products"
@@ -2553,6 +2968,8 @@ function resetAll(){
   only99 = false;
 
   query = "";
+
+  badgeFilter = null;
 
 
   document
@@ -2744,7 +3161,7 @@ function openWishlist(){
     wish.map(id=>{
 
       const p =
-        seed.find(
+        allProducts().find(
           x => x[0] === id
         );
 
@@ -2871,7 +3288,7 @@ function cartRender(){
     cart.map(item=>{
 
       const p =
-        seed.find(
+        allProducts().find(
           x => x[0] === item.id
         );
 
@@ -3105,15 +3522,131 @@ function bindSearch(id){
 
 
 /* =========================================
+   ADMIN PRODUCT MANAGEMENT
+========================================= */
+
+function openAdmin(){
+  const panel = document.getElementById("adminPanel");
+  if(!panel) return;
+  panel.classList.add("open");
+  renderAdminList();
+  panel.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+function closeAdmin(){
+  const panel = document.getElementById("adminPanel");
+  if(panel) panel.classList.remove("open");
+}
+
+function resetAdminForm(){
+  document.getElementById("adminId").value = "";
+  document.getElementById("adminName").value = "";
+  document.getElementById("adminCategory").value = "Women";
+  document.getElementById("adminPrice").value = "";
+  document.getElementById("adminMrp").value = "";
+  document.getElementById("adminPhoto").value = "";
+}
+
+function editAdminProduct(id){
+  const p = adminProducts.find(x => x.id === id);
+  if(!p) return;
+
+  openAdmin();
+  document.getElementById("adminId").value = p.id;
+  document.getElementById("adminName").value = p.name;
+  document.getElementById("adminCategory").value = p.category;
+  document.getElementById("adminPrice").value = p.price;
+  document.getElementById("adminMrp").value = p.mrp;
+  document.getElementById("adminPhoto").value = p.photo || "";
+}
+
+function saveAdminProduct(){
+  const id = document.getElementById("adminId").value || ("admin-" + Date.now());
+  const name = document.getElementById("adminName").value.trim();
+  const category = document.getElementById("adminCategory").value;
+  const price = Number(document.getElementById("adminPrice").value);
+  const mrp = Number(document.getElementById("adminMrp").value) || price;
+  const photo = document.getElementById("adminPhoto").value.trim();
+
+  if(!name || !price){
+    toast("Enter product name and price");
+    return;
+  }
+
+  const item = {
+    id,
+    name,
+    category,
+    price,
+    mrp,
+    photo,
+    badge:"New",
+    type:"beauty"
+  };
+
+  const index = adminProducts.findIndex(x => x.id === id);
+
+  if(index >= 0){
+    adminProducts[index] = item;
+  }else{
+    adminProducts.push(item);
+  }
+
+  localStorage.setItem(
+    "kavan_admin_products_v1",
+    JSON.stringify(adminProducts)
+  );
+
+  resetAdminForm();
+  renderAdminList();
+  render();
+  toast("Product saved ♡");
+}
+
+function deleteAdminProduct(id){
+  adminProducts =
+    adminProducts.filter(x => x.id !== id);
+
+  localStorage.setItem(
+    "kavan_admin_products_v1",
+    JSON.stringify(adminProducts)
+  );
+
+  renderAdminList();
+  render();
+  toast("Product removed");
+}
+
+function renderAdminList(){
+  const el = document.getElementById("adminList");
+  if(!el) return;
+
+  if(!adminProducts.length){
+    el.innerHTML =
+      '<small style="color:#777">No manually added products yet.</small>';
+    return;
+  }
+
+  el.innerHTML = adminProducts.map(p => `
+    <div class="adminItem">
+      <div>
+        <div class="adminItemName">${p.name}</div>
+        <div class="adminItemMeta">${p.category} · ₹${p.price} · MRP ₹${p.mrp}</div>
+      </div>
+      <div class="adminItemActions">
+        <button onclick="editAdminProduct('${p.id}')">Edit</button>
+        <button onclick="deleteAdminProduct('${p.id}')">Delete</button>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* =========================================
    ACCOUNT
 ========================================= */
 
 function account(){
-
-  toast(
-    "Admin login will be connected"
-  );
-
+  openAdmin();
 }
 
 
@@ -3244,6 +3777,17 @@ function home(){
 }
 
 
+function scrollProducts(){
+
+  document
+    .querySelector("#products")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
 /* =========================================
    INITIAL LOAD
 ========================================= */
@@ -3262,5 +3806,3 @@ render();
 
 </body>
 </html>
-
-
