@@ -204,6 +204,7 @@ button{cursor:pointer}
   font-weight:900;
   box-shadow:0 8px 20px #d9156835;
 }
+
 .heroVisual{
   position:relative;
   background:
@@ -483,8 +484,7 @@ button{cursor:pointer}
   font-size:11px;
   font-weight:900;
 }
-
-.promo{
+  .promo{
   margin:32px 0;
   padding:22px 27px;
   border-radius:16px;
@@ -493,11 +493,13 @@ button{cursor:pointer}
   align-items:center;
   justify-content:space-between;
 }
+
 .promo h3{
   margin:0;
   color:#990746;
   font-size:25px;
 }
+
 .promo p{
   margin:5px 0 0;
   color:#74334f;
@@ -509,12 +511,14 @@ button{cursor:pointer}
   background:#fff0f6;
   padding:28px 20px;
 }
+
 .footerInner{
   max-width:1300px;
   margin:auto;
   display:flex;
   justify-content:space-between;
 }
+
 .footerBrand{
   color:#a0094b;
   font-size:21px;
@@ -530,7 +534,11 @@ button{cursor:pointer}
   align-items:flex-end;
   justify-content:center;
 }
-.modal.open{display:flex}
+
+.modal.open{
+  display:flex;
+}
+
 .sheet{
   width:min(620px,100%);
   max-height:85vh;
@@ -539,11 +547,13 @@ button{cursor:pointer}
   border-radius:24px 24px 0 0;
   padding:20px;
 }
+
 .modalHead{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
+
 .close{
   width:36px;
   height:36px;
@@ -553,6 +563,7 @@ button{cursor:pointer}
   color:var(--pink);
   font-size:20px;
 }
+
 .cartRow{
   display:grid;
   grid-template-columns:65px 1fr auto;
@@ -561,6 +572,7 @@ button{cursor:pointer}
   border-bottom:1px solid #eee;
   align-items:center;
 }
+
 .cartImg{
   width:65px;
   height:65px;
@@ -568,17 +580,20 @@ button{cursor:pointer}
   overflow:hidden;
   background:#fff0f6;
 }
+
 .cartImg img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
+
 .qty{
   display:flex;
   align-items:center;
   gap:8px;
   margin-top:5px;
 }
+
 .qty button{
   width:25px;
   height:25px;
@@ -587,6 +602,7 @@ button{cursor:pointer}
   background:#ffe5ef;
   color:var(--pink);
 }
+
 .remove{
   border:0;
   background:none;
@@ -601,13 +617,18 @@ button{cursor:pointer}
   background:#180b1299;
   z-index:110;
 }
-.drawer.open{display:block}
+
+.drawer.open{
+  display:block;
+}
+
 .drawerPanel{
   height:100%;
   width:min(320px,88vw);
   background:#fff;
   padding:20px;
 }
+
 .drawerPanel a{
   display:block;
   color:var(--text);
@@ -631,21 +652,36 @@ button{cursor:pointer}
   transition:.2s;
   z-index:200;
 }
+
 .toast.show{
   opacity:1;
   transform:translate(-50%,0);
 }
 
-.mobileBottom{display:none}
+.mobileBottom{
+  display:none;
+}
 
 @media(max-width:1100px){
-  .headerInner{grid-template-columns:220px 1fr auto}
-  .products{grid-template-columns:repeat(3,1fr)}
-  .categories{grid-template-columns:repeat(6,1fr)}
+  .headerInner{
+    grid-template-columns:220px 1fr auto;
+  }
+
+  .products{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .categories{
+    grid-template-columns:repeat(6,1fr);
+  }
 }
 
 @media(max-width:900px){
-  .header{display:none}
+
+  .header{
+    display:none;
+  }
+
   .mobileHeader{
     display:block;
     position:sticky;
@@ -654,6 +690,7 @@ button{cursor:pointer}
     background:#fff;
     border-bottom:1px solid var(--line);
   }
+
   .mobileTop{
     height:65px;
     display:grid;
@@ -661,28 +698,34 @@ button{cursor:pointer}
     align-items:center;
     padding:6px 13px;
   }
+
   .menuBtn{
     border:0;
     background:#fff;
     color:var(--dark);
     font-size:26px;
   }
+
   .mobileLogo{
     text-align:center;
   }
+
   .mobileLogo strong{
     color:var(--dark);
     font-size:19px;
   }
+
   .mobileLogo small{
     display:block;
     color:#966078;
     font-size:9px;
   }
+
   .mobileActions{
     display:flex;
     gap:4px;
   }
+
   .mobileActions button{
     position:relative;
     border:0;
@@ -690,6 +733,7 @@ button{cursor:pointer}
     color:var(--dark);
     font-size:21px;
   }
+
   .mobileSearch{
     margin:0 13px 11px;
     height:43px;
@@ -699,10 +743,12 @@ button{cursor:pointer}
     align-items:center;
     padding:0 13px;
   }
+
   .mobileSearch span{
     color:var(--pink);
     margin-right:8px;
   }
+
   .mobileSearch input{
     width:100%;
     border:0;
@@ -710,54 +756,109 @@ button{cursor:pointer}
     font-size:13px;
   }
 
-  .container{padding:0 13px}
+  .container{
+    padding:0 13px;
+  }
+
   .hero{
     min-height:240px;
     grid-template-columns:48% 52%;
     border-radius:15px;
     margin:12px 0;
   }
-  .heroText{padding:25px 15px}
-  .heroText h1{font-size:28px}
-  .heroText p{font-size:10px}
-  .primaryBtn{padding:10px 15px;font-size:11px}
-  .circle{font-size:30px}
-  .c1{width:70px;height:70px}
-  .c2{width:65px;height:65px}
-  .c3{width:75px;height:75px}
-  .c4{width:55px;height:55px}
-  .c5{width:60px;height:60px}
+
+  .heroText{
+    padding:25px 15px;
+  }
+
+  .heroText h1{
+    font-size:28px;
+  }
+
+  .heroText p{
+    font-size:10px;
+  }
+
+  .primaryBtn{
+    padding:10px 15px;
+    font-size:11px;
+  }
+
+  .circle{
+    font-size:30px;
+  }
+
+  .c1{
+    width:70px;
+    height:70px;
+  }
+
+  .c2{
+    width:65px;
+    height:65px;
+  }
+
+  .c3{
+    width:75px;
+    height:75px;
+  }
+
+  .c4{
+    width:55px;
+    height:55px;
+  }
+
+  .c5{
+    width:60px;
+    height:60px;
+  }
 
   .trust{
     grid-template-columns:repeat(4,1fr);
     margin-bottom:22px;
   }
+
   .trustItem{
     display:block;
     text-align:center;
     padding:10px 2px;
   }
-  .trustIcon{font-size:20px}
+
+  .trustIcon{
+    font-size:20px;
+  }
+
   .trustItem strong{
     font-size:8px;
   }
-  .trustItem small{display:none}
+
+  .trustItem small{
+    display:none;
+  }
 
   .categories{
     display:flex;
     overflow:auto;
     gap:8px;
   }
+
   .category{
     min-width:85px;
   }
+
   .categoryImage{
     height:70px;
     font-size:30px;
   }
-  .category b{font-size:9px}
 
-  .shopLayout{display:block}
+  .category b{
+    font-size:9px;
+  }
+
+  .shopLayout{
+    display:block;
+  }
+
   .filters{
     display:none;
     position:fixed;
@@ -769,7 +870,10 @@ button{cursor:pointer}
     border-radius:0;
     overflow:auto;
   }
-  .filters.open{display:block}
+
+  .filters.open{
+    display:block;
+  }
 
   .filterMobile{
     display:block;
@@ -785,26 +889,48 @@ button{cursor:pointer}
   .shopBar{
     margin-bottom:10px;
   }
-  .shopBar small{display:none}
+
+  .shopBar small{
+    display:none;
+  }
 
   .products{
     grid-template-columns:repeat(2,1fr);
     gap:9px;
   }
-  .productImage{height:175px}
-  .productBody{padding:8px}
-  .productName{font-size:12px}
-  .price{font-size:16px}
+
+  .productImage{
+    height:175px;
+  }
+
+  .productBody{
+    padding:8px;
+  }
+
+  .productName{
+    font-size:12px;
+  }
+
+  .price{
+    font-size:16px;
+  }
 
   .promo{
     padding:17px;
   }
-  .promo h3{font-size:19px}
-  .promo p{font-size:10px}
+
+  .promo h3{
+    font-size:19px;
+  }
+
+  .promo p{
+    font-size:10px;
+  }
 
   .footer{
     margin-bottom:65px;
   }
+
   .footerInner{
     display:block;
     text-align:center;
@@ -822,6 +948,7 @@ button{cursor:pointer}
     border-top:1px solid var(--line);
     z-index:70;
   }
+
   .mobileBottom button{
     border:0;
     background:#fff;
@@ -829,18 +956,22 @@ button{cursor:pointer}
     font-size:9px;
     font-weight:800;
   }
+
   .mobileBottom span{
     display:block;
     font-size:21px;
     line-height:25px;
   }
+
   .mobileBottom .active{
     color:var(--pink);
   }
 }
 
 @media(min-width:901px){
-  .filterMobile{display:none}
+  .filterMobile{
+    display:none;
+  }
 }
 </style>
 </head>
@@ -869,6 +1000,7 @@ button{cursor:pointer}
     </label>
 
     <div class="headerActions">
+
       <button class="headBtn" onclick="account()">
         <span>♙</span>
         <small>Account</small>
@@ -885,6 +1017,7 @@ button{cursor:pointer}
         <small>Cart</small>
         <b class="badge" id="cartCount">0</b>
       </button>
+
     </div>
 
   </div>
@@ -897,6 +1030,7 @@ button{cursor:pointer}
 <div class="mobileHeader">
 
   <div class="mobileTop">
+
     <button class="menuBtn" onclick="openDrawer()">☰</button>
 
     <div class="mobileLogo">
@@ -905,9 +1039,17 @@ button{cursor:pointer}
     </div>
 
     <div class="mobileActions">
-      <button onclick="openWishlist()">♡<b class="badge" id="mobileWishCount">0</b></button>
-      <button onclick="openCart()">🛒<b class="badge" id="mobileCartCount">0</b></button>
+      <button onclick="openWishlist()">
+        ♡
+        <b class="badge" id="mobileWishCount">0</b>
+      </button>
+
+      <button onclick="openCart()">
+        🛒
+        <b class="badge" id="mobileCartCount">0</b>
+      </button>
     </div>
+
   </div>
 
   <label class="mobileSearch">
@@ -923,6 +1065,7 @@ button{cursor:pointer}
 <section class="hero">
 
   <div class="heroText">
+
     <h1>
       Small<br>
       Accessories<br>
@@ -938,14 +1081,17 @@ button{cursor:pointer}
       onclick="scrollProducts()">
       Shop Now →
     </button>
+
   </div>
 
   <div class="heroVisual">
+
     <div class="circle c1">💍</div>
     <div class="circle c2">🎀</div>
     <div class="circle c3">💄</div>
     <div class="circle c4">✨</div>
     <div class="circle c5">👜</div>
+
   </div>
 
 </section>
@@ -998,1125 +1144,2123 @@ button{cursor:pointer}
 </section>
 
 <section id="products">
-
-  <div class="sectionTitle">
-    <h2 id="listingTitle">Trending Now</h2>
-
-    <button class="filterMobile"
-      onclick="toggleFilters()">
-      ☰ Filters
-    </button>
-
-    <a href="#products" onclick="resetAll()">View All →</a>
-  </div>
-
   <div class="shopLayout">
 
-    <aside class="filters" id="filters">
+  <aside class="filters" id="filters">
 
-      <div class="filterTitle">
-        <strong>Filters</strong>
-        <button onclick="clearFilters()">Clear All</button>
+    <div class="filterTitle">
+      <strong>Filters</strong>
+      <button onclick="clearFilters()">Clear All</button>
+    </div>
+
+    <div class="filterGroup">
+      <strong>Categories</strong>
+      <div id="filterCats"></div>
+    </div>
+
+    <div class="filterGroup">
+      <strong>Price</strong>
+
+      <label>
+        <input type="checkbox" value="0-99" onchange="applyFilters()">
+        Under ₹100
+      </label>
+
+      <label>
+        <input type="checkbox" value="100-249" onchange="applyFilters()">
+        ₹100 – ₹249
+      </label>
+
+      <label>
+        <input type="checkbox" value="250-499" onchange="applyFilters()">
+        ₹250 – ₹499
+      </label>
+
+      <label>
+        <input type="checkbox" value="500-999999" onchange="applyFilters()">
+        ₹500+
+      </label>
+    </div>
+
+    <div class="filterGroup">
+      <strong>Rating</strong>
+
+      <label>
+        <input type="checkbox" value="4" onchange="applyFilters()">
+        ★ 4.0 & above
+      </label>
+
+      <label>
+        <input type="checkbox" value="4.5" onchange="applyFilters()">
+        ★ 4.5 & above
+      </label>
+    </div>
+
+    <div class="filterGroup">
+      <strong>Offers</strong>
+
+      <label>
+        <input id="offerOnly"
+               type="checkbox"
+               onchange="applyFilters()">
+        Offers only
+      </label>
+    </div>
+
+  </aside>
+
+  <div class="productArea">
+
+    <div class="shopBar">
+
+      <div>
+        <strong id="listingTitle">
+          Trending Now
+        </strong>
+
+        <small id="resultCount"></small>
       </div>
 
-      <div class="filterGroup">
-        <strong>Category</strong>
+      <button
+        class="filterMobile"
+        onclick="toggleFilters()">
+        ☰ Filters
+      </button>
 
-        <label>
-          <input type="radio" name="cat" value="All" checked>
-          All Products
-        </label>
+      <select id="sortSelect"
+              onchange="render()">
 
-        <label>
-          <input type="radio" name="cat" value="Earrings">
-          Earrings
-        </label>
+        <option value="default">
+          Sort: Recommended
+        </option>
 
-        <label>
-          <input type="radio" name="cat" value="Hair Accessories">
-          Hair Accessories
-        </label>
+        <option value="low">
+          Price: Low to High
+        </option>
 
-        <label>
-          <input type="radio" name="cat" value="Beauty">
-          Beauty
-        </label>
+        <option value="high">
+          Price: High to Low
+        </option>
 
-        <label>
-          <input type="radio" name="cat" value="Fashion">
-          Fashion
-        </label>
+        <option value="rating">
+          Rating
+        </option>
 
-        <label>
-          <input type="radio" name="cat" value="Kids">
-          Kids
-        </label>
-      </div>
+      </select>
 
-      <div class="filterGroup">
-        <strong>Price</strong>
+    </div>
 
-        <label>
-          <input type="radio" name="price" value="all" checked>
-          All Prices
-        </label>
+    <div
+      class="activeFilters"
+      id="activeFilters">
+    </div>
 
-        <label>
-          <input type="radio" name="price" value="100">
-          Under ₹100
-        </label>
-
-        <label>
-          <input type="radio" name="price" value="250">
-          ₹100 – ₹249
-        </label>
-
-        <label>
-          <input type="radio" name="price" value="500">
-          ₹250 – ₹499
-        </label>
-
-        <label>
-          <input type="radio" name="price" value="501">
-          ₹500+
-        </label>
-      </div>
-
-      <div class="filterGroup">
-        <strong>Rating</strong>
-
-        <label>
-          <input type="radio" name="rating" value="0" checked>
-          All Ratings
-        </label>
-
-        <label>
-          <input type="radio" name="rating" value="4">
-          ★ 4.0 & above
-        </label>
-
-        <label>
-          <input type="radio" name="rating" value="4.5">
-          ★ 4.5 & above
-        </label>
-      </div>
-
-      <div class="filterGroup">
-        <strong>Discount</strong>
-
-        <label>
-          <input type="radio" name="discount" value="0" checked>
-          All Discounts
-        </label>
-
-        <label>
-          <input type="radio" name="discount" value="10">
-          10% & above
-        </label>
-
-        <label>
-          <input type="radio" name="discount" value="20">
-          20% & above
-        </label>
-
-        <label>
-          <input type="radio" name="discount" value="30">
-          30% & above
-        </label>
-      </div>
-
-    </aside>
-
-    <div>
-
-      <div class="shopBar">
-
-        <div>
-          <strong id="resultCount">100 Products</strong>
-          <small>Curated picks for you</small>
-        </div>
-
-        <select id="sortSelect" onchange="renderProducts()">
-          <option value="popular">Sort by: Popularity</option>
-          <option value="low">Price: Low to High</option>
-          <option value="high">Price: High to Low</option>
-          <option value="rating">Customer Rating</option>
-        </select>
-
-      </div>
-
-      <div class="products" id="productGrid"></div>
-
+    <div
+      class="products"
+      id="grid">
     </div>
 
   </div>
 
+</div>
+
 </section>
+
 
 <section class="promo">
 
   <div>
     <h3>Special Offers Under ₹99</h3>
-    <p>Pretty picks at everyday prices.</p>
+
+    <p>
+      Pretty picks, everyday prices —
+      perfect for gifting too.
+    </p>
   </div>
 
-  <button class="primaryBtn"
+  <button
+    class="primaryBtn"
     onclick="under99()">
     Shop Offers →
   </button>
 
 </section>
 
+
+<section>
+
+  <div class="sectionTitle">
+
+    <h2>Best Sellers</h2>
+
+    <a href="#products"
+       onclick="resetAll()">
+      View All →
+    </a>
+
+  </div>
+
+  <div
+    class="products"
+    id="best">
+  </div>
+
+</section>
+
 </main>
+
 
 <footer class="footer">
 
   <div class="footerInner">
 
     <div>
-      <div class="footerBrand">KAVAN BAZAAR ♡</div>
-      <small>Trendy accessories for every you.</small>
+      <div class="footerBrand">
+        KAVAN BAZAAR ♡
+      </div>
+
+      <small>
+        Trendy accessories for every you.
+      </small>
     </div>
 
     <div>
-      <strong>Fashion • Fancy • Beauty • Kids</strong><br>
-      <small>Frontend shopping experience</small>
+      <strong>
+        KAVAN BAZAAR
+      </strong>
+
+      <br>
+
+      <small>
+        Fashion • Fancy • Beauty • Kids
+      </small>
     </div>
 
   </div>
 
 </footer>
 
-<div class="drawer" id="drawer">
+
+<!-- DRAWER -->
+
+<div
+  class="drawer"
+  id="drawer">
+
   <div class="drawerPanel">
+
     <div class="modalHead">
-      <strong>KAVAN BAZAAR</strong>
-      <button class="close" onclick="closeDrawer()">×</button>
+
+      <strong>
+        KAVAN BAZAAR
+      </strong>
+
+      <button
+        class="close"
+        onclick="closeDrawer()">
+        ×
+      </button>
+
     </div>
+
     <div id="drawerLinks"></div>
+
   </div>
+
 </div>
 
-<div class="modal" id="cartModal">
+
+<!-- CART -->
+
+<div
+  class="modal"
+  id="cartModal">
 
   <div class="sheet">
 
     <div class="modalHead">
+
       <h2>Your Cart</h2>
-      <button class="close" onclick="closeCart()">×</button>
+
+      <button
+        class="close"
+        onclick="closeCart()">
+        ×
+      </button>
+
     </div>
 
     <div id="cartBody"></div>
-    <div id="cartFooter"></div>
+
+    <div id="cartFoot"></div>
 
   </div>
 
 </div>
 
-<div class="modal" id="wishlistModal">
+
+<!-- WISHLIST -->
+
+<div
+  class="modal"
+  id="wishModal">
 
   <div class="sheet">
 
     <div class="modalHead">
+
       <h2>Wishlist</h2>
-      <button class="close" onclick="closeWishlist()">×</button>
+
+      <button
+        class="close"
+        onclick="closeWish()">
+        ×
+      </button>
+
     </div>
 
-    <div id="wishlistBody"></div>
+    <div id="wishBody"></div>
 
   </div>
 
 </div>
 
-<div class="toast" id="toast"></div>
+
+<div
+  class="toast"
+  id="toast">
+</div>
+
+
+<!-- MOBILE BOTTOM -->
 
 <nav class="mobileBottom">
 
-  <button class="active" onclick="home()">
-    <span>⌂</span>Home
+  <button
+    class="active"
+    onclick="home()">
+
+    <span>⌂</span>
+    Home
+
   </button>
 
-  <button onclick="scrollCategories()">
-    <span>▦</span>Categories
+  <button
+    onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
+
+    <span>▦</span>
+    Products
+
   </button>
 
-  <button onclick="openWishlist()">
-    <span>♡</span>Wishlist
+  <button
+    onclick="openWishlist()">
+
+    <span>♡</span>
+    Wishlist
+
   </button>
 
-  <button onclick="openCart()">
-    <span>🛒</span>Cart
+  <button
+    onclick="openCart()">
+
+    <span>🛒</span>
+    Cart
+
   </button>
 
-  <button onclick="account()">
-    <span>♙</span>Account
+  <button
+    onclick="account()">
+
+    <span>♙</span>
+    Account
+
   </button>
 
 </nav>
 
+
 <script>
 
-/* =========================
+/* =========================================
    KAVAN BAZAAR
-   100 PRODUCTS
-========================= */
+   PRODUCT DATA
+========================================= */
 
-const categories = [
-  "Earrings",
-  "Hair Accessories",
-  "Beauty",
-  "Fashion",
+const cats = [
+  "Women",
+  "Men",
   "Kids"
 ];
 
-const categoryIcons = {
-  "Earrings":"💎",
-  "Hair Accessories":"🎀",
-  "Beauty":"💄",
-  "Fashion":"👗",
-  "Kids":"🧸"
+
+/*
+  100 PRODUCT BASE
+
+  ID
+  Name
+  Category
+  Price
+  MRP
+  Rating
+  Reviews
+  Badge
+  Type
+*/
+
+const seed = [
+
+["1","Golden Floral Hair Clips Pack of 2","Women",100,499,4.5,275,"Bestseller","hair"],
+
+["2","Glitter Design Banana Hair Clips Pack of 12","Women",660,660,4.4,0,"Trending","hair"],
+
+["3","Nagas Antique Jhumka Earrings","Women",800,800,4.5,0,"Premium","ear"],
+
+["4","Kids Hair Accessories Set of 14","Kids",119,399,4.2,249,"Popular","kids"],
+
+["5","Plain Alligator Metal Hair Clips Pack of 50","Women",131,131,4.2,16,"Offer","hair"],
+
+["6","Golden Pearl Floral Hair Comb Clips Pack of 3","Women",299,299,4.3,0,"New","hair"],
+
+["7","Gold Plated Embellished Hair Clip","Women",320,320,4.3,0,"Premium","hair"],
+
+["8","Crystal Stone Hair Clip","Women",149,299,4.4,42,"Trending","hair"],
+
+["9","Korean Style Hair Clip Set","Women",99,199,4.5,85,"Popular","hair"],
+
+["10","Pearl Floral Hair Pin Set","Women",129,249,4.3,37,"New","hair"],
+
+["11","Fancy Stone Jhumka Earrings","Women",199,399,4.5,74,"Bestseller","ear"],
+
+["12","Gold Tone Temple Jhumka","Women",249,599,4.6,51,"Premium","ear"],
+
+["13","Korean Pearl Earrings","Women",179,349,4.4,63,"Trending","ear"],
+
+["14","Fashion Stud Earrings Set","Women",159,399,4.3,91,"Offer","ear"],
+
+["15","Leaf Design Stud Earrings","Women",176,599,4.4,32,"New","ear"],
+
+["16","Alloy Jhumki Earrings Set","Women",157,1399,4.3,28,"Popular","ear"],
+
+["17","Fashion Jewellery Earring Combo","Women",165,399,4.4,54,"Offer","ear"],
+
+["18","Gold Plated Pearl Earrings","Women",322,1699,4.5,46,"Premium","ear"],
+
+["19","Anti Tarnish Earrings Set of 6","Women",192,999,4.4,83,"Bestseller","ear"],
+
+["20","Crystal Drop Earrings","Women",189,499,4.3,40,"New","ear"],
+
+["21","Gold Plated Bracelet","Women",115,299,4.4,45,"Popular","brace"],
+
+["22","Brass Fashion Bracelet","Women",85,199,4.2,61,"Offer","brace"],
+
+["23","Gold Plated Alloy Bracelet","Women",195,499,4.4,72,"Trending","brace"],
+
+["24","Crystal Zircon Bracelet","Women",289,699,4.5,54,"Premium","brace"],
+
+["25","Beaded Crystal Bracelet","Women",386,799,4.6,31,"New","brace"],
+
+["26","Stainless Steel Gold Bracelet","Women",198,499,4.3,29,"Popular","brace"],
+
+["27","Gold Plated Fashion Bracelet","Women",173,399,4.2,67,"Offer","brace"],
+
+["28","Rudraksha Gold Plated Bracelet","Women",473,899,4.5,22,"Premium","brace"],
+
+["29","Stainless Steel Bracelet","Women",154,399,4.3,35,"New","brace"],
+
+["30","Rhodium Fashion Bracelet","Women",186,449,4.4,42,"Trending","brace"],
+
+["31","Women's Fashion Necklace","Women",299,599,4.4,56,"Popular","neck"],
+
+["32","Gold Tone Pendant Necklace","Women",349,799,4.5,34,"Premium","neck"],
+
+["33","Pearl Pendant Necklace","Women",399,899,4.6,28,"New","neck"],
+
+["34","Fashion Chain Necklace","Women",249,499,4.3,49,"Offer","neck"],
+
+["35","Traditional Temple Necklace","Women",499,999,4.5,19,"Premium","neck"],
+
+["36","Minimal Daily Wear Necklace","Women",199,399,4.2,76,"Popular","neck"],
+
+["37","Gold Plated Chain","Women",279,599,4.4,41,"Trending","neck"],
+
+["38","Stone Pendant Chain","Women",329,699,4.3,33,"New","neck"],
+
+["39","Fancy Party Necklace","Women",449,899,4.5,24,"Premium","neck"],
+
+["40","Pearl Layer Necklace","Women",389,799,4.4,39,"Bestseller","neck"],
+
+
+/* MEN — FANCY / ACCESSORIES ONLY */
+
+["41","Men's Leather Wallet","Men",299,599,4.4,85,"Popular","wallet"],
+
+["42","Men's Card Holder Wallet","Men",199,399,4.3,52,"New","wallet"],
+
+["43","Men's Metal Keychain","Men",99,199,4.4,71,"Offer","key"],
+
+["44","Men's Premium Keychain","Men",149,299,4.5,48,"Trending","key"],
+
+["45","Men's Classic Sunglasses","Men",299,699,4.3,63,"Popular","glass"],
+
+["46","Men's Fashion Sunglasses","Men",349,799,4.4,57,"New","glass"],
+
+["47","Men's Classic Belt","Men",299,599,4.5,91,"Bestseller","belt"],
+
+["48","Men's Casual Belt","Men",249,499,4.3,45,"Offer","belt"],
+
+["49","Men's Stainless Steel Bracelet","Men",199,399,4.4,38,"Trending","brace"],
+
+["50","Men's Fashion Bracelet","Men",179,349,4.2,62,"Popular","brace"],
+
+["51","Men's Pendant Chain","Men",299,599,4.4,27,"New","neck"],
+
+["52","Men's Minimal Chain","Men",249,499,4.3,36,"Popular","neck"],
+
+["53","Men's Fashion Ring","Men",149,299,4.2,58,"Offer","ring"],
+
+["54","Men's Stainless Steel Ring","Men",199,399,4.4,42,"Trending","ring"],
+
+["55","Men's Travel Wallet","Men",349,699,4.5,31,"Premium","wallet"],
+
+["56","Men's Coin Pouch","Men",159,299,4.2,23,"New","wallet"],
+
+["57","Men's Key Ring","Men",89,159,4.3,75,"Offer","key"],
+
+["58","Men's Aviator Sunglasses","Men",399,799,4.5,47,"Bestseller","glass"],
+
+["59","Men's Fashion Wallet","Men",329,699,4.4,52,"Popular","wallet"],
+
+["60","Men's Accessory Gift Set","Men",499,999,4.6,18,"Premium","combo"],
+
+
+/* KIDS */
+
+["61","Kids Cute Hair Clip Set","Kids",79,149,4.5,65,"Popular","kids"],
+
+["62","Kids Butterfly Hair Clips","Kids",89,159,4.4,51,"Trending","kids"],
+
+["63","Kids Colour Hair Clips","Kids",69,129,4.3,44,"Offer","kids"],
+
+["64","Kids Pearl Hair Clips","Kids",99,199,4.5,38,"New","kids"],
+
+["65","Kids Fancy Hair Accessories","Kids",119,249,4.4,42,"Popular","kids"],
+
+["66","Kids Bow Hair Clip Set","Kids",89,179,4.5,56,"Bestseller","kids"],
+
+["67","Kids Floral Hair Clips","Kids",99,199,4.3,33,"New","kids"],
+
+["68","Kids Crystal Hair Clips","Kids",129,249,4.5,29,"Trending","kids"],
+
+["69","Kids Cartoon Hair Clips","Kids",79,149,4.4,47,"Offer","kids"],
+
+["70","Kids Mini Hair Accessory Set","Kids",149,299,4.6,25,"Premium","kids"],
+
+["71","Kids Fancy Bracelet","Kids",79,149,4.3,34,"Popular","brace"],
+
+["72","Kids Beaded Bracelet","Kids",69,129,4.4,41,"New","brace"],
+
+["73","Kids Charm Bracelet","Kids",99,199,4.5,28,"Trending","brace"],
+
+["74","Kids Pearl Bracelet","Kids",119,229,4.4,21,"Premium","brace"],
+
+["75","Kids Cute Necklace","Kids",129,249,4.5,31,"Popular","neck"],
+
+["76","Kids Butterfly Necklace","Kids",99,199,4.3,38,"New","neck"],
+
+["77","Kids Fancy Jewellery Set","Kids",179,349,4.5,44,"Bestseller","combo"],
+
+["78","Kids Birthday Jewellery Combo","Kids",199,399,4.6,19,"Premium","combo"],
+
+["79","Kids Party Accessory Set","Kids",149,299,4.4,26,"Trending","combo"],
+
+["80","Kids Gift Accessories Set","Kids",229,449,4.5,17,"Premium","combo"],
+
+
+/* WOMEN BEAUTY */
+
+["81","Pink Lipstick","Women",149,249,4.4,67,"Popular","beauty"],
+
+["82","Matte Red Lipstick","Women",179,299,4.5,73,"Bestseller","beauty"],
+
+["83","Nude Lipstick","Women",159,279,4.3,42,"New","beauty"],
+
+["84","Glossy Lip Colour","Women",129,229,4.4,51,"Trending","beauty"],
+
+["85","Liquid Lipstick","Women",199,349,4.5,39,"Premium","beauty"],
+
+["86","Nail Polish Set","Women",199,299,4.4,88,"Popular","nail"],
+
+["87","Gloss Nail Polish","Women",79,129,4.3,54,"Offer","nail"],
+
+["88","Matte Nail Polish","Women",89,149,4.4,48,"New","nail"],
+
+["89","Beauty Accessory Combo","Women",249,499,4.5,36,"Combo","beauty"],
+
+["90","Makeup Accessory Set","Women",299,599,4.4,29,"Premium","beauty"],
+
+["91","Fancy Hair Beauty Combo","Women",199,399,4.5,57,"Bestseller","beauty"],
+
+["92","Pearl Beauty Hair Set","Women",179,349,4.3,33,"New","beauty"],
+
+["93","Fashion Hair Accessory Combo","Women",149,299,4.4,46,"Offer","beauty"],
+
+["94","Party Wear Beauty Set","Women",299,499,4.5,24,"Premium","beauty"],
+
+["95","Daily Wear Beauty Combo","Women",129,249,4.2,68,"Popular","beauty"],
+
+["96","Fancy Jewellery Combo","Women",399,799,4.6,31,"Premium","combo"],
+
+["97","Women Gift Accessory Set","Women",299,599,4.5,27,"Bestseller","combo"],
+
+["98","Fashion Accessories Combo","Women",249,499,4.4,43,"Trending","combo"],
+
+["99","Premium Fancy Combo Set","Women",499,999,4.6,18,"Premium","combo"],
+
+["100","KAVAN Special Beauty Combo","Women",349,699,4.5,35,"Bestseller","combo"]
+
+];
+
+
+/* =========================================
+   REAL PRODUCT PHOTOS
+========================================= */
+
+const verifiedProducts = {
+
+  "1":[
+    "Golden Floral Hair Clips Pack of 2",
+    100,
+    499,
+    4.5,
+    275,
+    "https://rukminim3.flixcart.com/image/824/972/xif0q/shopsy-hair-accessory/i/j/c/korean-style-women-s-and-girls-golden-hair-clips-pack-of-2-2-original-imagx8pnzvezerae.jpeg?crop=false&q=60"
+  ],
+
+  "2":[
+    "Impression Glitter Design Banana Hair Clips Pack of 12",
+    660,
+    660,
+    4.4,
+    0,
+    "https://impression4u.com/cdn/shop/files/WhatsAppImage2025-04-18at5.34.17PM.jpg?v=1744981203"
+  ],
+
+  "3":[
+    "Nagas Antique Jhumka Earrings",
+    800,
+    800,
+    4.5,
+    0,
+    "https://aspfashionjewellery.com/cdn/shop/files/Picsart_23-06-30_15-25-59-300.jpg?v=1688211968"
+  ],
+
+  "4":[
+    "Nagi jewels Set Of 14 Kid Hair Accessories",
+    119,
+    399,
+    4.2,
+    249,
+    "https://images.meesho.com/images/products/258288635/onf0g_512.webp?width=512"
+  ],
+
+  "5":[
+    "J0YJ0 Plain Alligator Metal Hair Clips Pack of 50",
+    131,
+    131,
+    4.2,
+    16,
+    "https://images.meesho.com/images/products/456057457/zjhau_512.webp"
+  ],
+
+  "6":[
+    "JMD Golden Pearl Floral Hair Comb Clips Pack of 3",
+    299,
+    299,
+    4.3,
+    0,
+    "https://images.meesho.com/images/products/714028836/liiay_512.webp?width=512"
+  ],
+
+  "7":[
+    "Vogue Panash Gold-Plated Embellished Hair Clip",
+    320,
+    320,
+    4.3,
+    0,
+    "https://assets.ajio.com/medias/sys_master/root/20240808/vCHD/66b4dac81d763220fa6a9a5c/-1117Wx1400H-700272895-gold-MODEL.jpg"
+  ]
+
 };
 
-const products = [];
 
-const baseProducts = [
+/* Apply verified information */
 
-["Traditional Gold Jhumka Earrings","Earrings",149,199,4.6],
-["Pearl Drop Earrings","Earrings",179,249,4.5],
-["Stone Stud Earrings","Earrings",99,149,4.4],
-["Rose Gold Hoop Earrings","Earrings",129,189,4.5],
-["Kundan Party Earrings","Earrings",249,349,4.7],
-["Butterfly Earrings","Earrings",119,169,4.4],
-["Floral Drop Earrings","Earrings",159,229,4.5],
-["Crystal Hanging Earrings","Earrings",199,299,4.6],
-["Minimal Heart Earrings","Earrings",89,129,4.3],
-["Temple Design Jhumka","Earrings",229,329,4.7],
+Object.entries(verifiedProducts).forEach(
+  ([id,v]) => {
 
-["Velvet Bow Hair Clip","Hair Accessories",79,119,4.5],
-["Butterfly Hair Clip Set","Hair Accessories",99,149,4.6],
-["Pearl Hair Clip","Hair Accessories",89,139,4.4],
-["Crystal Hair Pin Set","Hair Accessories",129,179,4.5],
-["Flower Hair Claw","Hair Accessories",109,159,4.5],
-["Pastel Hair Clip Set","Hair Accessories",69,99,4.3],
-["Satin Bow Hair Clip","Hair Accessories",119,169,4.6],
-["Cute Butterfly Hair Pin","Hair Accessories",59,89,4.4],
-["Premium Hair Claw","Hair Accessories",149,199,4.5],
-["Girls Hair Accessory Combo","Hair Accessories",199,299,4.7],
+    const p =
+      seed.find(x => x[0] === id);
 
-["Matte Liquid Lipstick","Beauty",199,299,4.5],
-["Velvet Matte Lipstick","Beauty",249,349,4.6],
-["High Shine Lip Gloss","Beauty",149,199,4.4],
-["Tinted Lip Balm","Beauty",129,179,4.5],
-["Lip & Cheek Tint","Beauty",179,249,4.5],
-["Liquid Blush","Beauty",229,299,4.6],
-["Shimmer Body Glitter","Beauty",159,229,4.3],
-["Nail Polish Set","Beauty",199,299,4.5],
-["Pastel Nail Polish Duo","Beauty",99,149,4.4],
-["Beauty Mini Combo Kit","Beauty",249,399,4.6],
+    if(!p) return;
 
-["Floral Casual Dress","Fashion",599,899,4.5],
-["Pastel Party Dress","Fashion",699,999,4.6],
-["Printed Summer Dress","Fashion",549,799,4.4],
-["Girls Trendy Top","Fashion",399,599,4.3],
-["Denim Jacket","Fashion",699,999,4.5],
-["Ruffle Sleeve Top","Fashion",449,649,4.4],
-["Pleated Skirt","Fashion",499,749,4.5],
-["Cotton Casual Shirt","Fashion",449,649,4.4],
-["Party Wear Skirt","Fashion",549,799,4.5],
-["Premium Fashion Combo","Fashion",799,1199,4.6],
+    p[1] = v[0];
+    p[3] = v[1];
+    p[4] = v[2];
+    p[5] = v[3];
+    p[6] = v[4];
+    p[9] = v[5];
 
-["Cute Kids Backpack","Kids",399,599,4.5],
-["Kids Fashion Cap","Kids",149,229,4.4],
-["Kids Sunglasses","Kids",129,199,4.3],
-["Kids Hair Clip Set","Kids",79,119,4.5],
-["Kids Bracelet Set","Kids",99,149,4.4],
-["Kids Fancy Watch","Kids",199,299,4.3],
-["Kids Mini Sling Bag","Kids",249,399,4.5],
-["Kids Casual Shoes","Kids",499,699,4.4],
-["Kids Winter Beanie","Kids",149,229,4.5],
-["Kids Accessories Combo","Kids",299,449,4.6]
+  }
+);
 
-];
 
-/* Create exactly 100 catalogue entries */
+/* =========================================
+   STATE
+========================================= */
 
-baseProducts.forEach((p,i)=>{
-  products.push({
-    id:i+1,
-    name:p[0],
-    category:p[1],
-    price:p[2],
-    mrp:p[3],
-    rating:p[4],
-    reviews:20+(i*17)%150,
-    discount:Math.round((1-p[2]/p[3])*100),
-    imageIndex:i+1
-  });
-});
+let cart =
+  JSON.parse(
+    localStorage.getItem("kavan_cart") || "[]"
+  );
 
-const extraNames = [
-  "Premium",
-  "Trendy",
-  "Classic",
-  "Elegant",
-  "Cute",
-  "Fancy",
-  "Stylish",
-  "Party Wear",
-  "Daily Wear",
-  "New Collection"
-];
+let wish =
+  JSON.parse(
+    localStorage.getItem("kavan_wish") || "[]"
+  );
 
-while(products.length<100){
+let active = "All";
+let query = "";
+let only99 = false;
 
-  const i=products.length;
-  const category=categories[i%categories.length];
+let filterCats = [];
+let priceFilters = [];
+let ratingFilters = [];
+let offerOnly = false;
 
-  const names={
-    Earrings:["Stone Fashion Earrings","Fancy Drop Earrings","Pearl Fashion Earrings","Daily Wear Jhumka"],
-    "Hair Accessories":["Fancy Hair Clip","Girls Hair Bow","Trendy Hair Claw","Hair Accessory Set"],
-    Beauty:["Lip Gloss","Beauty Combo","Nail Colour","Makeup Accessory"],
-    Fashion:["Trendy Casual Wear","Fashion Top","Party Wear Dress","Stylish Outfit"],
-    Kids:["Kids Fancy Accessory","Cute Kids Combo","Kids Fashion Item","Kids Daily Wear"]
+
+/* =========================================
+   CATEGORY ICON
+========================================= */
+
+function catIcon(c,i){
+
+  const icon = {
+
+    Women:"💄",
+    Men:"⌚",
+    Kids:"🎀"
+
+  }[c] || "✨";
+
+  return `
+    <div style="
+      font-size:42px;
+      height:95px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(
+        145deg,
+        #fff0f6,
+        #ffe3ed
+      );
+      border-radius:11px;
+    ">
+      ${icon}
+    </div>
+  `;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+function nav(){
+
+  document.getElementById("nav").innerHTML = `
+
+    <a
+      href="#"
+      class="${active==="All" ? "active" : ""}"
+      onclick="resetAll();return false">
+      Home
+    </a>
+
+    <a
+      href="#products"
+      class="${active==="Women" ? "active" : ""}"
+      onclick="setCat('Women');return false">
+      Women
+    </a>
+
+    <a
+      href="#products"
+      class="${active==="Men" ? "active" : ""}"
+      onclick="setCat('Men');return false">
+      Men
+    </a>
+
+    <a
+      href="#products"
+      class="${active==="Kids" ? "active" : ""}"
+      onclick="setCat('Kids');return false">
+      Kids
+    </a>
+
+  `;
+
+  document.getElementById("drawerLinks").innerHTML = `
+
+    <a
+      href="#"
+      onclick="resetAll();closeDrawer();return false">
+      Home
+    </a>
+
+    <a
+      href="#products"
+      onclick="setCat('Women');closeDrawer()">
+      Women
+    </a>
+
+    <a
+      href="#products"
+      onclick="setCat('Men');closeDrawer()">
+      Men
+    </a>
+
+    <a
+      href="#products"
+      onclick="setCat('Kids');closeDrawer()">
+      Kids
+    </a>
+
+  `;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+function productImage(p,i){
+
+  if(p[9]){
+
+    return `
+      <img
+        src="${p[9]}"
+        alt="${p[1]}"
+        loading="lazy"
+        onerror="this.style.display='none'">
+    `;
+
+  }
+
+  const fallback = {
+
+    Women:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",
+
+    Men:"https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=700&q=80",
+
+    Kids:"https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80"
+
   };
 
-  const name=names[category][i%4];
-
-  let price;
-
-  if(category==="Earrings") price=79+(i%8)*25;
-  else if(category==="Hair Accessories") price=59+(i%8)*20;
-  else if(category==="Beauty") price=99+(i%8)*30;
-  else if(category==="Fashion") price=399+(i%8)*55;
-  else price=99+(i%8)*35;
-
-  products.push({
-    id:i+1,
-    name:extraNames[i%extraNames.length]+" "+name+" "+(i+1),
-    category,
-    price,
-    mrp:Math.round(price*1.35),
-    rating:4.1+(i%6)/10,
-    reviews:25+(i*13)%130,
-    discount:Math.round((1-price/Math.round(price*1.35))*100),
-    imageIndex:i+1
-  });
+  return `
+    <img
+      src="${fallback[p[2]]}"
+      alt="${p[1]}"
+      loading="lazy">
+  `;
 }
 
 
-/* =========================
-   STATE
-========================= */
+/* =========================================
+   CATEGORY CARDS
+========================================= */
 
-let cart=JSON.parse(localStorage.getItem("kavan_cart")||"[]");
-let wishlist=JSON.parse(localStorage.getItem("kavan_wishlist")||"[]");
+function renderCats(){
 
-let activeCategory="All";
-let searchText="";
+  document.getElementById("categories").innerHTML =
+    cats.map((c,i)=>`
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
-function renderNav(){
-
-  document.getElementById("nav").innerHTML=
-    `<a href="#" class="active" onclick="resetAll();return false">Home</a>`+
-    categories.map(c=>
-      `<a href="#products" onclick="setCategory('${c}');return false">${c}</a>`
-    ).join("");
-
-  document.getElementById("drawerLinks").innerHTML=
-    `<a href="#" onclick="home();closeDrawer();return false">Home</a>`+
-    categories.map(c=>
-      `<a href="#products" onclick="setCategory('${c}');closeDrawer()">${c}</a>`
-    ).join("");
-}
-
-
-/* =========================
-   CATEGORIES
-========================= */
-
-function renderCategories(){
-
-  document.getElementById("categories").innerHTML=
-    categories.map(c=>`
-      <button class="category"
-        onclick="setCategory('${c}')">
+      <button
+        class="category"
+        onclick="setCat('${c}')">
 
         <div class="categoryImage">
-          ${categoryIcons[c]}
+          ${catIcon(c,i)}
         </div>
 
         <b>${c}</b>
 
       </button>
+
     `).join("");
+
 }
 
 
-/* =========================
-   PRODUCT IMAGE
-========================= */
-
-function imageURL(product){
-
-  const q=
-    `${product.category},fashion,accessories,product,photo`
-      .toLowerCase()
-      .replace(/[^a-z0-9, ]/g,"")
-      .replace(/ /g,",");
-
-  return `https://loremflickr.com/600/600/${encodeURIComponent(q)}?lock=${product.imageIndex}`;
-}
-
-
-/* =========================
+/* =========================================
    PRODUCT CARD
-========================= */
+========================================= */
 
-function productCard(p){
+function card(p,i){
 
-  const liked=wishlist.includes(p.id);
+  const id = p[0];
+  const name = p[1];
+  const category = p[2];
+  const price = p[3];
+  const mrp = p[4];
+  const rating = p[5];
+  const reviews = p[6];
+  const badge = p[7];
+
+  const off =
+    mrp > price
+      ? Math.round(
+          (1 - price/mrp) * 100
+        )
+      : 0;
+
+  const activeWish =
+    wish.includes(id);
 
   return `
-  <article class="product">
 
-    <div class="productImage">
+    <article class="product">
 
-      ${p.discount>=25
-        ? `<span class="offer">${p.discount}% OFF</span>`
-        : ""
-      }
+      <div class="productImage">
 
-      <button
-        class="heart ${liked?"active":""}"
-        onclick="toggleWishlist(${p.id})">
-        ${liked?"♥":"♡"}
-      </button>
-
-      <img
-        src="${imageURL(p)}"
-        alt="${p.name}"
-        loading="lazy"
-        referrerpolicy="no-referrer"
-        onerror="this.src='https://loremflickr.com/600/600/fashion,accessories?lock=${p.id}'">
-
-    </div>
-
-    <div class="productBody">
-
-      <div class="productCategory">
-        ${p.category}
-      </div>
-
-      <div class="productName">
-        ${p.name}
-      </div>
-
-      <div>
-        <span class="price">₹${p.price}</span>
-        <span class="mrp">₹${p.mrp}</span>
-      </div>
-
-      <span class="discount">
-        ${p.discount}% OFF
-      </span>
-
-      <div class="rating">
-        <b>★</b>
-        ${p.rating.toFixed(1)}
-        (${p.reviews})
-      </div>
-
-      <button
-        class="addBtn"
-        onclick="addToCart(${p.id})">
-        🛒 Add to Cart
-      </button>
-
-    </div>
-
-  </article>
-  `;
-}
-
-
-/* =========================
-   FILTERING
-========================= */
-
-function getFilteredProducts(){
-
-  let list=products.filter(p=>{
-
-    const categoryOK=
-      activeCategory==="All" ||
-      p.category===activeCategory;
-
-    const searchOK=
-      !searchText ||
-      p.name.toLowerCase().includes(searchText.toLowerCase()) ||
-      p.category.toLowerCase().includes(searchText.toLowerCase());
-
-    return categoryOK && searchOK;
-
-  });
-
-  const price=
-    document.querySelector('input[name="price"]:checked')?.value;
-
-  if(price && price!=="all"){
-    if(price==="100")
-      list=list.filter(p=>p.price<100);
-
-    if(price==="250")
-      list=list.filter(p=>p.price>=100 && p.price<250);
-
-    if(price==="500")
-      list=list.filter(p=>p.price>=250 && p.price<500);
-
-    if(price==="501")
-      list=list.filter(p=>p.price>=500);
-  }
-
-  const rating=
-    Number(document.querySelector('input[name="rating"]:checked')?.value||0);
-
-  if(rating)
-    list=list.filter(p=>p.rating>=rating);
-
-  const discount=
-    Number(document.querySelector('input[name="discount"]:checked')?.value||0);
-
-  if(discount)
-    list=list.filter(p=>p.discount>=discount);
-
-  return list;
-}
-
-
-/* =========================
-   RENDER PRODUCTS
-========================= */
-
-function renderProducts(){
-
-  let list=getFilteredProducts();
-
-  const sort=document.getElementById("sortSelect").value;
-
-  if(sort==="low")
-    list.sort((a,b)=>a.price-b.price);
-
-  if(sort==="high")
-    list.sort((a,b)=>b.price-a.price);
-
-  if(sort==="rating")
-    list.sort((a,b)=>b.rating-a.rating);
-
-  if(sort==="popular")
-    list.sort((a,b)=>b.reviews-a.reviews);
-
-  document.getElementById("productGrid").innerHTML=
-    list.map(productCard).join("");
-
-  document.getElementById("resultCount").textContent=
-    `${list.length} Products`;
-
-  document.getElementById("listingTitle").textContent=
-    searchText
-      ? `Search: ${searchText}`
-      : activeCategory==="All"
-        ? "Trending Now"
-        : activeCategory;
-
-  updateCounts();
-}
-
-
-/* =========================
-   CATEGORY
-========================= */
-
-function setCategory(category){
-
-  activeCategory=category;
-
-  document.querySelectorAll('input[name="cat"]')
-    .forEach(x=>{
-      x.checked=
-        category==="All"
-          ? x.value==="All"
-          : x.value===category;
-    });
-
-  renderProducts();
-
-  scrollProducts();
-}
-
-
-/* =========================
-   SEARCH
-========================= */
-
-function bindSearch(id){
-
-  document.getElementById(id)
-    .addEventListener("input",e=>{
-
-      searchText=e.target.value;
-
-      const other=
-        id==="desktopSearch"
-          ? "mobileSearchInput"
-          : "desktopSearch";
-
-      document.getElementById(other).value=
-        searchText;
-
-      activeCategory="All";
-
-      renderProducts();
-    });
-}
-
-
-/* =========================
-   CART
-========================= */
-
-function addToCart(id){
-
-  const existing=cart.find(x=>x.id===id);
-
-  if(existing)
-    existing.qty++;
-  else
-    cart.push({id,qty:1});
-
-  saveData();
-
-  toast("Added to cart ♡");
-}
-
-function removeFromCart(id){
-
-  cart=cart.filter(x=>x.id!==id);
-
-  saveData();
-
-  renderCart();
-}
-
-function changeQty(id,change){
-
-  const item=cart.find(x=>x.id===id);
-
-  if(!item)return;
-
-  item.qty+=change;
-
-  if(item.qty<=0)
-    cart=cart.filter(x=>x.id!==id);
-
-  saveData();
-
-  renderCart();
-}
-
-function openCart(){
-
-  document.getElementById("cartModal")
-    .classList.add("open");
-
-  renderCart();
-}
-
-function closeCart(){
-
-  document.getElementById("cartModal")
-    .classList.remove("open");
-}
-
-function renderCart(){
-
-  const body=document.getElementById("cartBody");
-
-  if(!cart.length){
-
-    body.innerHTML=`
-      <div style="text-align:center;padding:40px;color:#777">
-        Your cart is empty ♡
-      </div>
-    `;
-
-    document.getElementById("cartFooter").innerHTML="";
-
-    return;
-  }
-
-  let total=0;
-
-  body.innerHTML=cart.map(item=>{
-
-    const p=products.find(x=>x.id===item.id);
-
-    total+=p.price*item.qty;
-
-    return `
-      <div class="cartRow">
-
-        <div class="cartImg">
-          <img src="${imageURL(p)}">
-        </div>
-
-        <div>
-          <strong>${p.name}</strong>
-          <div style="color:var(--pink);font-weight:800">
-            ₹${p.price}
-          </div>
-
-          <div class="qty">
-            <button onclick="changeQty(${p.id},-1)">−</button>
-            <span>${item.qty}</span>
-            <button onclick="changeQty(${p.id},1)">+</button>
-          </div>
-        </div>
+        ${
+          badge === "Offer"
+            ? `<span class="offer">OFFER</span>`
+            : ""
+        }
 
         <button
-          class="remove"
-          onclick="removeFromCart(${p.id})">
-          Remove
+          class="heart ${activeWish ? "active" : ""}"
+          onclick="toggleWish('${id}')">
+
+          ${activeWish ? "♥" : "♡"}
+
         </button>
 
+        ${productImage(p,i)}
+
       </div>
-    `;
 
-  }).join("");
+      <div class="productBody">
 
-  document.getElementById("cartFooter").innerHTML=`
-    <h3>Total: ₹${total}</h3>
+        <div class="productCategory">
+          ${category}
+        </div>
 
-    <button
-      class="primaryBtn"
-      style="width:100%"
-      onclick="toast('Checkout will be connected with backend later')">
-      Checkout
-    </button>
-  `;
-}
-
-
-/* =========================
-   WISHLIST
-========================= */
-
-function toggleWishlist(id){
-
-  if(wishlist.includes(id))
-    wishlist=wishlist.filter(x=>x!==id);
-  else
-    wishlist.push(id);
-
-  saveData();
-
-  renderProducts();
-}
-
-function openWishlist(){
-
-  document.getElementById("wishlistModal")
-    .classList.add("open");
-
-  renderWishlist();
-}
-
-function closeWishlist(){
-
-  document.getElementById("wishlistModal")
-    .classList.remove("open");
-}
-
-function renderWishlist(){
-
-  const body=document.getElementById("wishlistBody");
-
-  if(!wishlist.length){
-
-    body.innerHTML=`
-      <div style="text-align:center;padding:40px;color:#777">
-        Your wishlist is empty ♡
-      </div>
-    `;
-
-    return;
-  }
-
-  body.innerHTML=wishlist.map(id=>{
-
-    const p=products.find(x=>x.id===id);
-
-    return `
-      <div class="cartRow">
-
-        <div class="cartImg">
-          <img src="${imageURL(p)}">
+        <div class="productName">
+          ${name}
         </div>
 
         <div>
-          <strong>${p.name}</strong>
-          <div style="color:var(--pink);font-weight:800">
-            ₹${p.price}
-          </div>
+
+          <span class="price">
+            ₹${price}
+          </span>
+
+          ${
+            mrp > price
+              ? `<span class="mrp">₹${mrp}</span>`
+              : ""
+          }
+
+        </div>
+
+        ${
+          off
+            ? `<span class="discount">
+                ${off}% OFF
+              </span>`
+            : ""
+        }
+
+        <div class="rating">
+          <b>★</b>
+          ${rating.toFixed(1)}
+          (${reviews})
         </div>
 
         <button
           class="addBtn"
-          onclick="addToCart(${p.id})">
-          Add
+          onclick="addCart('${id}')">
+
+          🛒 Add to Cart
+
         </button>
 
       </div>
-    `;
 
-  }).join("");
+    </article>
+
+  `;
 }
 
 
-/* =========================
-   STORAGE
-========================= */
+/* =========================================
+   FILTER CATEGORY
+========================================= */
 
-function saveData(){
+function renderFilterCats(){
+
+  document.getElementById("filterCats").innerHTML =
+    cats.map(c=>`
+
+      <button
+        class="filterCat
+        ${filterCats.includes(c) ? "active" : ""}"
+        onclick="toggleCatFilter('${c}')">
+
+        <span>
+          ${c}
+        </span>
+
+        <span>
+          ${seed.filter(
+            p => p[2] === c
+          ).length}
+        </span>
+
+      </button>
+
+    `).join("");
+
+}
+
+
+function toggleCatFilter(c){
+
+  const index =
+    filterCats.indexOf(c);
+
+  if(index >= 0){
+
+    filterCats.splice(index,1);
+
+  }else{
+
+    filterCats.push(c);
+
+  }
+
+  applyFilters();
+
+}
+
+
+/* =========================================
+   INPUT FILTERS
+========================================= */
+
+function selectedInputs(){
+
+  priceFilters =
+    [
+      ...document.querySelectorAll(
+        '.filterGroup input[type="checkbox"]'
+      )
+    ]
+    .filter(
+      x =>
+        x.checked &&
+        x.value.includes("-")
+    )
+    .map(x=>x.value);
+
+
+  ratingFilters =
+    [
+      ...document.querySelectorAll(
+        '.filterGroup input[type="checkbox"]'
+      )
+    ]
+    .filter(
+      x =>
+        x.checked &&
+        !x.value.includes("-")
+    )
+    .map(x=>Number(x.value));
+
+
+  offerOnly =
+    document.getElementById(
+      "offerOnly"
+    ).checked;
+
+}
+
+
+/* =========================================
+   FILTER PRODUCTS
+========================================= */
+
+function filtered(){
+
+  return seed.filter(p => {
+
+    const categoryMatch =
+      filterCats.length
+        ? filterCats.includes(p[2])
+        : (
+            active === "All" ||
+            p[2] === active
+          );
+
+
+    const searchMatch =
+      !query ||
+      p[1]
+        .toLowerCase()
+        .includes(query.toLowerCase()) ||
+      p[2]
+        .toLowerCase()
+        .includes(query.toLowerCase());
+
+
+    const priceMatch =
+      !only99 ||
+      p[3] < 100;
+
+
+    const selectedPriceMatch =
+      !priceFilters.length ||
+      priceFilters.some(v=>{
+
+        const [a,b] =
+          v.split("-").map(Number);
+
+        return (
+          p[3] >= a &&
+          p[3] <= b
+        );
+
+      });
+
+
+    const ratingMatch =
+      !ratingFilters.length ||
+      ratingFilters.some(
+        v => p[5] >= v
+      );
+
+
+    const offerMatch =
+      !offerOnly ||
+      p[7] === "Offer";
+
+
+    return (
+      categoryMatch &&
+      searchMatch &&
+      priceMatch &&
+      selectedPriceMatch &&
+      ratingMatch &&
+      offerMatch
+    );
+
+  });
+
+}
+
+
+/* =========================================
+   SORT
+========================================= */
+
+function sortProducts(list){
+
+  const sort =
+    document.getElementById(
+      "sortSelect"
+    )?.value || "default";
+
+
+  if(sort === "low"){
+
+    return list.sort(
+      (a,b)=>a[3]-b[3]
+    );
+
+  }
+
+
+  if(sort === "high"){
+
+    return list.sort(
+      (a,b)=>b[3]-a[3]
+    );
+
+  }
+
+
+  if(sort === "rating"){
+
+    return list.sort(
+      (a,b)=>b[5]-a[5]
+    );
+
+  }
+
+
+  return list;
+
+}
+
+
+/* =========================================
+   MAIN RENDER
+========================================= */
+
+function render(){
+
+  let list =
+    sortProducts(
+      filtered()
+    );
+
+
+  const count =
+    filterCats.length +
+    priceFilters.length +
+    ratingFilters.length +
+    (offerOnly ? 1 : 0) +
+    (only99 ? 1 : 0);
+
+
+  if(query){
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      `Search: ${query}`;
+
+  }else if(
+    filterCats.length
+  ){
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      filterCats.join(", ");
+
+  }else if(active !== "All"){
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      active;
+
+  }else if(only99){
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      "Offers Under ₹99";
+
+  }else{
+
+    document.getElementById(
+      "listingTitle"
+    ).textContent =
+      "Trending Now";
+
+  }
+
+
+  document.getElementById(
+    "resultCount"
+  ).textContent =
+    `${list.length} products`;
+
+
+  document.getElementById(
+    "grid"
+  ).innerHTML =
+
+    list.length
+
+      ? list
+          .slice(0,100)
+          .map(card)
+          .join("")
+
+      : `
+        <div
+          style="
+            grid-column:1/-1;
+            text-align:center;
+            padding:50px;
+            color:#777;
+          ">
+
+          No products found.
+
+        </div>
+      `;
+
+
+  document.getElementById(
+    "best"
+  ).innerHTML =
+
+    seed
+      .filter(
+        p =>
+          [
+            "Bestseller",
+            "Popular",
+            "Trending"
+          ].includes(p[7])
+      )
+      .slice(0,8)
+      .map(card)
+      .join("");
+
+
+  document.getElementById(
+    "filterCount"
+  ) &&
+  (
+    document.getElementById(
+      "filterCount"
+    ).textContent = count
+  );
+
+
+  document.getElementById(
+    "activeFilters"
+  ).innerHTML = [
+
+    ...filterCats,
+
+    ...priceFilters.map(
+      x => x.replace("-", " – ")
+    ),
+
+    ...ratingFilters.map(
+      x => `★ ${x}+`
+    ),
+
+    ...(offerOnly
+      ? ["Offers only"]
+      : [])
+
+  ]
+  .map(
+    x => `
+      <span class="filterChip">
+        ${x}
+      </span>
+    `
+  )
+  .join("");
+
+
+  renderFilterCats();
+
+  update();
+
+  nav();
+
+  renderCats();
+
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+function setCat(c){
+
+  active = c;
+
+  filterCats = [];
+
+  only99 = false;
+
+  document
+    .querySelectorAll(
+      '.filters input'
+    )
+    .forEach(
+      x => x.checked = false
+    );
+
+
+  document
+    .querySelector(
+      "#products"
+    )
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+
+  render();
+
+}
+
+
+/* =========================================
+   UNDER ₹99
+========================================= */
+
+function under99(){
+
+  active = "All";
+
+  only99 = true;
+
+  document
+    .querySelector(
+      "#products"
+    )
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+  render();
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+function resetAll(){
+
+  active = "All";
+
+  filterCats = [];
+
+  priceFilters = [];
+
+  ratingFilters = [];
+
+  offerOnly = false;
+
+  only99 = false;
+
+  query = "";
+
+
+  document
+    .querySelectorAll(
+      '.filters input'
+    )
+    .forEach(
+      x => x.checked = false
+    );
+
+
+  const search =
+    document.getElementById(
+      "desktopSearch"
+    );
+
+  const mobileSearch =
+    document.getElementById(
+      "mobileSearchInput"
+    );
+
+
+  if(search)
+    search.value = "";
+
+  if(mobileSearch)
+    mobileSearch.value = "";
+
+
+  render();
+
+}
+
+
+/* =========================================
+   CART
+========================================= */
+
+function addCart(id){
+
+  const item =
+    cart.find(
+      x => x.id === id
+    );
+
+
+  if(item){
+
+    item.q++;
+
+  }else{
+
+    cart.push({
+      id:id,
+      q:1
+    });
+
+  }
+
+
+  update();
+
+  toast(
+    "Added to cart ♡"
+  );
+
+}
+
+
+function update(){
+
+  const cartCount =
+    cart.reduce(
+      (a,x)=>a+x.q,
+      0
+    );
+
+
+  [
+    "cartCount",
+    "mobileCartCount"
+  ]
+  .forEach(id=>{
+
+    const el =
+      document.getElementById(id);
+
+    if(el)
+      el.textContent =
+        cartCount;
+
+  });
+
+
+  [
+    "wishCount",
+    "mobileWishCount"
+  ]
+  .forEach(id=>{
+
+    const el =
+      document.getElementById(id);
+
+    if(el)
+      el.textContent =
+        wish.length;
+
+  });
+
 
   localStorage.setItem(
     "kavan_cart",
     JSON.stringify(cart)
   );
 
+
   localStorage.setItem(
-    "kavan_wishlist",
-    JSON.stringify(wishlist)
+    "kavan_wish",
+    JSON.stringify(wish)
   );
 
-  updateCounts();
-}
-
-function updateCounts(){
-
-  const cartCount=
-    cart.reduce((sum,x)=>sum+x.qty,0);
-
-  document.getElementById("cartCount").textContent=
-    cartCount;
-
-  document.getElementById("mobileCartCount").textContent=
-    cartCount;
-
-  document.getElementById("wishCount").textContent=
-    wishlist.length;
-
-  document.getElementById("mobileWishCount").textContent=
-    wishlist.length;
 }
 
 
-/* =========================
-   FILTER EVENTS
-========================= */
+/* =========================================
+   WISHLIST
+========================================= */
 
-document.querySelectorAll('input[name="cat"]')
-  .forEach(input=>{
-    input.addEventListener("change",()=>{
-      setCategory(input.value);
-    });
-  });
+function toggleWish(id){
 
-document.querySelectorAll(
-  'input[name="price"],input[name="rating"],input[name="discount"]'
-).forEach(input=>{
-  input.addEventListener("change",renderProducts);
-});
+  const index =
+    wish.indexOf(id);
+
+
+  if(index >= 0){
+
+    wish.splice(index,1);
+
+  }else{
+
+    wish.push(id);
+
+  }
+
+
+  update();
+
+  render();
+
+}
+
+
+function openWishlist(){
+
+  document
+    .getElementById(
+      "wishModal"
+    )
+    .classList.add("open");
+
+
+  const body =
+    document.getElementById(
+      "wishBody"
+    );
+
+
+  if(!wish.length){
+
+    body.innerHTML = `
+      <div
+        style="
+          text-align:center;
+          padding:40px;
+          color:#777;
+        ">
+
+        Your wishlist is empty ♡
+
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  body.innerHTML =
+    wish.map(id=>{
+
+      const p =
+        seed.find(
+          x => x[0] === id
+        );
+
+
+      if(!p)
+        return "";
+
+
+      return `
+
+        <div class="cartRow">
+
+          <div class="cartImg">
+
+            ${productImage(p,1)}
+
+          </div>
+
+          <div>
+
+            <b>
+              ${p[1]}
+            </b>
+
+            <div>
+              ₹${p[3]}
+            </div>
+
+          </div>
+
+          <button
+            class="addBtn"
+            onclick="addCart('${id}')">
+
+            Add
+
+          </button>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+}
+
+
+function closeWish(){
+
+  document
+    .getElementById(
+      "wishModal"
+    )
+    .classList.remove("open");
+
+}
+
+
+/* =========================================
+   CART MODAL
+========================================= */
+
+function openCart(){
+
+  document
+    .getElementById(
+      "cartModal"
+    )
+    .classList.add("open");
+
+
+  cartRender();
+
+}
+
+
+function closeCart(){
+
+  document
+    .getElementById(
+      "cartModal"
+    )
+    .classList.remove("open");
+
+}
+
+
+function cartRender(){
+
+  const body =
+    document.getElementById(
+      "cartBody"
+    );
+
+
+  if(!cart.length){
+
+    body.innerHTML = `
+      <div
+        style="
+          text-align:center;
+          padding:40px;
+          color:#777;
+        ">
+
+        Your cart is empty.
+
+      </div>
+    `;
+
+    document.getElementById(
+      "cartFoot"
+    ).innerHTML = "";
+
+    return;
+
+  }
+
+
+  let total = 0;
+
+
+  body.innerHTML =
+    cart.map(item=>{
+
+      const p =
+        seed.find(
+          x => x[0] === item.id
+        );
+
+
+      if(!p)
+        return "";
+
+
+      total +=
+        p[3] * item.q;
+
+
+      return `
+
+        <div class="cartRow">
+
+          <div class="cartImg">
+
+            ${productImage(p,1)}
+
+          </div>
+
+          <div>
+
+            <b>
+              ${p[1]}
+            </b>
+
+            <div>
+              ₹${p[3]}
+            </div>
+
+            <div class="qty">
+
+              <button
+                onclick="
+                  qty('${p[0]}',-1)
+                ">
+                −
+              </button>
+
+              <span>
+                ${item.q}
+              </span>
+
+              <button
+                onclick="
+                  qty('${p[0]}',1)
+                ">
+                +
+              </button>
+
+            </div>
+
+          </div>
+
+          <button
+            class="remove"
+            onclick="
+              removeCart('${p[0]}')
+            ">
+
+            Remove
+
+          </button>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+
+  document.getElementById(
+    "cartFoot"
+  ).innerHTML = `
+
+    <h3>
+      Total: ₹${total}
+    </h3>
+
+    <button
+      class="primaryBtn"
+      style="width:100%"
+      onclick="checkout()">
+
+      Checkout
+
+    </button>
+
+  `;
+
+}
+
+
+function qty(id,d){
+
+  const item =
+    cart.find(
+      x => x.id === id
+    );
+
+
+  if(!item)
+    return;
+
+
+  item.q += d;
+
+
+  if(item.q <= 0){
+
+    cart =
+      cart.filter(
+        x => x.id !== id
+      );
+
+  }
+
+
+  update();
+
+  cartRender();
+
+}
+
+
+function removeCart(id){
+
+  cart =
+    cart.filter(
+      x => x.id !== id
+    );
+
+
+  update();
+
+  cartRender();
+
+}
+
+
+/* =========================================
+   CHECKOUT
+========================================= */
+
+function checkout(){
+
+  toast(
+    "Checkout system will be connected later"
+  );
+
+}
+
+
+/* =========================================
+   MOBILE DRAWER
+========================================= */
+
+function openDrawer(){
+
+  document
+    .getElementById(
+      "drawer"
+    )
+    .classList.add("open");
+
+}
+
+
+function closeDrawer(){
+
+  document
+    .getElementById(
+      "drawer"
+    )
+    .classList.remove("open");
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+function bindSearch(id){
+
+  const el =
+    document.getElementById(id);
+
+
+  if(!el)
+    return;
+
+
+  el.addEventListener(
+    "input",
+    e => {
+
+      query =
+        e.target.value;
+
+      active = "All";
+
+      only99 = false;
+
+
+      const other =
+        id === "desktopSearch"
+          ? "mobileSearchInput"
+          : "desktopSearch";
+
+
+      const otherEl =
+        document.getElementById(
+          other
+        );
+
+
+      if(otherEl)
+        otherEl.value =
+          query;
+
+
+      render();
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+function account(){
+
+  toast(
+    "Admin login will be connected"
+  );
+
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+function applyFilters(){
+
+  selectedInputs();
+
+  only99 = false;
+
+  render();
+
+  if(
+    window.innerWidth <= 900
+  ){
+
+    document
+      .getElementById(
+        "filters"
+      )
+      .classList.remove(
+        "open"
+      );
+
+  }
+
+}
 
 
 function clearFilters(){
 
-  activeCategory="All";
-  searchText="";
+  filterCats = [];
 
-  document.getElementById("desktopSearch").value="";
-  document.getElementById("mobileSearchInput").value="";
+  priceFilters = [];
 
-  document.querySelectorAll('input[name="cat"]')
-    .forEach(x=>x.checked=x.value==="All");
+  ratingFilters = [];
 
-  document.querySelectorAll('input[name="price"]')
-    .forEach(x=>x.checked=x.value==="all");
+  offerOnly = false;
 
-  document.querySelectorAll('input[name="rating"]')
-    .forEach(x=>x.checked=x.value==="0");
+  only99 = false;
 
-  document.querySelectorAll('input[name="discount"]')
-    .forEach(x=>x.checked=x.value==="0");
+  active = "All";
 
-  renderProducts();
+
+  document
+    .querySelectorAll(
+      ".filters input"
+    )
+    .forEach(
+      x => x.checked = false
+    );
+
+
+  render();
+
 }
 
-
-/* =========================
-   UNDER ₹99
-========================= */
-
-function under99(){
-
-  activeCategory="All";
-
-  const list=products.filter(p=>p.price<100);
-
-  document.getElementById("listingTitle")
-    .textContent="Offers Under ₹99";
-
-  document.getElementById("productGrid")
-    .innerHTML=list.map(productCard).join("");
-
-  scrollProducts();
-}
-
-
-/* =========================
-   MOBILE
-========================= */
 
 function toggleFilters(){
 
-  document.getElementById("filters")
-    .classList.toggle("open");
-}
+  document
+    .getElementById(
+      "filters"
+    )
+    .classList.toggle(
+      "open"
+    );
 
-function openDrawer(){
-
-  document.getElementById("drawer")
-    .classList.add("open");
-}
-
-function closeDrawer(){
-
-  document.getElementById("drawer")
-    .classList.remove("open");
 }
 
 
-/* =========================
-   HELPERS
-========================= */
+/* =========================================
+   TOAST
+========================================= */
 
-function scrollProducts(){
+function toast(message){
 
-  document.getElementById("products")
-    .scrollIntoView({behavior:"smooth"});
+  const el =
+    document.getElementById(
+      "toast"
+    );
+
+
+  el.textContent =
+    message;
+
+  el.classList.add(
+    "show"
+  );
+
+
+  clearTimeout(
+    window.toastTimer
+  );
+
+
+  window.toastTimer =
+    setTimeout(
+      () => {
+
+        el.classList.remove(
+          "show"
+        );
+
+      },
+      1800
+    );
+
 }
 
-function scrollCategories(){
 
-  document.getElementById("categories")
-    .scrollIntoView({behavior:"smooth"});
-}
+/* =========================================
+   HOME
+========================================= */
 
 function home(){
+
+  resetAll();
 
   window.scrollTo({
     top:0,
     behavior:"smooth"
   });
 
-  resetAll();
-}
-
-function resetAll(){
-
-  activeCategory="All";
-  searchText="";
-
-  document.getElementById("desktopSearch").value="";
-  document.getElementById("mobileSearchInput").value="";
-
-  document.querySelectorAll('input[name="cat"]')
-    .forEach(x=>x.checked=x.value==="All");
-
-  document.querySelectorAll('input[name="price"]')
-    .forEach(x=>x.checked=x.value==="all");
-
-  document.querySelectorAll('input[name="rating"]')
-    .forEach(x=>x.checked=x.value==="0");
-
-  document.querySelectorAll('input[name="discount"]')
-    .forEach(x=>x.checked=x.value==="0");
-
-  renderProducts();
-}
-
-function account(){
-
-  toast("Account demo — login will be added later");
-}
-
-function toast(message){
-
-  const el=document.getElementById("toast");
-
-  el.textContent=message;
-
-  el.classList.add("show");
-
-  clearTimeout(window.toastTimer);
-
-  window.toastTimer=setTimeout(()=>{
-    el.classList.remove("show");
-  },1700);
 }
 
 
-/* =========================
-   MODAL CLICK OUTSIDE
-========================= */
-
-document.getElementById("cartModal")
-  .addEventListener("click",e=>{
-    if(e.target.id==="cartModal")
-      closeCart();
-  });
-
-document.getElementById("wishlistModal")
-  .addEventListener("click",e=>{
-    if(e.target.id==="wishlistModal")
-      closeWishlist();
-  });
-
-document.getElementById("drawer")
-  .addEventListener("click",e=>{
-    if(e.target.id==="drawer")
-      closeDrawer();
-  });
-
-
-/* =========================
+/* =========================================
    INITIAL LOAD
-========================= */
+========================================= */
 
-renderNav();
-renderCategories();
+bindSearch(
+  "desktopSearch"
+);
 
-bindSearch("desktopSearch");
-bindSearch("mobileSearchInput");
+bindSearch(
+  "mobileSearchInput"
+);
 
-renderProducts();
-updateCounts();
+render();
 
 </script>
 
 </body>
 </html>
+
+
