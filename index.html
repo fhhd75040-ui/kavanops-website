@@ -543,6 +543,7 @@ h1,h2,h3{font-family:var(--serif)}
   overflow:hidden;
   background:#fff;
   transition:.2s;
+  cursor:pointer;
 }
 .product:hover{
   border-color:var(--gold);
@@ -723,18 +724,34 @@ h1,h2,h3{font-family:var(--serif)}
 }
 
 .sheet{
-  width:min(620px,100%);
-  max-height:85vh;
+  width:min(680px,100%);
+  max-height:90vh;
   overflow:auto;
   background:#fff;
   border-radius:24px 24px 0 0;
-  padding:20px;
+  padding:28px;
+}
+
+@media(max-width:768px){
+  .sheet{
+    width:100%;
+    border-radius:16px 16px 0 0;
+    padding:20px;
+    max-height:95vh;
+  }
 }
 
 .modalHead{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  margin-bottom:24px;
+}
+
+.modalHead h2{
+  margin:0;
+  font-size:22px;
+  color:var(--wine-dark);
 }
 
 .close{
@@ -845,6 +862,281 @@ h1,h2,h3{font-family:var(--serif)}
   display:none;
 }
 
+/* DETAIL VIEW STYLES */
+.detailGrid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:32px;
+  margin-bottom:32px;
+}
+
+.detailImage{
+  border-radius:12px;
+  overflow:hidden;
+  background:var(--blush);
+  aspect-ratio:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.detailImage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.detailInfo{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+.detailCategory{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.detailName{
+  font-family:var(--serif);
+  font-size:28px;
+  font-weight:600;
+  color:var(--wine-dark);
+  margin:0 0 14px;
+  line-height:1.35;
+}
+
+.detailBadge{
+  display:inline-block;
+  background:var(--wine);
+  color:#fff;
+  padding:6px 12px;
+  border-radius:4px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.3px;
+  margin-bottom:18px;
+  width:fit-content;
+}
+
+.detailRating{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--line);
+}
+
+.detailRating b{
+  color:var(--gold);
+  font-size:18px;
+  font-weight:700;
+}
+
+.detailRating span{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.detailPricingSection{
+  margin-bottom:24px;
+}
+
+.detailPrice{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  margin-bottom:8px;
+}
+
+.detailPrice .price{
+  font-size:32px;
+  color:var(--wine-dark);
+  font-weight:700;
+  font-family:var(--sans);
+}
+
+.detailPrice .mrp{
+  font-size:16px;
+  text-decoration:line-through;
+  color:#a99298;
+  margin:0;
+  font-family:var(--sans);
+}
+
+.detailDiscount{
+  color:var(--green);
+  background:#e2f5ec;
+  padding:6px 10px;
+  border-radius:4px;
+  font-size:12px;
+  font-weight:700;
+  display:inline-block;
+}
+
+.detailFeatures{
+  background:#fafaf8;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:16px;
+  margin-bottom:24px;
+}
+
+.detailFeatures strong{
+  display:block;
+  font-family:var(--serif);
+  font-size:14px;
+  font-weight:600;
+  color:var(--wine-dark);
+  margin-bottom:12px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+}
+
+.detailFeatures ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.detailFeatures li{
+  color:var(--text);
+  font-size:13px;
+  line-height:1.7;
+  padding:5px 0;
+  padding-left:18px;
+  position:relative;
+}
+
+.detailFeatures li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--green);
+  font-weight:700;
+}
+
+.detailActions{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:12px;
+  align-items:center;
+}
+
+.detailWishBtn{
+  width:52px;
+  height:52px;
+  min-height:52px;
+  min-width:52px;
+  border:2px solid var(--line);
+  background:#fff;
+  color:var(--rose);
+  border-radius:8px;
+  font-weight:700;
+  font-size:20px;
+  transition:.2s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.detailWishBtn:hover{
+  border-color:var(--rose);
+  background:var(--blush);
+}
+
+.detailWishBtn.active{
+  background:var(--rose);
+  color:#fff;
+  border-color:var(--rose);
+}
+
+.detailAddBtn{
+  height:52px;
+  min-height:52px;
+  border:0;
+  border-radius:8px;
+  background:var(--wine);
+  color:#fff;
+  font-weight:700;
+  font-size:14px;
+  font-family:var(--sans);
+  padding:0 28px;
+  transition:.2s;
+  cursor:pointer;
+  letter-spacing:.3px;
+  white-space:nowrap;
+}
+
+.detailAddBtn:hover{
+  background:var(--wine-dark);
+}
+
+.detailAddBtn:active{
+  transform:scale(.98);
+}
+
+@media(max-width:1100px){
+  .detailGrid{
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+
+  .detailName{
+    font-size:24px;
+  }
+
+  .detailPrice .price{
+    font-size:28px;
+  }
+}
+
+@media(max-width:768px){
+  .detailGrid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .detailImage{
+    aspect-ratio:1;
+    max-height:380px;
+  }
+
+  .detailName{
+    font-size:22px;
+  }
+
+  .detailPrice .price{
+    font-size:26px;
+  }
+
+  .detailActions{
+    grid-template-columns:auto 1fr;
+    gap:10px;
+  }
+
+  .detailWishBtn{
+    width:48px;
+    height:48px;
+    min-height:48px;
+    min-width:48px;
+    font-size:18px;
+  }
+
+  .detailAddBtn{
+    height:48px;
+    min-height:48px;
+    padding:0 24px;
+    font-size:13px;
+  }
+}
+
 @media(max-width:1100px){
   .headerInner{
     grid-template-columns:220px 1fr auto;
@@ -856,6 +1148,10 @@ h1,h2,h3{font-family:var(--serif)}
 
   .categories{
     grid-template-columns:repeat(6,1fr);
+  }
+
+  .detailGrid{
+    grid-template-columns:1fr;
   }
 }
 
@@ -1238,16 +1534,39 @@ h1,h2,h3{font-family:var(--serif)}
 }
 .adminFormActions{
   grid-column:1/-1;
-  display:flex;
-  gap:8px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
+
+.adminFormActions .primaryBtn{
+  width:100%;
+  margin-top:0;
+  padding:12px 20px;
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
 .adminCancel{
   border:1px solid var(--line);
   background:#fff;
   color:var(--wine);
   border-radius:4px;
-  padding:10px 18px;
+  padding:12px 20px;
   font-weight:700;
+  font-size:13px;
+  width:100%;
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:.2s;
+}
+
+.adminCancel:hover{
+  background:var(--blush);
 }
 .adminList{
   margin-top:16px;
@@ -1291,9 +1610,22 @@ h1,h2,h3{font-family:var(--serif)}
   .adminToolsHead{align-items:stretch;flex-direction:column}
   .adminOpenBtn{width:100%}
   .adminForm{grid-template-columns:1fr}
-  .adminFormActions{grid-column:auto}
+  .adminFormActions{
+    grid-column:auto;
+    grid-template-columns:1fr;
+  }
   .adminItem{align-items:flex-start}
   .adminItemActions{flex-direction:column}
+
+  .detailGrid{
+    grid-template-columns:1fr;
+  }
+
+  .sheet{
+    width:100%;
+    border-radius:0;
+    max-height:100vh;
+  }
 }
 
 </style>
@@ -1773,6 +2105,33 @@ h1,h2,h3{font-family:var(--serif)}
     </div>
 
     <div id="wishBody"></div>
+
+  </div>
+
+</div>
+
+
+<!-- PRODUCT DETAILS -->
+
+<div
+  class="modal"
+  id="detailModal">
+
+  <div class="sheet">
+
+    <div class="modalHead">
+
+      <h2>Product Details</h2>
+
+      <button
+        class="close"
+        onclick="closeDetail()">
+        ×
+      </button>
+
+    </div>
+
+    <div id="detailBody"></div>
 
   </div>
 
@@ -2575,7 +2934,7 @@ function card(p,i){
 
   return `
 
-    <article class="product">
+    <article class="product" onclick="openDetail('${id}')">
 
       <div class="productImage">
 
@@ -2587,7 +2946,7 @@ function card(p,i){
 
         <button
           class="heart ${activeWish ? "active" : ""}"
-          onclick="toggleWish('${id}')">
+          onclick="toggleWish('${id}');event.stopPropagation()">
 
           ${activeWish ? "♥" : "♡"}
 
@@ -2631,7 +2990,7 @@ function card(p,i){
 
         <button
           class="addBtn"
-          onclick="addCart('${id}')">
+          onclick="addCart('${id}');event.stopPropagation()">
 
           🛒 Add to Cart
 
@@ -2642,6 +3001,108 @@ function card(p,i){
     </article>
 
   `;
+}
+
+
+/* =========================================
+   PRODUCT DETAILS
+========================================= */
+
+function openDetail(id){
+
+  const p = allProducts().find(x => x[0] === id);
+
+  if(!p) return;
+
+  const name = p[1];
+  const category = p[2];
+  const price = p[3];
+  const mrp = p[4];
+  const rating = p[5];
+  const reviews = p[6];
+  const badge = p[7];
+
+  const off =
+    mrp > price
+      ? Math.round(
+          (1 - price/mrp) * 100
+        )
+      : 0;
+
+  const discountAmount = mrp - price;
+
+  const activeWish = wish.includes(id);
+
+  const detailContent = `
+
+    <div class="detailGrid">
+
+      <div class="detailImage">
+        ${productImage(p,1)}
+      </div>
+
+      <div class="detailInfo">
+
+        <div class="detailCategory">
+          ${category}
+        </div>
+
+        <h1 class="detailName">
+          ${name}
+        </h1>
+
+        <span class="detailBadge">
+          ${badge}
+        </span>
+
+        <div class="detailRating">
+          <b>★ ${rating}</b>
+          <span>(${reviews} ${reviews === 1 ? 'Review' : 'Reviews'})</span>
+        </div>
+
+        <div class="detailPricingSection">
+          <div class="detailPrice">
+            <span class="price">₹${price}</span>
+            ${mrp > price ? `<span class="mrp">₹${mrp}</span>` : ""}
+          </div>
+          ${off ? `<div class="detailDiscount">${off}% OFF — Save ₹${discountAmount}</div>` : ""}
+        </div>
+
+        <div class="detailFeatures">
+          <strong>Why Choose This</strong>
+          <ul>
+            <li>Premium quality materials</li>
+            <li>Trendy & fashionable design</li>
+            <li>Perfect for everyday wear & special occasions</li>
+            <li>Available across Tamil Nadu</li>
+          </ul>
+        </div>
+
+        <div class="detailActions">
+          <button class="detailWishBtn ${activeWish ? 'active' : ''}" onclick="toggleWish('${id}');event.stopPropagation()" title="${activeWish ? 'Remove from Wishlist' : 'Add to Wishlist'}">
+            ${activeWish ? '♥' : '♡'}
+          </button>
+          <button class="detailAddBtn" onclick="addCart('${id}'); toast('Added to cart ♡'); closeDetail()">
+            Add to Cart
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+  document.getElementById("detailBody").innerHTML = detailContent;
+
+  document.getElementById("detailModal").classList.add("open");
+
+}
+
+function closeDetail(){
+
+  document.getElementById("detailModal").classList.remove("open");
+
 }
 
 
