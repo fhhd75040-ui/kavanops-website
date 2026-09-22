@@ -3,561 +3,853 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KAVAN BAZAAR | Trendy Accessories for Every You</title>
-<meta name="description" content="KAVAN BAZAAR — fashion, fancy and beauty accessories.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='5' y='7' width='54' height='52' rx='15' fill='%23ed176f'/%3E%3Cpath d='M20 28v-6c0-7 5-12 12-12s12 5 12 12v6' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M17 27h30v25H17z' fill='white'/%3E%3Cpath d='M32 34c-5-6-12 1-6 7l6 6 6-6c6-6-1-13-6-7z' fill='%23ed176f'/%3E%3C/svg%3E">
+<title>KAVAN BAZAAR | Fashion & Fancy</title>
 
 <style>
 :root{
---p:#e9166e;--p2:#ff3f88;--dark:#a5094b;--soft:#fff0f6;
---ink:#1e1720;--muted:#746a71;--line:#eddde5;
---green:#19bf64;--gold:#e6a928;
---shadow:0 10px 30px rgba(174,25,91,.10)
+  --pink:#e9166e;
+  --pink2:#ff3b87;
+  --dark:#9d0748;
+  --light:#fff0f6;
+  --text:#211a1e;
+  --muted:#766d72;
+  --border:#eadce3;
 }
+
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
+
 body{
-margin:0;color:var(--ink);
-font-family:Inter,Arial,Helvetica,sans-serif;background:#fff
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
 }
-button,input,select{font:inherit}
-button{cursor:pointer}
+
+button,input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
 
 .top{
-height:42px;background:linear-gradient(90deg,#c3075a,#f52b82);
-color:#fff;display:flex;align-items:center;justify-content:center;
-font-weight:800;font-size:14px
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(90deg,#c3075a,#f42b82);
+  color:white;
+  font-weight:800;
+  font-size:13px;
 }
-.top u{margin-left:8px}
 
 .header{
-background:#fff;border-bottom:1px solid #f0e2e8;
-position:sticky;top:0;z-index:60
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#fff;
+  border-bottom:1px solid var(--border);
 }
+
 .head{
-max-width:1280px;margin:auto;min-height:91px;padding:13px 20px;
-display:grid;grid-template-columns:260px 1fr auto;
-align-items:center;gap:20px
+  max-width:1400px;
+  margin:auto;
+  min-height:86px;
+  padding:12px 20px;
+  display:grid;
+  grid-template-columns:270px 1fr auto;
+  gap:22px;
+  align-items:center;
 }
+
 .brand{
-display:flex;gap:11px;align-items:center;color:var(--dark);
-text-decoration:none
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:var(--dark);
 }
-.bag{
-width:50px;height:50px;border-radius:16px;
-background:linear-gradient(145deg,#ff5b9e,#df0f67);
-position:relative;display:grid;place-items:center;
-box-shadow:0 8px 18px #f4b2cc
+
+.logo{
+  width:50px;
+  height:50px;
+  border-radius:15px;
+  background:linear-gradient(145deg,#ff5a9d,#df0e67);
+  display:grid;
+  place-items:center;
+  color:white;
+  font-size:26px;
+  box-shadow:0 7px 18px #ed7aaa55;
 }
-.bag:before{
-content:"";position:absolute;width:28px;height:24px;
-background:#fff;border-radius:4px;bottom:9px
-}
-.bag:after{
-content:"♥";position:absolute;color:var(--p);
-font-size:17px;bottom:10px
-}
-.handle{
-position:absolute;width:18px;height:12px;border:3px solid #fff;
-border-bottom:0;border-radius:10px 10px 0 0;top:8px
-}
+
 .brand h1{
-font-size:24px;margin:0;font-weight:950;letter-spacing:-1px
+  margin:0;
+  font-size:23px;
+  font-weight:950;
 }
+
 .brand small{
-font-family:cursive;font-size:12px;color:#9d526f
+  color:#9a6075;
+  font-family:cursive;
 }
+
 .search{
-height:48px;border:1.5px solid #f1c7d8;border-radius:28px;
-display:flex;align-items:center;padding:0 17px
+  height:48px;
+  border:1px solid #edc6d7;
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+  padding:0 17px;
 }
-.search b{
-font-size:25px;color:var(--p);font-weight:400;margin-right:10px
+
+.search span{
+  font-size:25px;
+  color:var(--pink);
+  margin-right:10px;
 }
+
 .search input{
-border:0;outline:0;width:100%;font-size:15px
+  width:100%;
+  border:0;
+  outline:0;
 }
+
 .actions{
-display:flex;gap:13px;align-items:center
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
-.wa{
-display:flex;gap:9px;align-items:center;
-text-decoration:none;color:var(--ink);white-space:nowrap
+
+.action{
+  border:0;
+  background:white;
+  color:var(--dark);
+  position:relative;
+  min-width:55px;
 }
-.wa i{
-width:42px;height:42px;border-radius:50%;
-display:grid;place-items:center;background:#20c96b;
-color:#fff;font-style:normal;font-size:23px;font-weight:900
+
+.action span{
+  display:block;
+  font-size:22px;
 }
-.wa strong{font-size:15px}
-.wa small{
-display:block;color:var(--muted);font-size:11px
+
+.action small{
+  font-size:10px;
+  font-weight:bold;
 }
-.hbtn{
-background:#fff;color:var(--dark);
-position:relative;min-width:48px
-}
-.hbtn span{
-display:block;font-size:23px
-}
-.hbtn small{
-font-size:10px;font-weight:700
-}
+
 .count{
-position:absolute;right:0;top:-3px;background:var(--p);
-color:#fff;border-radius:20px;min-width:19px;height:19px;
-padding:0 5px;display:grid;place-items:center;font-size:10px
+  position:absolute;
+  right:0;
+  top:-3px;
+  min-width:18px;
+  height:18px;
+  padding:0 4px;
+  display:grid;
+  place-items:center;
+  border-radius:20px;
+  background:var(--pink);
+  color:#fff;
+  font-size:9px;
 }
+
 .nav{
-background:linear-gradient(90deg,#b50756,#f12780);overflow:auto
+  background:linear-gradient(90deg,#b50756,#f12780);
+  overflow:auto;
 }
-.navin{
-max-width:1280px;margin:auto;display:flex;scrollbar-width:none
+
+.nav-inner{
+  max-width:1400px;
+  margin:auto;
+  display:flex;
 }
-.navin::-webkit-scrollbar{display:none}
+
 .nav a{
-padding:13px 19px;color:#fff;text-decoration:none;
-font-weight:800;font-size:14px;white-space:nowrap
+  color:#fff;
+  text-decoration:none;
+  padding:13px 17px;
+  white-space:nowrap;
+  font-size:13px;
+  font-weight:800;
 }
-.nav a:hover,.nav a.on{background:rgba(0,0,0,.12)}
 
-.mobile{display:none}
+.nav a:hover,
+.nav a.active{
+  background:#0002;
+}
 
-.wrap{
-max-width:1280px;margin:auto;padding:0 20px
+.mobile-header{
+  display:none;
+}
+
+.container{
+  max-width:1400px;
+  margin:auto;
+  padding:0 20px;
 }
 
 .hero{
-height:315px;margin:16px 0 22px;border-radius:20px;overflow:hidden;
-background:linear-gradient(100deg,#ffe7f0,#ffd3e2);
-display:grid;grid-template-columns:38% 62%;position:relative
-}
-.heroText{
-padding:42px 38px;z-index:2
-}
-.heroText h2{
-font-family:Georgia,serif;color:#980744;font-size:43px;
-line-height:1.05;margin:0 0 13px
-}
-.heroText p{
-color:#81244e;font-weight:700;line-height:1.5
-}
-.pinkBtn{
-border:0;border-radius:26px;padding:13px 24px;color:#fff;
-background:linear-gradient(90deg,#e70d67,#f73383);
-font-weight:900;box-shadow:0 8px 18px #e91a6e3d
-}
-.heroArt{
-position:relative;overflow:hidden;
-background:
-radial-gradient(circle at 55% 45%,#fff0f6 0 30%,transparent 31%),
-radial-gradient(circle at 85% 80%,#f8bdd2 0 11%,transparent 12%)
-}
-.flower{
-position:absolute;border-radius:50%;width:100px;height:100px;
-border:27px dotted #ef0d6d;background:#ffd9e7;
-filter:drop-shadow(0 8px 8px #dca0b6)
-}
-.f1{left:13%;top:28%}
-.f2{left:33%;top:9%;border-color:#823dc1;background:#eadcf7}
-.f3{left:43%;top:43%;border-color:#0b9588;background:#d7f2ed}
-
-.bottle{
-position:absolute;width:44px;height:82px;border-radius:7px 7px 12px 12px;
-background:linear-gradient(90deg,#ff3b88,#bd0e58);
-box-shadow:0 10px 16px #c48a9c
-}
-.bottle:before{
-content:"";position:absolute;left:7px;top:-29px;width:30px;height:31px;
-border-radius:5px 5px 2px 2px;background:#28252a
-}
-.b1{left:62%;top:19%;transform:rotate(4deg)}
-.b2{
-left:73%;top:45%;
-background:linear-gradient(90deg,#823ac1,#51268f)
+  margin:18px 0 25px;
+  height:310px;
+  border-radius:22px;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,#ffe4ef,#ffd2e2);
+  display:grid;
+  grid-template-columns:40% 60%;
 }
 
-.earring{
-position:absolute;width:45px;height:76px;border:6px solid #d19a21;
-border-radius:50%;left:55%;top:61%
-}
-.earring:after{
-content:"";position:absolute;width:24px;height:24px;
-border:4px solid #d19a21;border-radius:50%;
-background:#11a08f;left:3px;bottom:-15px
-}
-.ear2{left:67%;top:63%}
-
-.beads{
-position:absolute;width:130px;height:62px;border:8px dotted #d99d22;
-border-radius:50%;left:76%;top:67%;transform:rotate(-12deg)
+.hero-text{
+  padding:42px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-.butter{
-position:absolute;left:40%;top:64%;width:90px;height:60px
+.hero-text h2{
+  margin:0 0 12px;
+  color:#970744;
+  font-family:Georgia,serif;
+  font-size:43px;
+  line-height:1.05;
 }
-.butter:before,.butter:after{
-content:"";position:absolute;width:43px;height:57px;
-background:#ef477e;border:3px solid #8b244d;
-border-radius:70% 20% 70% 20%;top:0
+
+.hero-text p{
+  color:#7e3150;
+  font-weight:bold;
+  line-height:1.5;
 }
-.butter:before{left:2px;transform:rotate(25deg)}
-.butter:after{right:2px;transform:scaleX(-1) rotate(25deg)}
+
+.btn{
+  border:0;
+  border-radius:25px;
+  padding:12px 23px;
+  background:linear-gradient(90deg,var(--pink),var(--pink2));
+  color:#fff;
+  font-weight:900;
+}
+
+.hero-image{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 
 .trust{
-display:grid;grid-template-columns:repeat(4,1fr);
-border:1px solid var(--line);border-radius:17px;
-margin-bottom:32px;box-shadow:var(--shadow)
-}
-.trustItem{
-padding:16px 12px;display:flex;gap:10px;
-justify-content:center;align-items:center;
-border-right:1px solid var(--line)
-}
-.trustItem:last-child{border:0}
-.trustIcon{font-size:27px;color:var(--p)}
-.trustItem strong{font-size:13px}
-.trustItem small{
-display:block;color:var(--muted);margin-top:2px
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);
+  border-radius:17px;
+  margin-bottom:32px;
 }
 
-.sectionHead{
-display:flex;align-items:end;justify-content:space-between;
-margin:28px 0 15px
+.trust-item{
+  padding:17px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  border-right:1px solid var(--border);
 }
-.sectionHead h2{
-font-size:26px;margin:0
+
+.trust-item:last-child{
+  border:0;
 }
+
+.trust-icon{
+  font-size:27px;
+  color:var(--pink);
+}
+
+.trust-item strong{
+  font-size:13px;
+}
+
+.trust-item small{
+  display:block;
+  color:var(--muted);
+  margin-top:3px;
+  font-size:11px;
+}
+
+.section-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:27px 0 15px;
+}
+
+.section-head h2{
+  margin:0;
+  font-size:25px;
+}
+
 .view{
-color:var(--p);font-weight:900;text-decoration:none
+  color:var(--pink);
+  text-decoration:none;
+  font-weight:900;
 }
 
-.cats{
-display:grid;grid-template-columns:repeat(8,1fr);gap:14px
-}
-.cat{
-border:1px solid #f0dfe7;background:#fff;border-radius:17px;
-padding:9px 7px;text-align:center;transition:.2s
-}
-.cat:hover{
-transform:translateY(-3px);box-shadow:var(--shadow)
-}
-.catPic{
-height:105px;background:linear-gradient(145deg,#fff2f7,#ffe6ef);
-border-radius:13px;display:grid;place-items:center
-}
-.catPic svg{width:88px;height:88px}
-.cat b{
-font-size:12px;display:block;margin-top:7px
+.categories{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:13px;
 }
 
-.grid{
-display:grid;grid-template-columns:repeat(6,1fr);gap:14px
+.category{
+  border:1px solid var(--border);
+  border-radius:15px;
+  background:#fff;
+  padding:8px;
+  text-align:center;
 }
+
+.category-image{
+  height:105px;
+  overflow:hidden;
+  border-radius:12px;
+  background:#fff0f6;
+}
+
+.category-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.category b{
+  display:block;
+  margin-top:7px;
+  font-size:11px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:14px;
+}
+
 .card{
-border:1px solid var(--line);border-radius:12px;
-overflow:hidden;background:#fff;transition:.2s;position:relative;
-box-shadow:0 2px 10px rgba(174,25,91,.06)
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+  position:relative;
+  transition:.2s;
 }
+
 .card:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 24px rgba(174,25,91,.12)
+  transform:translateY(-4px);
+  box-shadow:0 12px 28px #9b174b18;
 }
-.pic{
-height:185px;
-background:linear-gradient(145deg,#fff4f8,#ffe8f0);
-display:grid;place-items:center;position:relative;
-border-bottom:1px solid #f3dce6
+
+.product-image{
+  height:215px;
+  background:#fafafa;
+  position:relative;
+  overflow:hidden;
 }
-.pic svg{
-width:88%;height:88%;
-filter:drop-shadow(0 5px 5px rgba(100,30,60,.10))
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
-.wish{
-position:absolute;right:8px;top:8px;width:34px;height:34px;
-border-radius:50%;border:0;background:#fff;color:var(--p);
-font-size:20px;box-shadow:0 4px 14px #00000012
+
+.wishlist{
+  position:absolute;
+  right:9px;
+  top:9px;
+  width:36px;
+  height:36px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  color:var(--pink);
+  font-size:21px;
+  box-shadow:0 3px 12px #0002;
+  z-index:2;
 }
-.wish.active{
-background:var(--p);color:#fff
+
+.wishlist.active{
+  color:#fff;
+  background:var(--pink);
 }
-.tag{
-position:absolute;left:8px;top:8px;background:#ff633f;
-color:#fff;border-radius:11px;padding:4px 7px;
-font-size:10px;font-weight:900
+
+.offer{
+  position:absolute;
+  left:9px;
+  top:9px;
+  background:#ff5c3c;
+  color:#fff;
+  padding:5px 8px;
+  border-radius:10px;
+  font-size:10px;
+  font-weight:900;
+  z-index:2;
 }
-.body{padding:10px}
-.catname{
-font-size:9px;color:var(--p);font-weight:900;
-text-transform:uppercase;letter-spacing:.2px
+
+.product-body{
+  padding:10px;
 }
-.name{
-font-weight:850;font-size:13px;line-height:1.3;
-min-height:35px;margin:4px 0
+
+.category-name{
+  color:var(--pink);
+  font-size:9px;
+  font-weight:900;
+  text-transform:uppercase;
 }
+
+.product-name{
+  font-size:13px;
+  font-weight:850;
+  line-height:1.3;
+  min-height:35px;
+  margin:5px 0;
+}
+
 .price{
-font-size:17px;color:var(--p);font-weight:950
+  color:var(--pink);
+  font-size:17px;
+  font-weight:950;
 }
+
 .mrp{
-text-decoration:line-through;color:#978c93;
-font-size:11px;margin-left:6px
+  color:#8e8388;
+  text-decoration:line-through;
+  font-size:11px;
+  margin-left:5px;
 }
-.off{
-display:inline-block;background:#def6e9;color:#108f52;
-font-size:10px;font-weight:900;border-radius:5px;
-padding:3px 6px;margin:5px 0
+
+.discount{
+  display:inline-block;
+  background:#def6e9;
+  color:#128e52;
+  font-size:10px;
+  font-weight:900;
+  padding:3px 6px;
+  border-radius:5px;
+  margin:5px 0;
 }
+
 .rating{
-font-size:11px;color:#8a7b83
+  color:#777;
+  font-size:11px;
 }
-.rating b{color:#ffb000}
+
+.rating b{
+  color:#ffb000;
+}
+
 .add{
-width:100%;border:0;border-radius:22px;
-background:linear-gradient(90deg,#ed116d,#ff3b87);
-color:#fff;padding:9px;font-weight:900;margin-top:7px;
-font-size:11px
+  width:100%;
+  border:0;
+  border-radius:22px;
+  padding:9px;
+  margin-top:7px;
+  color:white;
+  background:linear-gradient(90deg,var(--pink),var(--pink2));
+  font-weight:900;
+  font-size:11px;
 }
 
 .promo{
-margin:32px 0;padding:23px 28px;border-radius:18px;
-background:linear-gradient(100deg,#ffe8f1,#ffd2e1);
-display:flex;justify-content:space-between;align-items:center
+  margin:30px 0;
+  padding:24px 28px;
+  border-radius:18px;
+  background:linear-gradient(100deg,#ffe8f1,#ffd3e2);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
+
 .promo h3{
-color:#9f0949;font-size:28px;margin:0
-}
-.promo p{
-margin:6px 0 0;color:#78334f
+  margin:0;
+  color:#970744;
+  font-size:27px;
 }
 
 .footer{
-margin-top:45px;background:#fff0f6;
-border-top:1px solid #f1dce7;padding:28px 20px
-}
-.footIn{
-max-width:1280px;margin:auto;display:flex;
-justify-content:space-between;align-items:center
-}
-.footBrand{
-font-weight:950;color:#a20a4c;font-size:21px
+  margin-top:40px;
+  padding:30px 20px;
+  background:#fff0f6;
+  border-top:1px solid var(--border);
 }
 
-.bottom{display:none}
+.footer-inner{
+  max-width:1400px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+}
 
-.drawer,.modal{
-position:fixed;inset:0;background:#1b0b13a8;
-z-index:100;display:none
+.footer-brand{
+  color:#9e0849;
+  font-size:21px;
+  font-weight:950;
 }
-.drawer.open,.modal.open{display:block}
-.drawerPanel{
-height:100%;width:min(340px,88vw);background:#fff;
-padding:20px;box-shadow:15px 0 30px #0003
-}
-.drawerHead,.modalHead{
-display:flex;justify-content:space-between;align-items:center
-}
-.drawer a{
-display:block;padding:14px 3px;text-decoration:none;
-color:var(--ink);font-weight:800;
-border-bottom:1px solid #f0e4e9
-}
-.x{
-width:38px;height:38px;border-radius:50%;
-background:#fff0f6;color:var(--p);font-size:22px
-}
+
+.drawer,
 .modal{
-display:none;align-items:flex-end;justify-content:center
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:#180b1299;
+  display:none;
 }
-.modal.open{display:flex}
+
+.drawer.open,
+.modal.open{
+  display:block;
+}
+
+.drawer-panel{
+  height:100%;
+  width:min(350px,88vw);
+  background:#fff;
+  padding:20px;
+}
+
+.drawer-head,
+.modal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.drawer-link{
+  display:block;
+  padding:14px 0;
+  border-bottom:1px solid #eee;
+  color:#222;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.close{
+  border:0;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#fff0f6;
+  color:var(--pink);
+  font-size:23px;
+}
+
+.modal{
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.modal.open{
+  display:flex;
+}
+
 .sheet{
-background:#fff;width:min(620px,100%);
-max-height:84vh;overflow:auto;
-border-radius:25px 25px 0 0;padding:20px
+  width:min(650px,100%);
+  max-height:85vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:25px 25px 0 0;
+  padding:20px;
 }
-.cartRow{
-display:grid;grid-template-columns:70px 1fr auto;
-gap:12px;align-items:center;
-padding:12px 0;border-bottom:1px solid #eee
+
+.cart-row{
+  display:grid;
+  grid-template-columns:75px 1fr auto;
+  gap:12px;
+  align-items:center;
+  padding:12px 0;
+  border-bottom:1px solid #eee;
 }
-.mini{
-width:70px;height:70px;border-radius:12px;
-background:#fff0f6;display:grid;place-items:center
+
+.mini-image{
+  width:75px;
+  height:75px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff0f6;
 }
-.mini svg{width:60px;height:60px}
+
+.mini-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
 .qty{
-display:flex;align-items:center;gap:8px;margin-top:5px
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-top:6px;
 }
+
 .qty button{
-width:27px;height:27px;border:0;border-radius:50%;
-background:#ffe5ef;color:var(--p);font-weight:900
+  width:27px;
+  height:27px;
+  border:0;
+  border-radius:50%;
+  background:#ffe5ef;
+  color:var(--pink);
+  font-weight:bold;
 }
+
 .toast{
-position:fixed;left:50%;bottom:90px;
-transform:translate(-50%,30px);
-background:#241a20;color:#fff;padding:11px 18px;
-border-radius:25px;opacity:0;pointer-events:none;
-transition:.2s;z-index:200
+  position:fixed;
+  left:50%;
+  bottom:80px;
+  transform:translate(-50%,30px);
+  opacity:0;
+  background:#231b20;
+  color:#fff;
+  padding:11px 18px;
+  border-radius:25px;
+  z-index:200;
+  transition:.2s;
 }
+
 .toast.show{
-opacity:1;transform:translate(-50%,0)
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+.bottom{
+  display:none;
 }
 
 @media(max-width:1200px){
-.grid{grid-template-columns:repeat(4,1fr)}
+  .products{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .categories{
+    grid-template-columns:repeat(6,1fr);
+  }
 }
 
 @media(max-width:900px){
-.top{
-height:38px;font-size:12px
-}
-.header{display:none}
-.mobile{
-display:block;position:sticky;top:0;z-index:60;
-background:#fff;border-bottom:1px solid #eee
-}
-.mrow{
-height:70px;display:grid;
-grid-template-columns:42px 1fr auto;
-align-items:center;padding:7px 15px
-}
-.hamb{
-border:0;background:#fff;color:#920848;font-size:28px
-}
-.mbrand{text-align:center}
-.mbrand strong{
-color:#a3094b;font-size:21px
-}
-.mbrand small{
-display:block;font-family:cursive;
-color:#8b5a6c;font-size:10px
-}
-.micons{
-display:flex;gap:5px
-}
-.mi{
-border:0;background:#fff;color:#a3094b;
-font-size:22px;position:relative
-}
-.msearch{
-margin:0 15px 12px;height:47px;
-border:1px solid #eadde4;border-radius:26px;
-display:flex;align-items:center;padding:0 15px
-}
-.msearch b{
-font-size:23px;color:var(--p);
-font-weight:400;margin-right:9px
-}
-.msearch input{
-border:0;outline:0;width:100%
-}
-.wrap{padding:0 15px}
-.hero{
-height:250px;grid-template-columns:45% 55%;
-margin:13px 0;border-radius:15px
-}
-.heroText{padding:25px 15px}
-.heroText h2{font-size:28px}
-.heroText p{font-size:11px}
-.pinkBtn{
-padding:10px 15px;font-size:12px
-}
-.heroArt .flower{
-width:65px;height:65px;border-width:17px
-}
-.f1{left:5%;top:31%}
-.f2{left:30%;top:10%}
-.f3{left:42%;top:43%}
-.bottle{
-width:28px;height:58px
-}
-.bottle:before{
-width:20px;height:21px;left:4px;top:-20px
-}
-.b1{left:63%;top:20%}
-.b2{left:77%;top:48%}
-.earring{
-width:28px;height:50px;border-width:4px;
-left:53%;top:61%
-}
-.earring:after{
-width:15px;height:15px;border-width:3px;bottom:-9px
-}
-.ear2{left:67%}
-.beads{
-width:80px;height:40px;border-width:5px;
-left:72%;top:71%
-}
-.butter{
-left:31%;top:68%;transform:scale(.75)
-}
-.trust{
-grid-template-columns:repeat(4,1fr);
-border-radius:14px;margin-bottom:24px
-}
-.trustItem{
-padding:11px 3px;display:block;text-align:center
-}
-.trustIcon{font-size:21px}
-.trustItem strong{
-font-size:9px;line-height:1.2;display:block
-}
-.trustItem small{display:none}
-.sectionHead{
-margin:22px 0 12px
-}
-.sectionHead h2{font-size:22px}
-.cats{
-display:flex;overflow:auto;gap:10px;
-scrollbar-width:none
-}
-.cats::-webkit-scrollbar{display:none}
-.cat{
-min-width:84px;border-radius:14px
-}
-.catPic{height:75px}
-.catPic svg{
-width:65px;height:65px
-}
-.cat b{font-size:10px}
-.grid{
-grid-template-columns:repeat(2,1fr);
-gap:10px
-}
-.pic{height:170px}
-.body{padding:9px}
-.name{
-font-size:13px;min-height:34px
-}
-.price{font-size:17px}
-.add{
-font-size:12px;padding:10px
-}
-.promo{
-padding:18px;margin:24px 0;border-radius:15px
-}
-.promo h3{font-size:20px}
-.promo p{font-size:11px}
-.footer{margin-bottom:66px}
-.footIn{
-display:block;text-align:center
-}
-.bottom{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-position:fixed;bottom:0;left:0;right:0;
-height:64px;background:#fff;
-border-top:1px solid #eadde5;
-z-index:70;
-box-shadow:0 -8px 25px #0000000c
-}
-.bottom button{
-border:0;background:#fff;color:#352d33;
-font-size:10px;font-weight:800
-}
-.bottom span{
-display:block;font-size:22px;line-height:26px
-}
-.bottom .active{color:var(--p)}
+
+  .header{
+    display:none;
+  }
+
+  .mobile-header{
+    display:block;
+    position:sticky;
+    top:0;
+    z-index:60;
+    background:#fff;
+    border-bottom:1px solid #eee;
+  }
+
+  .mobile-row{
+    height:65px;
+    display:grid;
+    grid-template-columns:42px 1fr auto;
+    align-items:center;
+    padding:6px 13px;
+  }
+
+  .hamburger{
+    border:0;
+    background:#fff;
+    color:var(--dark);
+    font-size:27px;
+  }
+
+  .mobile-brand{
+    text-align:center;
+    color:var(--dark);
+  }
+
+  .mobile-brand strong{
+    display:block;
+    font-size:19px;
+  }
+
+  .mobile-brand small{
+    font-family:cursive;
+    font-size:9px;
+  }
+
+  .mobile-actions{
+    display:flex;
+  }
+
+  .mobile-action{
+    border:0;
+    background:#fff;
+    color:var(--dark);
+    position:relative;
+    font-size:21px;
+  }
+
+  .mobile-search{
+    height:46px;
+    margin:0 13px 11px;
+    border:1px solid var(--border);
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    padding:0 14px;
+  }
+
+  .mobile-search span{
+    color:var(--pink);
+    font-size:23px;
+    margin-right:8px;
+  }
+
+  .mobile-search input{
+    width:100%;
+    border:0;
+    outline:0;
+  }
+
+  .container{
+    padding:0 13px;
+  }
+
+  .hero{
+    height:245px;
+    grid-template-columns:46% 54%;
+    border-radius:15px;
+  }
+
+  .hero-text{
+    padding:20px 14px;
+  }
+
+  .hero-text h2{
+    font-size:27px;
+  }
+
+  .hero-text p{
+    font-size:11px;
+  }
+
+  .hero-image img{
+    object-position:center;
+  }
+
+  .trust{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .trust-item{
+    display:block;
+    padding:11px 3px;
+    text-align:center;
+  }
+
+  .trust-icon{
+    font-size:20px;
+  }
+
+  .trust-item strong{
+    display:block;
+    font-size:9px;
+  }
+
+  .trust-item small{
+    display:none;
+  }
+
+  .categories{
+    display:flex;
+    overflow:auto;
+    gap:9px;
+  }
+
+  .category{
+    min-width:86px;
+  }
+
+  .category-image{
+    height:76px;
+  }
+
+  .category b{
+    font-size:9px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .product-image{
+    height:175px;
+  }
+
+  .product-name{
+    font-size:12px;
+  }
+
+  .price{
+    font-size:16px;
+  }
+
+  .add{
+    font-size:11px;
+  }
+
+  .promo{
+    padding:18px;
+  }
+
+  .promo h3{
+    font-size:20px;
+  }
+
+  .promo p{
+    font-size:10px;
+  }
+
+  .footer{
+    margin-bottom:65px;
+  }
+
+  .footer-inner{
+    display:block;
+    text-align:center;
+  }
+
+  .bottom{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:62px;
+    background:#fff;
+    border-top:1px solid var(--border);
+    z-index:70;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .bottom button{
+    border:0;
+    background:#fff;
+    color:#40373b;
+    font-size:10px;
+    font-weight:bold;
+  }
+
+  .bottom span{
+    display:block;
+    font-size:21px;
+  }
 }
 </style>
 </head>
@@ -565,193 +857,212 @@ display:block;font-size:22px;line-height:26px
 <body>
 
 <div class="top">
-✨ KAVAN BAZAAR — New collection is live <u>Shop now →</u>
+  ✨ KAVAN BAZAAR — New collection is live
 </div>
 
 <header class="header">
-<div class="head">
 
-<a class="brand" href="#" onclick="home();return false">
-<span class="bag"><i class="handle"></i></span>
-<span>
-<h1>KAVAN BAZAAR</h1>
-<small>Trendy Accessories for Every You ♡</small>
-</span>
-</a>
+  <div class="head">
 
-<label class="search">
-<b>⌕</b>
-<input id="search" placeholder="Search for earrings, hair clips, nail polish...">
-</label>
+    <a class="brand" href="#" onclick="home();return false">
+      <span class="logo">♥</span>
+      <span>
+        <h1>KAVAN BAZAAR</h1>
+        <small>Trendy Accessories for Every You ♡</small>
+      </span>
+    </a>
 
-<div class="actions">
+    <label class="search">
+      <span>⌕</span>
+      <input
+        id="desktopSearch"
+        placeholder="Search earrings, hair clips, lipstick..."
+      >
+    </label>
 
-<span class="wa">
-<i>♡</i>
-<span>
-<strong>10,000+ Styles</strong>
-<small>Fashion • Fancy • Kids</small>
-</span>
-</span>
+    <div class="actions">
 
-<button class="hbtn" onclick="toast('Account demo — no login required')">
-<span>♙</span>
-<small>Account</small>
-</button>
+      <button class="action" onclick="toast('Account demo')">
+        <span>♙</span>
+        <small>Account</small>
+      </button>
 
-<button class="hbtn" onclick="openWish()">
-<span>♡</span>
-<small>Wishlist</small>
-<b class="count" id="wc">0</b>
-</button>
+      <button class="action" onclick="openWishlist()">
+        <span>♡</span>
+        <small>Wishlist</small>
+        <b class="count" id="wishlistCount">0</b>
+      </button>
 
-<button class="hbtn" onclick="openCart()">
-<span>🛒</span>
-<small>Cart</small>
-<b class="count" id="cc">0</b>
-</button>
+      <button class="action" onclick="openCart()">
+        <span>🛒</span>
+        <small>Cart</small>
+        <b class="count" id="cartCount">0</b>
+      </button>
 
-</div>
-</div>
+    </div>
 
-<nav class="nav">
-<div class="navin" id="nav"></div>
-</nav>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner" id="nav"></div>
+  </nav>
+
 </header>
 
-<div class="mobile">
+<div class="mobile-header">
 
-<div class="mrow">
+  <div class="mobile-row">
 
-<button class="hamb" onclick="openDrawer()">☰</button>
+    <button class="hamburger" onclick="openDrawer()">
+      ☰
+    </button>
 
-<div class="mbrand">
-<strong>KAVAN BAZAAR</strong>
-<small>Trendy Accessories for Every You ♡</small>
+    <div class="mobile-brand">
+      <strong>KAVAN BAZAAR</strong>
+      <small>Trendy Accessories for Every You ♡</small>
+    </div>
+
+    <div class="mobile-actions">
+
+      <button class="mobile-action" onclick="openWishlist()">
+        ♡
+        <b class="count" id="mobileWishlistCount">0</b>
+      </button>
+
+      <button class="mobile-action" onclick="openCart()">
+        🛒
+        <b class="count" id="mobileCartCount">0</b>
+      </button>
+
+    </div>
+
+  </div>
+
+  <label class="mobile-search">
+    <span>⌕</span>
+    <input
+      id="mobileSearch"
+      placeholder="Search products..."
+    >
+  </label>
+
 </div>
 
-<div class="micons">
-
-<button class="mi" onclick="openWish()">
-♡<b class="count" id="mwc">0</b>
-</button>
-
-<button class="mi" onclick="openCart()">
-🛒<b class="count" id="mcc">0</b>
-</button>
-
-</div>
-</div>
-
-<label class="msearch">
-<b>⌕</b>
-<input id="msearch" placeholder="Search for earrings, hair clips, nail polish...">
-</label>
-
-</div>
-
-<main class="wrap">
+<main class="container">
 
 <section class="hero">
 
-<div class="heroText">
-<h2>Small<br>Accessories<br>Big Happiness ♡</h2>
+  <div class="hero-text">
 
-<p>
-Trendy | Affordable | Stylish<br>
-For Every You
-</p>
+    <h2>
+      Small<br>
+      Accessories<br>
+      Big Happiness ♡
+    </h2>
 
-<button class="pinkBtn"
-onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
-Shop Now →
-</button>
-</div>
+    <p>
+      Trendy • Affordable • Stylish<br>
+      Fashion & Fancy Collections
+    </p>
 
-<div class="heroArt">
-<i class="flower f1"></i>
-<i class="flower f2"></i>
-<i class="flower f3"></i>
-<i class="bottle b1"></i>
-<i class="bottle b2"></i>
-<i class="earring"></i>
-<i class="earring ear2"></i>
-<i class="beads"></i>
-<i class="butter"></i>
-</div>
+    <button
+      class="btn"
+      onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})"
+    >
+      Shop Now →
+    </button>
+
+  </div>
+
+  <div class="hero-image">
+    <img
+      src="https://loremflickr.com/1000/600/fashion,jewelry,accessories?lock=9001"
+      alt="KAVAN BAZAAR Fashion Accessories"
+    >
+  </div>
 
 </section>
 
 <section class="trust">
 
-<div class="trustItem">
-<div class="trustIcon">🚚</div>
-<div>
-<strong>Tamil Nadu Wide Delivery</strong>
-<small>Across Tamil Nadu</small>
-</div>
-</div>
+  <div class="trust-item">
+    <div class="trust-icon">🚚</div>
+    <div>
+      <strong>Tamil Nadu Delivery</strong>
+      <small>Across Tamil Nadu</small>
+    </div>
+  </div>
 
-<div class="trustItem">
-<div class="trustIcon">♢</div>
-<div>
-<strong>Safe & Secure Shopping</strong>
-<small>Easy demo checkout</small>
-</div>
-</div>
+  <div class="trust-item">
+    <div class="trust-icon">🔒</div>
+    <div>
+      <strong>Safe Shopping</strong>
+      <small>Secure experience</small>
+    </div>
+  </div>
 
-<div class="trustItem">
-<div class="trustIcon">♧</div>
-<div>
-<strong>Affordable Prices</strong>
-<small>Starting from ₹49</small>
-</div>
-</div>
+  <div class="trust-item">
+    <div class="trust-icon">₹</div>
+    <div>
+      <strong>Affordable Prices</strong>
+      <small>Starting ₹49</small>
+    </div>
+  </div>
 
-<div class="trustItem">
-<div class="trustIcon">♡</div>
-<div>
-<strong>Easy Shopping</strong>
-<small>Simple cart experience</small>
-</div>
-</div>
+  <div class="trust-item">
+    <div class="trust-icon">♡</div>
+    <div>
+      <strong>Easy Shopping</strong>
+      <small>Simple cart</small>
+    </div>
+  </div>
 
 </section>
 
 <section>
 
-<div class="sectionHead">
-<h2>Shop by Category</h2>
-<a class="view" href="#products">View All →</a>
-</div>
+  <div class="section-head">
+    <h2>Shop by Category</h2>
+    <a class="view" href="#products">View All →</a>
+  </div>
 
-<div class="cats" id="cats"></div>
+  <div class="categories" id="categories"></div>
 
 </section>
 
 <section id="products">
 
-<div class="sectionHead">
-<h2 id="listingTitle">Trending Now</h2>
-<a class="view" href="#products" onclick="resetAll()">View All →</a>
-</div>
+  <div class="section-head">
+    <h2 id="productTitle">Trending Products</h2>
+    <a class="view" href="#products" onclick="resetProducts()">
+      View All →
+    </a>
+  </div>
 
-<div class="grid" id="grid"></div>
-
-<div id="best" style="display:none"></div>
+  <div class="products" id="productGrid"></div>
 
 </section>
 
 <section class="promo">
 
-<div>
-<h3>Special Offers Under ₹99</h3>
-<p>Pretty picks, everyday prices — perfect for gifting too.</p>
-</div>
+  <div>
+    <h3>Special Offers Under ₹99</h3>
+    <p>Pretty products at everyday prices.</p>
+  </div>
 
-<button class="pinkBtn" onclick="under99()">
-Shop Offers →
-</button>
+  <button class="btn" onclick="showOffers()">
+    Shop Offers →
+  </button>
+
+</section>
+
+<section>
+
+  <div class="section-head">
+    <h2>Best Sellers</h2>
+  </div>
+
+  <div class="products" id="bestGrid"></div>
 
 </section>
 
@@ -759,1081 +1070,1214 @@ Shop Offers →
 
 <footer class="footer">
 
-<div class="footIn">
+  <div class="footer-inner">
 
-<div>
-<div class="footBrand">KAVAN BAZAAR ♡</div>
-<small>Trendy accessories for every you.</small>
-</div>
+    <div>
+      <div class="footer-brand">
+        KAVAN BAZAAR ♡
+      </div>
 
-<div>
-<strong>Frontend Store</strong><br>
-<small>Shopping experience preview • Backend coming next</small>
-</div>
+      <small>
+        Trendy accessories for every you.
+      </small>
+    </div>
 
-</div>
+    <div>
+      <strong>Frontend Store</strong><br>
+      <small>
+        Shopping experience preview
+      </small>
+    </div>
+
+  </div>
 
 </footer>
 
+<!-- DRAWER -->
+
 <div class="drawer" id="drawer">
 
-<div class="drawerPanel">
+  <div class="drawer-panel">
 
-<div class="drawerHead">
-<strong>KAVAN BAZAAR</strong>
-<button class="x" onclick="closeDrawer()">×</button>
+    <div class="drawer-head">
+      <strong>KAVAN BAZAAR</strong>
+      <button class="close" onclick="closeDrawer()">×</button>
+    </div>
+
+    <div id="drawerLinks"></div>
+
+  </div>
+
 </div>
 
-<div id="drawerLinks"></div>
-
-</div>
-</div>
+<!-- CART -->
 
 <div class="modal" id="cartModal">
 
-<div class="sheet">
+  <div class="sheet">
 
-<div class="modalHead">
-<h2>Your Cart</h2>
-<button class="x" onclick="closeCart()">×</button>
-</div>
+    <div class="modal-head">
+      <h2>Your Cart</h2>
+      <button class="close" onclick="closeCart()">×</button>
+    </div>
 
-<div id="cartBody"></div>
-<div id="cartFoot"></div>
+    <div id="cartBody"></div>
 
-</div>
-</div>
+    <div id="cartFooter"></div>
 
-<div class="modal" id="wishModal">
-
-<div class="sheet">
-
-<div class="modalHead">
-<h2>Wishlist</h2>
-<button class="x" onclick="closeWish()">×</button>
-</div>
-
-<div id="wishBody"></div>
+  </div>
 
 </div>
+
+<!-- WISHLIST -->
+
+<div class="modal" id="wishlistModal">
+
+  <div class="sheet">
+
+    <div class="modal-head">
+      <h2>Wishlist</h2>
+      <button class="close" onclick="closeWishlist()">×</button>
+    </div>
+
+    <div id="wishlistBody"></div>
+
+  </div>
+
 </div>
 
 <div class="toast" id="toast"></div>
 
 <nav class="bottom">
 
-<button class="active" onclick="home()">
-<span>⌂</span>Home
-</button>
+  <button onclick="home()">
+    <span>⌂</span>
+    Home
+  </button>
 
-<button onclick="document.querySelector('.cats').scrollIntoView({behavior:'smooth'})">
-<span>▦</span>Categories
-</button>
+  <button onclick="document.querySelector('.categories').scrollIntoView({behavior:'smooth'})">
+    <span>▦</span>
+    Categories
+  </button>
 
-<button onclick="openWish()">
-<span>♡</span>Wishlist
-</button>
+  <button onclick="openWishlist()">
+    <span>♡</span>
+    Wishlist
+  </button>
 
-<button onclick="openCart()">
-<span>🛒</span>Cart
-</button>
-
-<button onclick="toast('Account demo — no login required')">
-<span>♙</span>Account
-</button>
+  <button onclick="openCart()">
+    <span>🛒</span>
+    Cart
+  </button>
 
 </nav>
 
 <script>
 
-const cats=[
-"Girls' Hair Accessories & Jewelry",
-"Girls' Beauty & Cosmetics",
-"Girls' Fashion & Apparel",
-"Boys' Fashion & Streetwear",
-"Kids' Accessories & Footwear"
+/* =========================================
+   CATEGORIES
+========================================= */
+
+const categories = [
+  "Earrings",
+  "Hair Clips",
+  "Hair Accessories",
+  "Scrunchies",
+  "Necklaces",
+  "Bracelets",
+  "Anklets",
+  "Nail Polish",
+  "Beauty Accessories",
+  "Combo Sets",
+  "Jewellery Accessories",
+  "Kids Accessories"
 ];
 
-function visualIndex(id){
-const s=String(id);
-return s[0]==="p"
-?130+Number(s.slice(1))
-:Number(s)-1
-}
 
-const seed=[
+/* =========================================
+   REAL PHOTO PRODUCT DATA
+========================================= */
 
-["1","Enchanted Blossom Pearl Hair Claw",cats[0],149,199,4.6,84,"Bestseller","hair"],
-["2","Glittering Butterfly Pastel Snap Clips",cats[0],99,149,4.5,112,"Trending","butter"],
-["3","Velvet Bow Satin Alligator Clip",cats[0],129,179,4.4,76,"Offer","hair"],
-["4","Mermaid Shimmer Iridescent Hair Barrette",cats[0],159,229,4.6,68,"New","hair"],
-["5","Celestial Star Geometric Hair Pin",cats[0],89,129,4.3,54,"Offer","hair"],
-["6","Whimsical Daisy Resin Hair Slide",cats[0],79,119,4.4,91,"Popular","hair"],
-["7","Charming Beads & Playful Charms Bracelet",cats[0],149,199,4.5,63,"Bestseller","brace"],
-["8","Boho-Chic Floral Macrame Headband",cats[0],179,249,4.4,48,"New","hair"],
-["9","Sparkling Tiara Crystal Headpiece",cats[0],249,349,4.7,37,"Premium","hair"],
-["10","Rainbow Pastel Telephone Cord Hair Ties",cats[0],69,99,4.3,128,"Offer","hair"],
-["11","Dreamcatcher Feather Pendant Necklace",cats[0],199,299,4.5,42,"New","neck"],
-["12","Mystic Unicorn Holographic Scrunchie",cats[0],99,149,4.6,83,"Trending","scrunch"],
-["13","Gilded Leaf Minimalist Hair Crown",cats[0],229,329,4.4,29,"Premium","hair"],
-["14","Sweetheart Enamel Stud Earrings",cats[0],119,169,4.5,72,"Popular","ear"],
-["15","Neon Vibes Acrylic Layered Choker",cats[0],139,199,4.3,55,"New","neck"],
-["16","Pixie Dust Glittering Hair Bow",cats[0],89,129,4.5,94,"Offer","hair"],
-["17","Ocean Wave Turquoise Anklet",cats[0],159,229,4.4,46,"Popular","anklet"],
-["18","Vintage Rose Ribbon Hair Scarf",cats[0],129,189,4.2,38,"New","hair"],
-["19","Constellation Floating Star Ring Set",cats[0],149,219,4.5,51,"Trending","ear"],
-["20","Fairy Wings Organza Hair Barrettes",cats[0],109,159,4.4,67,"Offer","hair"],
+const products = [
 
-["21","Velvet Petal Hydrating Matte Lipstick",cats[1],199,279,4.5,93,"Bestseller","beauty"],
-["22","Glitter Glow Color-Changing Lip Oil",cats[1],179,249,4.4,81,"Trending","beauty"],
-["23","Sweet Berry High-Shine Tinted Balm",cats[1],149,199,4.5,74,"Popular","beauty"],
-["24","Bubblegum Pop Shimmer Lip Gloss",cats[1],129,179,4.3,88,"Offer","beauty"],
-["25","Satin Crème Long-Wear Liquid Lipstick",cats[1],219,299,4.6,62,"New","beauty"],
-["26","Neon Spark Holographic Lip Topper",cats[1],159,229,4.2,43,"New","beauty"],
-["27","Glittering Donut Lip Balm & Gloss Combo",cats[1],189,269,4.5,69,"Combo","beauty"],
-["28","Cotton Candy Scented Hydrating Lip Mask",cats[1],169,239,4.4,57,"Popular","beauty"],
-["29","Peachy Keen Cheek & Lip Stain",cats[1],199,279,4.5,66,"Trending","beauty"],
-["30","Stardust Shimmer Body Glitter Gel",cats[1],179,249,4.3,41,"New","beauty"],
-["31","Mermaid Scales Peel-Off Nail Lacquer",cats[1],119,169,4.4,97,"Offer","nail"],
-["32","Vanilla Dream Moisturising Hand Cream",cats[1],149,199,4.5,52,"Popular","beauty"],
-["33","Rosy Glow Hydrating Face Mist",cats[1],189,259,4.4,46,"New","beauty"],
-["34","Berry Burst Fruit-Scented Body Wash",cats[1],159,219,4.2,39,"Offer","beauty"],
-["35","Chic Pastel Water-Based Nail Polish Set",cats[1],249,349,4.6,108,"Bestseller","nail"],
-["36","Sugar Plum Exfoliating Lip Scrub",cats[1],139,199,4.3,61,"Popular","beauty"],
-["37","Dewy Morning Illuminating Face Primer",cats[1],229,319,4.5,48,"Premium","beauty"],
-["38","Candy Swirl Scented Detangling Spray",cats[1],169,239,4.3,44,"New","beauty"],
-["39","Glow-in-the-Dark Cosmic Nail Art Stickers",cats[1],89,129,4.4,73,"Offer","nail"],
-["40","Velvet Mousse Matte Lip Clay",cats[1],199,279,4.5,58,"Trending","beauty"],
+["1","Traditional Jhumka Earrings","Earrings",149,199,4.6,98,"Bestseller","jhumka,earrings"],
+["2","Butterfly Hair Clip Set","Hair Clips",99,149,4.5,121,"Trending","hair,clips"],
+["3","Velvet Scrunchies Set","Scrunchies",79,129,4.4,83,"Offer","scrunchies"],
+["4","Nail Polish Collection","Nail Polish",199,299,4.6,110,"Popular","nail,polish"],
+["5","Beaded Bracelet Set","Bracelets",99,149,4.5,74,"Bestseller","bracelet,jewelry"],
+["6","Charm Anklet","Anklets",119,179,4.3,67,"Offer","anklet,jewelry"],
+["7","Fashion Necklace","Necklaces",349,499,4.7,51,"Premium","necklace,jewelry"],
+["8","Stone Drop Earrings","Earrings",149,229,4.5,61,"New","earrings,jewelry"],
+["9","Rhinestone Butterfly Clip","Hair Clips",89,129,4.5,82,"Offer","hair,accessories"],
+["10","Colourful Hair Clips","Hair Accessories",69,99,4.3,55,"New","hair,clips"],
+["11","Satin Scrunchies","Scrunchies",129,179,4.5,71,"Popular","scrunchie"],
+["12","Lotus Earrings","Earrings",179,249,4.7,92,"Bestseller","indian,jewelry"],
+["13","Beaded Anklet","Anklets",99,169,4.2,156,"Offer","anklet"],
+["14","Gold Tone Necklace","Necklaces",349,499,4.5,44,"Premium","gold,necklace"],
+["15","Pastel Bracelet","Bracelets",89,139,4.4,54,"New","bracelet"],
+["16","Beauty Accessory Kit","Beauty Accessories",149,229,4.3,38,"Combo","beauty,accessories"],
+["17","Kids Hair Clips","Kids Accessories",79,119,4.5,61,"Popular","kids,hair,clips"],
+["18","Fancy Jewellery Combo","Combo Sets",299,449,4.6,47,"Combo","jewelry,set"],
+["19","Stone Jewellery Earrings","Jewellery Accessories",229,329,4.5,35,"Premium","jewelry"],
+["20","Mini Nail Polish Duo","Nail Polish",79,119,4.4,88,"Offer","nail,polish"],
 
-["41","Twirling Starlet Tulle Gown",cats[2],699,999,4.6,24,"Premium","fashion"],
-["42","Velvet Blossom Holiday Dress",cats[2],599,849,4.5,31,"New","fashion"],
-["43","Midnight Shimmer Sequined Skirt",cats[2],549,799,4.4,28,"Trending","fashion"],
-["44","Pastel Whimsy Ruffled Blouse",cats[2],449,649,4.3,36,"Popular","fashion"],
-["45","Enchanted Garden Butterfly Dungarees",cats[2],649,899,4.5,22,"New","fashion"],
-["46","Vintage Lace Bohemian Sun Dress",cats[2],599,849,4.4,19,"Premium","fashion"],
-["47","Strawberry Fields Tiered Midi Skirt",cats[2],499,699,4.3,27,"Offer","fashion"],
-["48","Cozy Cashmere-Blend Cable Knit Sweater",cats[2],799,1099,4.5,17,"Premium","fashion"],
-["49","Metallic Rose Gold Quilted Puffer Jacket",cats[2],899,1299,4.4,14,"Premium","fashion"],
-["50","Sun-Kissed Linen Ruffle Romper",cats[2],549,799,4.2,25,"New","fashion"],
-["51","Urban Chic Distressed Denim Jacket",cats[2],699,999,4.5,21,"Popular","fashion"],
-["52","Whimsical Woodland Embroidered Cardigan",cats[2],649,899,4.4,18,"New","fashion"],
-["53","Sweet Lavender Eyelet Lace Top",cats[2],399,599,4.3,33,"Offer","fashion"],
-["54","Dancing Clouds Layered Tutu Skirt",cats[2],499,699,4.6,29,"Trending","fashion"],
-["55","Retro Polka Dot A-Line Party Dress",cats[2],599,849,4.5,26,"Popular","fashion"],
-["56","Tropical Paradise Off-Shoulder Jumpsuit",cats[2],749,1049,4.3,16,"New","fashion"],
-["57","Winter Wonderland Faux Fur Coat",cats[2],899,1299,4.5,12,"Premium","fashion"],
-["58","Midnight Satin Pleated Maxi Dress",cats[2],799,1149,4.4,15,"Premium","fashion"],
-["59","Sweetheart Knit Cropped Cardigan",cats[2],499,699,4.2,23,"Offer","fashion"],
-["60","Mermaid Tail Knit Loungewear Set",cats[2],699,999,4.4,20,"New","fashion"],
-
-["61","Urban Explorer Hooded Parka",cats[3],799,1099,4.4,18,"New","fashion"],
-["62","Multicolor Floral Premium Cotton Casual Shirt",cats[3],499,699,4.3,27,"Popular","fashion"],
-["63","Rugged Comfort Denim Cargo Pants",cats[3],649,899,4.4,22,"Trending","fashion"],
-["64","Varsity Legend Embroidered Bomber Jacket",cats[3],849,1199,4.5,16,"Premium","fashion"],
-["65","Nautical Prep Tailored Blazer",cats[3],899,1299,4.4,13,"Premium","fashion"],
-["66","Positive Vibe Animal Graphic Streetwear Tee",cats[3],399,599,4.3,41,"Offer","fashion"],
-["67","All-Star Performance Lightweight Sports Jersey",cats[3],449,649,4.2,34,"Popular","fashion"],
-["68","Alpine Peak Weatherproof Ski Jacket",cats[3],899,1299,4.5,9,"Premium","fashion"],
-["69","Street-Style Camouflage Jogger Pants",cats[3],549,799,4.3,25,"New","fashion"],
-["70","Retro Arcade Pixel Graphic Hoodie",cats[3],699,999,4.5,19,"Trending","fashion"],
-["71","Cobalt Blue Tailored Cotton Chinos",cats[3],599,849,4.4,21,"Popular","fashion"],
-["72","Midnight Stealth Water-Resistant Windbreaker",cats[3],749,1049,4.3,14,"New","fashion"],
-["73","Classic Oxford Button-Down Dress Shirt",cats[3],499,699,4.5,32,"Bestseller","fashion"],
-["74","Shadow Black Distressed Biker Denim",cats[3],699,999,4.2,17,"Popular","fashion"],
-["75","Adventure Bound Fleece-Lined Utility Vest",cats[3],649,899,4.4,15,"New","fashion"],
-["76","Cyber Punk Neon Accent Track Jacket",cats[3],799,1099,4.3,11,"Premium","fashion"],
-["77","Eco-Earth Organic Cotton Henley Tee",cats[3],449,649,4.5,29,"Popular","fashion"],
-["78","Gridiron Champ Mesh Practice Jersey",cats[3],399,599,4.2,26,"Offer","fashion"],
-["79","Bold Horizons Geometric Graphic Sweatshirt",cats[3],549,799,4.4,20,"Trending","fashion"],
-["80","Coastal Breeze Linen Summer Shorts",cats[3],349,499,4.3,37,"Offer","fashion"],
-
-["81","Classic Gentleman Satin Bow Tie",cats[4],129,179,4.4,44,"Popular","kids"],
-["82","Cozy Dreamland Fleece Pajama Set",cats[4],399,599,4.5,31,"New","kids"],
-["83","Puddle-Jumper Waterproof Raincoat",cats[4],449,649,4.3,24,"Popular","kids"],
-["84","Cloud-Walk Breathable Mesh Sneakers",cats[4],699,999,4.5,18,"Trending","kids"],
-["85","Urban Hype High-Top Skate Shoes",cats[4],749,1049,4.4,16,"New","kids"],
-["86","Galactic Explorer Ergonomic Backpack",cats[4],499,699,4.5,29,"Bestseller","kids"],
-["87","Retro Aviator Polarised Sunglasses",cats[4],199,299,4.2,37,"Offer","kids"],
-["88","Cozy Bear Plush Winter Beanie",cats[4],149,229,4.4,52,"Popular","kids"],
-["89","Active Dynamic Cushioned Running Shoes",cats[4],699,999,4.3,14,"New","kids"],
-["90","Safari Adventure Canvas Bucket Hat",cats[4],199,299,4.5,33,"Trending","kids"],
-["91","Weekend Wanderer Durable Duffel Bag",cats[4],449,649,4.4,21,"Popular","kids"],
-["92","Urban Nomad Genuine Leather Belt",cats[4],299,449,4.3,19,"New","kids"],
-["93","Wildwood Camo Water-Resistant Watch",cats[4],349,499,4.2,17,"Offer","kids"],
-["94","Comfort Glide Memory Foam Loafers",cats[4],649,899,4.4,12,"Premium","kids"],
-["95","Winter Warmth Thinsulate Ski Gloves",cats[4],249,349,4.3,23,"Popular","kids"],
-["96","Solar Flare Neon Athletic Socks",cats[4],99,149,4.4,67,"Offer","kids"],
-["97","Little Maverick Suede Chelsea Boots",cats[4],799,1099,4.5,10,"Premium","kids"],
-["98","Preppy Stripe Knit Infinity Scarf",cats[4],199,299,4.2,28,"New","kids"],
-["99","Deep Dive Silicon Swim Goggles",cats[4],249,349,4.3,31,"Popular","kids"],
-["100","Street Legend Embroidered Snapback Cap",cats[4],249,349,4.4,26,"Trending","kids"]
+["21","Maybelline Matte Lipstick","Beauty Accessories",699,799,4.6,120,"Bestseller","lipstick,beauty"],
+["22","Maybelline Vinyl Ink","Beauty Accessories",849,949,4.6,98,"Trending","lipstick"],
+["23","Maybelline Creamy Matte","Beauty Accessories",599,699,4.5,87,"Popular","lipstick"],
+["24","Lakme Matte Lip Colour","Beauty Accessories",338,450,4.5,119,"Bestseller","lipstick"],
+["25","Lakme Matte Lipstick","Beauty Accessories",263,375,4.4,108,"Popular","lipstick"],
+["26","Lakme Lip Mousse","Beauty Accessories",644,799,4.5,62,"New","lipstick"],
+["27","Lakme Liquid Lip","Beauty Accessories",559,699,4.5,55,"Trending","lipstick"],
+["28","Swiss Beauty Matte Lipstick","Beauty Accessories",206,249,4.5,152,"Bestseller","lipstick"],
+["29","Swiss Beauty Liquid Lipstick","Beauty Accessories",329,399,4.5,67,"Popular","lipstick"],
+["30","SUGAR Matte Lipstick","Beauty Accessories",799,899,4.5,57,"Premium","lipstick"]
 
 ];
 
-const lipstickProducts=[
-["101","Maybelline Superstay Matte Ink Liquid Lipstick",cats[1],699,699,4.6,120,"Bestseller","beauty"],
-["102","Maybelline Superstay Vinyl Ink Liquid Lipstick",cats[1],849,849,4.6,98,"Trending","beauty"],
-["103","Maybelline Color Sensational Ultimattes Lipstick",cats[1],599,599,4.5,87,"Popular","beauty"],
-["104","Maybelline Color Sensational Creamy Matte Lipstick",cats[1],299,329,4.6,145,"Bestseller","beauty"],
-["105","Maybelline Sensational Liquid Matte Lipstick",cats[1],349,429,4.5,132,"Popular","beauty"],
-["106","Maybelline Sensational Liquid Matte Mini Lipstick",cats[1],99,129,4.4,76,"Offer","beauty"],
-["107","Maybelline Superstay Matte Ink Crayon",cats[1],599,699,4.5,64,"New","beauty"],
-["108","Maybelline Moisturizing Serum Lipstick",cats[1],599,699,4.6,91,"Trending","beauty"],
-["109","Lakme Forever Matte Liquid Lip Colour",cats[1],338,450,4.5,119,"Bestseller","beauty"],
-["110","Lakme Forever Matte Lipstick",cats[1],263,375,4.4,108,"Popular","beauty"],
-["111","Lakme Xtraordin-Airy Velvet Matte Lip Mousse",cats[1],644,990,4.5,62,"New","beauty"],
-["112","Lakme Unreal 3D Slim Bullet Lipstick",cats[1],719,899,4.4,48,"Premium","beauty"],
-["113","Lakme 9 To 5 Matte To Glass Liquid Lip",cats[1],559,699,4.5,55,"Trending","beauty"],
-["114","Lakme 9 To 5 Primer + Shine Lipstick",cats[1],413,550,4.3,73,"Popular","beauty"],
-["115","Lakme 9to5 Primer + Matte Liquid Lip Color",cats[1],309,499,4.5,94,"Offer","beauty"],
-["116","Lakme Absolute Beyond Matte Lipstick",cats[1],675,750,4.4,51,"Premium","beauty"],
-["117","Lakme Beyond Matte Lip Liquid",cats[1],315,450,4.3,43,"Offer","beauty"],
-["118","Swiss Beauty Pure Matte Lipstick",cats[1],206,229,4.5,152,"Bestseller","beauty"],
-["119","Swiss Beauty Non Transfer Waterproof Lipstick",cats[1],339,399,4.4,88,"Trending","beauty"],
-["120","Swiss Beauty Stay On Matte Liquid Lipstick",cats[1],329,399,4.5,67,"Popular","beauty"],
-["121","Swiss Beauty Stay All Day Matte Lipstick",cats[1],224,249,4.4,59,"Offer","beauty"],
-["122","Swiss Beauty Select Dare To Matte Lipstick",cats[1],424,499,4.5,44,"New","beauty"],
-["123","Swiss Beauty Select High On Shine Creamy Lipstick",cats[1],375,429,4.4,39,"Popular","beauty"],
-["124","Swiss Beauty Matte Ultra Smooth Liquid Lipstick",cats[1],199,249,4.3,82,"Offer","beauty"],
-["125","Swiss Beauty Non-Transfer Matte Lipstick",cats[1],279,329,4.4,61,"Trending","beauty"],
-["126","SUGAR Matte As Hell Crayon Lipstick",cats[1],799,849,4.5,57,"Premium","beauty"],
-["127","MARS Creamy Matte Lipstick",cats[1],189,199,4.3,96,"Offer","beauty"],
-["128","Faces Canada Ultime Pro HD Intense Matte Lips",cats[1],625,849,4.5,46,"Premium","beauty"],
-["129","Nykaa Ultra Matte Lipstick",cats[1],422,649,4.4,71,"Popular","beauty"],
-["130","L'Oreal Paris Color Riche Satin Lipstick",cats[1],849,999,4.5,52,"Premium","beauty"]
+
+/* =========================================
+   GENERATE MANY DIFFERENT PRODUCTS
+========================================= */
+
+const imageTypes = [
+  "jewelry",
+  "earrings",
+  "hair,accessories",
+  "fashion,accessories",
+  "beauty",
+  "makeup",
+  "lipstick",
+  "nail,polish",
+  "bracelet",
+  "necklace",
+  "kids,accessories"
 ];
 
-seed.push(...lipstickProducts);
+for(let i=31;i<=10000;i++){
 
-for(let i=0;i<9870;i++){
-let x=seed[i%130];
-let price=49+(i%20)*25;
+  const base =
+    products[(i-31)%30];
 
-seed.push([
-"p"+i,
-"KAVAN BAZAAR "+x[1]+" Edition "+(i+1),
-x[2],
-price,
-Math.round(price*1.4),
-4.1+(i%9)/10,
-25+(i*13)%300,
-i%6===0?"Offer":i%5===0?"New":"Popular",
-x[8]
-]);
-}
+  const type =
+    imageTypes[(i-31)%imageTypes.length];
 
-let cart=JSON.parse(localStorage.getItem("kavan_cart_v2")||"[]");
-let wish=JSON.parse(localStorage.getItem("kavan_wish_v2")||"[]");
+  const price =
+    49 + ((i-31)%20)*25;
 
-let active="All";
-let query="";
-let only99=false;
+  products.push([
+    String(i),
+    "KAVAN BAZAAR "
+    + base[1]
+    + " Collection "
+    + i,
 
-function svg(type,i=0){
+    base[2],
 
-const n=Math.abs(Number(i)||0);
+    price,
 
-const hue=(n*47+type.length*29)%360;
-const hue2=(hue+45+(n%7)*13)%360;
+    Math.round(price*1.4),
 
-const c=`hsl(${hue} 82% 55%)`;
-const c2=`hsl(${hue2} 78% 62%)`;
-const bg=`hsl(${(hue+330)%360} 80% 96%)`;
+    4.1 + ((i-31)%9)/10,
 
-const ang=(n*17)%360;
-const dots=3+(n%8);
+    20 + ((i-31)*17)%250,
 
-const uid=`u${n}_${type.replace(/\W/g,"")}`;
+    (i%6===0)
+      ? "Offer"
+      : (i%5===0)
+      ? "New"
+      : "Popular",
 
-const spark=Array.from(
-{length:dots},
-(_,k)=>{
-const x=20+((n*31+k*37)%140);
-const y=20+((n*17+k*29)%105);
-const s=2+(k%4);
-
-return `<circle cx="${x}" cy="${y}" r="${s}" fill="${c2}" opacity=".72"/>`;
-}
-).join("");
-
-const base=`
-<svg viewBox="0 0 180 150" aria-hidden="true">
-<defs>
-
-<linearGradient id="${uid}a" x1="0" y1="0" x2="1" y2="1">
-<stop stop-color="${c}"/>
-<stop offset="1" stop-color="${c2}"/>
-</linearGradient>
-
-<filter id="${uid}s">
-<feDropShadow dx="0" dy="7" stdDeviation="6" flood-opacity=".16"/>
-</filter>
-
-</defs>
-
-<rect x="5" y="5" width="170" height="140" rx="22" fill="${bg}"/>
-
-${spark}
-`;
-
-let art="";
-
-if(type==="scrunch"){
-
-art=`
-<g transform="rotate(${ang} 90 75)" filter="url(#${uid}s)">
-<circle cx="90" cy="75" r="48"
-fill="none"
-stroke="url(#${uid}a)"
-stroke-width="24"
-stroke-dasharray="${8+n%10} ${4+n%7}"/>
-
-<circle cx="90" cy="75" r="16"
-fill="#fff"
-stroke="${c}"
-stroke-width="5"/>
-</g>
-`;
+    type
+  ]);
 
 }
 
-else if(type==="butter"){
 
-art=`
-<g transform="translate(${(n%13)-6} ${(n%9)-4}) rotate(${ang-180} 90 75)"
-filter="url(#${uid}s)">
+/* =========================================
+   STATE
+========================================= */
 
-<path d="M87 74C36 15 8 42 25 82c10 25 39 18 62-7z"
-fill="url(#${uid}a)" stroke="#702348" stroke-width="3"/>
+let cart =
+  JSON.parse(
+    localStorage.getItem("kavan_cart_v2") || "[]"
+  );
 
-<path d="M93 74c51-59 79-32 62 8-10 25-39 18-62-7z"
-fill="url(#${uid}a)" stroke="#702348" stroke-width="3"/>
+let wishlist =
+  JSON.parse(
+    localStorage.getItem("kavan_wish_v2") || "[]"
+  );
 
-<path d="M88 79c-39 38-62 27-55 2 6-20 29-20 55-2z"
-fill="${c2}"/>
+let activeCategory = "All";
+let searchText = "";
+let offersOnly = false;
 
-<path d="M92 79c39 38 62 27 55 2-6-20-29-20-55-2z"
-fill="${c2}"/>
 
-<path d="M90 61v39"
-stroke="#33232b"
-stroke-width="7"
-stroke-linecap="round"/>
+/* =========================================
+   REAL IMAGE URL
+========================================= */
 
-</g>
-`;
+function productImage(product,index){
+
+  const tags =
+    product[8] || "fashion,accessories";
+
+  /*
+    lock creates a different photo request
+    for every product.
+  */
+
+  const lock =
+    Number(product[0]) + 1000;
+
+  return `
+    <img
+      src="https://loremflickr.com/700/700/${encodeURIComponent(tags)}?lock=${lock}"
+      alt="${escapeHtml(product[1])}"
+      loading="lazy"
+      onerror="this.onerror=null;this.src='https://loremflickr.com/700/700/fashion,accessories?lock=${lock}'"
+    >
+  `;
+}
+
+
+/* =========================================
+   ESCAPE
+========================================= */
+
+function escapeHtml(text){
+
+  return String(text)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
 
 }
 
-else if(type==="nail"){
 
-art=`
-<g transform="rotate(${(n%9)-4} 90 78)" filter="url(#${uid}s)">
+/* =========================================
+   NAVIGATION
+========================================= */
 
-${[0,1,2,3].map(k=>{
+function renderNavigation(){
 
-const x=18+k*40+(n%5);
-const col=k%2?c:c2;
+  document.getElementById("nav").innerHTML =
+    `<a
+      href="#"
+      class="${activeCategory==="All"?"active":""}"
+      onclick="resetProducts();return false"
+    >
+      Home
+    </a>`
 
-return `
-<rect x="${x}" y="50" width="28" height="70"
-rx="8" fill="${col}"/>
+    +
 
-<rect x="${x+4}" y="22" width="20" height="33"
-rx="5" fill="#29242a"/>
+    categories.map(cat=>`
 
-<path d="M${x+5} 66h18"
-stroke="#fff"
-opacity=".5"
-stroke-width="3"/>
-`;
+      <a
+        href="#products"
+        class="${activeCategory===cat?"active":""}"
+        onclick="selectCategory('${escapeHtml(cat)}')"
+      >
+        ${cat}
+      </a>
 
-}).join("")}
+    `).join("");
 
-</g>
-`;
 
-}
+  document.getElementById("drawerLinks").innerHTML =
+    `<a
+      class="drawer-link"
+      href="#"
+      onclick="resetProducts();closeDrawer();return false"
+    >
+      Home
+    </a>`
 
-else if(type==="ear"||type==="ear2"){
+    +
 
-art=`
-<g transform="rotate(${ang-180} 90 75)"
-filter="url(#${uid}s)">
+    categories.map(cat=>`
 
-<path d="M53 30l-18 28 18 18 18-18z
-M127 30l-18 28 18 18 18-18z"
-fill="url(#${uid}a)"
-stroke="#b77d15"
-stroke-width="4"/>
+      <a
+        class="drawer-link"
+        href="#products"
+        onclick="selectCategory('${escapeHtml(cat)}');closeDrawer()"
+      >
+        ${cat}
+      </a>
 
-<path d="M49 76c-18 19-12 44 8 48
-19-7 22-31 3-48z
-
-M131 76c18 19 12 44-8 48
--19-7-22-31-3-48z"
-fill="${c2}"
-stroke="#b77d15"
-stroke-width="4"/>
-
-<circle cx="55" cy="98" r="6" fill="#fff"/>
-<circle cx="125" cy="98" r="6" fill="#fff"/>
-
-</g>
-`;
+    `).join("");
 
 }
 
-else if(type==="brace"||type==="anklet"){
 
-const pts=Array.from(
-{length:7+(n%5)},
-(_,k)=>{
+/* =========================================
+   CATEGORY PHOTOS
+========================================= */
 
-const a=k*2*Math.PI/(7+(n%5));
+function categoryImage(category,index){
 
-return `
-<circle
-cx="${90+58*Math.cos(a)}"
-cy="${75+39*Math.sin(a)}"
-r="${6+(k+n)%4}"
-fill="${k%2?c:c2}"/>
-`;
+  const query =
+    category
+      .toLowerCase()
+      .replaceAll(" ","%20");
 
-}
-).join("");
-
-art=`
-<g transform="rotate(${ang-180} 90 75)"
-filter="url(#${uid}s)">
-
-<ellipse cx="90" cy="75"
-rx="60" ry="40"
-fill="none"
-stroke="#d7dbe4"
-stroke-width="8"/>
-
-<ellipse cx="90" cy="75"
-rx="48" ry="30"
-fill="none"
-stroke="${c}"
-stroke-width="3"
-stroke-dasharray="5 6"/>
-
-${pts}
-
-</g>
-`;
+  return `
+    <img
+      src="https://loremflickr.com/400/400/${encodeURIComponent(query)}?lock=${5000+index}"
+      alt="${escapeHtml(category)}"
+      loading="lazy"
+    >
+  `;
 
 }
 
-else if(type==="neck"){
 
-art=`
-<g transform="rotate(${ang-180} 90 75)"
-filter="url(#${uid}s)">
+function renderCategories(){
 
-<path d="M35 28c14 76 96 76 110 0"
-fill="none"
-stroke="#d49b21"
-stroke-width="5"/>
+  document.getElementById("categories").innerHTML =
 
-<path d="M48 40c12 58 72 58 84 0"
-fill="none"
-stroke="${c}"
-stroke-width="3"
-stroke-dasharray="5 4"/>
+    categories.slice(0,8).map((cat,index)=>`
 
-<path d="M90 82l-${18+n%9} ${25+n%8}
-18 23 18-${25+n%8}z"
-fill="url(#${uid}a)"
-stroke="#b77d15"
-stroke-width="4"/>
+      <button
+        class="category"
+        onclick="selectCategory('${escapeHtml(cat)}')"
+      >
 
-<circle cx="90" cy="108"
-r="${5+n%7}"
-fill="#fff"
-opacity=".8"/>
+        <div class="category-image">
+          ${categoryImage(cat,index)}
+        </div>
 
-</g>
-`;
+        <b>${cat}</b>
+
+      </button>
+
+    `).join("");
 
 }
 
-else if(type==="hair"||type==="beauty"||type==="kids"){
 
-art=`
-<g transform="rotate(${ang-180} 90 75)"
-filter="url(#${uid}s)">
+/* =========================================
+   PRODUCT CARD
+========================================= */
 
-<rect x="40" y="45"
-width="100" height="20"
-rx="10"
-fill="url(#${uid}a)"/>
+function productCard(product,index){
 
-<rect x="51" y="38"
-width="78" height="6"
-rx="3"
-fill="#fff"
-opacity=".45"/>
+  const [
+    id,
+    name,
+    category,
+    price,
+    mrp,
+    rating,
+    reviews,
+    badge
+  ] = product;
 
-<circle cx="50" cy="94"
-r="${15+n%6}"
-fill="#ffd0e1"/>
+  const discount =
+    Math.round((1-price/mrp)*100);
 
-<circle cx="90" cy="94"
-r="${13+(n%7)}"
-fill="${c}"/>
+  const isWish =
+    wishlist.includes(id);
 
-<circle cx="132" cy="94"
-r="${12+(n%5)}"
-fill="${c2}"/>
+  return `
 
-<path d="M42 114h96"
-stroke="${c}"
-stroke-width="4"
-stroke-dasharray="6 5"/>
+  <article class="card">
 
-</g>
-`;
+    <div class="product-image">
 
-}
+      ${
+        badge==="Offer"
+        ? `<span class="offer">OFFER</span>`
+        : ""
+      }
 
-else{
+      <button
+        class="wishlist ${isWish?"active":""}"
+        onclick="toggleWishlist('${id}')"
+      >
+        ${isWish?"♥":"♡"}
+      </button>
 
-art=`
-<g transform="rotate(${ang-180} 90 75)"
-filter="url(#${uid}s)">
+      ${productImage(product,index)}
 
-<circle cx="90" cy="73"
-r="${43+n%9}"
-fill="#ffe0ec"/>
+    </div>
 
-<rect x="${55+n%8}"
-y="${52+n%5}"
-width="${70+n%12}"
-height="${46+n%9}"
-rx="${8+n%7}"
-fill="url(#${uid}a)"/>
+    <div class="product-body">
 
-<circle cx="90" cy="80"
-r="${11+n%5}"
-fill="#fff"/>
+      <div class="category-name">
+        ${category}
+      </div>
 
-<path d="M67 68h46"
-stroke="#fff"
-opacity=".55"
-stroke-width="4"/>
+      <div class="product-name">
+        ${escapeHtml(name)}
+      </div>
 
-</g>
-`;
+      <div>
+        <span class="price">
+          ₹${price}
+        </span>
 
-}
+        <span class="mrp">
+          ₹${mrp}
+        </span>
+      </div>
 
-return base+art+`</svg>`;
-}
+      <span class="discount">
+        ${discount}% OFF
+      </span>
 
-function nav(){
+      <div class="rating">
+        <b>★</b>
+        ${rating.toFixed(1)}
+        (${reviews})
+      </div>
 
-document.getElementById("nav").innerHTML=
-`<a href="#" class="${active==="All"?"on":""}"
-onclick="resetAll();return false">Home</a>`
-+
-cats.map(c=>
-`<a href="#products"
-class="${active===c?"on":""}"
-onclick='setCat(${JSON.stringify(c)});return false'>
-${c}
-</a>`
-).join("");
+      <button
+        class="add"
+        onclick="addToCart('${id}')"
+      >
+        🛒 Add to Cart
+      </button>
 
-document.getElementById("drawerLinks").innerHTML=
-`<a href="#"
-onclick="resetAll();closeDrawer();return false">
-Home
-</a>`
-+
-cats.map(c=>
-`<a href="#products"
-onclick='setCat(${JSON.stringify(c)});closeDrawer()'>
-${c}
-</a>`
-).join("");
+    </div>
+
+  </article>
+
+  `;
 
 }
 
-function catIcon(c,i){
-return svg("hair",i)
-}
 
-function renderCats(){
+/* =========================================
+   FILTER
+========================================= */
 
-document.getElementById("cats").innerHTML=
-cats.map((c,i)=>
-`
-<button class="cat"
-onclick='setCat(${JSON.stringify(c)})'>
+function filteredProducts(){
 
-<div class="catPic">
-${catIcon(c,i)}
-</div>
+  return products.filter(product=>{
 
-<b>${c}</b>
+    const categoryMatch =
+      activeCategory==="All"
+      ||
+      product[2]===activeCategory;
 
-</button>
-`
-).join("");
+    const searchMatch =
+      !searchText
+      ||
+      product[1]
+        .toLowerCase()
+        .includes(searchText.toLowerCase())
+      ||
+      product[2]
+        .toLowerCase()
+        .includes(searchText.toLowerCase());
 
-}
+    const offerMatch =
+      !offersOnly
+      ||
+      product[3]<100;
 
-function card(p,i){
+    return categoryMatch
+      && searchMatch
+      && offerMatch;
 
-let[
-id,n,c,pr,mr,r,rv,b,t
-]=p;
-
-let off=Math.round((1-pr/mr)*100);
-
-let activeWish=wish.includes(id);
-
-return `
-<article class="card">
-
-<div class="pic">
-
-${b==="Offer"
-?'<span class="tag">OFFER</span>'
-:""}
-
-<button
-class="wish ${activeWish?"active":""}"
-onclick="toggleWish('${id}')">
-${activeWish?"♥":"♡"}
-</button>
-
-${svg(t,visualIndex(id))}
-
-</div>
-
-<div class="body">
-
-<div class="catname">
-${c}
-</div>
-
-<div class="name">
-${n}
-</div>
-
-<div>
-<span class="price">₹${pr}</span>
-<span class="mrp">₹${mr}</span>
-</div>
-
-<span class="off">
-${off}% OFF
-</span>
-
-<div class="rating">
-<b>★</b> ${r.toFixed(1)} (${rv})
-</div>
-
-<button class="add"
-onclick="addCart('${id}')">
-🛒 Add to Cart
-</button>
-
-</div>
-
-</article>
-`;
+  });
 
 }
 
-function filtered(){
 
-return seed.filter(p=>
-(active==="All"||p[2]===active)
-&&
-(!query||
-p[1].toLowerCase().includes(query.toLowerCase())
-||
-p[2].toLowerCase().includes(query.toLowerCase()))
-&&
-(!only99||p[3]<100)
-);
+/* =========================================
+   RENDER PRODUCTS
+========================================= */
+
+function renderProducts(){
+
+  const list =
+    filteredProducts();
+
+  let title =
+    "Trending Products";
+
+  if(searchText)
+    title = `Search: ${searchText}`;
+
+  else if(activeCategory!=="All")
+    title = activeCategory;
+
+  else if(offersOnly)
+    title = "Offers Under ₹99";
+
+
+  document.getElementById(
+    "productTitle"
+  ).textContent = title;
+
+
+  /*
+    Show first 60 products.
+    All 10,000 products remain available
+    through search/category generation.
+  */
+
+  document.getElementById(
+    "productGrid"
+  ).innerHTML =
+
+    list
+      .slice(0,60)
+      .map(productCard)
+      .join("");
+
+
+  const best =
+    products
+      .filter(p=>
+        p[7]==="Bestseller"
+        ||
+        p[7]==="Trending"
+      )
+      .slice(0,12);
+
+
+  document.getElementById(
+    "bestGrid"
+  ).innerHTML =
+
+    best
+      .map(productCard)
+      .join("");
+
+
+  updateCounts();
+  renderNavigation();
+  renderCategories();
+
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+function selectCategory(category){
+
+  activeCategory =
+    category;
+
+  searchText = "";
+  offersOnly = false;
+
+  document.getElementById(
+    "desktopSearch"
+  ).value="";
+
+  document.getElementById(
+    "mobileSearch"
+  ).value="";
+
+  renderProducts();
+
+  document
+    .getElementById("products")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
 
 }
 
-function render(){
 
-let list=filtered();
+/* =========================================
+   OFFERS
+========================================= */
 
-document.getElementById("listingTitle").textContent=
-query
-?`Search: ${query}`
-:active!=="All"
-?active
-:only99
-?"Offers Under ₹99"
-:"All Products";
+function showOffers(){
 
-document.getElementById("grid").innerHTML=
-list.map(card).join("")
-||
-'<div style="grid-column:1/-1;text-align:center;padding:40px;color:#777">No products found.</div>';
+  activeCategory="All";
+  searchText="";
+  offersOnly=true;
 
-update();
-nav();
-renderCats();
+  renderProducts();
+
+  document
+    .getElementById("products")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
 
 }
 
-function setCat(c){
 
-active=c;
-only99=false;
+/* =========================================
+   RESET
+========================================= */
 
-document.querySelector("#products")
-.scrollIntoView({behavior:"smooth"});
+function resetProducts(){
 
-render();
+  activeCategory="All";
+  searchText="";
+  offersOnly=false;
 
-}
+  document.getElementById(
+    "desktopSearch"
+  ).value="";
 
-function under99(){
+  document.getElementById(
+    "mobileSearch"
+  ).value="";
 
-active="All";
-only99=true;
-
-document.querySelector("#products")
-.scrollIntoView({behavior:"smooth"});
-
-render();
-
-}
-
-function resetAll(){
-
-active="All";
-only99=false;
-query="";
-
-document.getElementById("search").value="";
-document.getElementById("msearch").value="";
-
-render();
+  renderProducts();
 
 }
+
 
 function home(){
 
-resetAll();
+  resetProducts();
 
-scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-
-function update(){
-
-let c=cart.reduce((a,x)=>a+x.q,0);
-
-["cc","mcc"].forEach(
-x=>document.getElementById(x).textContent=c
-);
-
-["wc","mwc"].forEach(
-x=>document.getElementById(x).textContent=wish.length
-);
-
-localStorage.setItem(
-"kavan_cart_v2",
-JSON.stringify(cart)
-);
-
-localStorage.setItem(
-"kavan_wish_v2",
-JSON.stringify(wish)
-);
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 
 }
 
-function get(id){
 
-return seed.find(p=>p[0]===id);
+/* =========================================
+   CART
+========================================= */
 
-}
+function findProduct(id){
 
-function addCart(id){
-
-let x=cart.find(a=>a.id===id);
-
-x
-?x.q++
-:cart.push({id,q:1});
-
-update();
-
-toast("Added to cart ♡");
+  return products.find(
+    p=>p[0]===id
+  );
 
 }
 
-function toggleWish(id){
 
-let i=wish.indexOf(id);
+function addToCart(id){
 
-i>=0
-?wish.splice(i,1)
-:wish.push(id);
+  const existing =
+    cart.find(item=>item.id===id);
 
-update();
-render();
+  if(existing){
 
-}
+    existing.quantity++;
 
-function toast(s){
+  }else{
 
-let t=document.getElementById("toast");
+    cart.push({
+      id:id,
+      quantity:1
+    });
 
-t.textContent=s;
-t.classList.add("show");
+  }
 
-clearTimeout(window.toastT);
+  saveData();
 
-window.toastT=setTimeout(
-()=>t.classList.remove("show"),
-1700
-);
+  showToast(
+    "Added to cart ♡"
+  );
 
 }
 
-function openDrawer(){
 
-document.getElementById("drawer")
-.classList.add("open");
+function changeQuantity(id,amount){
+
+  const item =
+    cart.find(x=>x.id===id);
+
+  if(!item)
+    return;
+
+  item.quantity += amount;
+
+  if(item.quantity<=0){
+
+    cart =
+      cart.filter(
+        x=>x.id!==id
+      );
+
+  }
+
+  saveData();
+
+  renderCart();
 
 }
 
-function closeDrawer(){
 
-document.getElementById("drawer")
-.classList.remove("open");
+function removeFromCart(id){
+
+  cart =
+    cart.filter(
+      x=>x.id!==id
+    );
+
+  saveData();
+
+  renderCart();
 
 }
+
+
+/* =========================================
+   CART MODAL
+========================================= */
 
 function openCart(){
 
-document.getElementById("cartModal")
-.classList.add("open");
+  document
+    .getElementById("cartModal")
+    .classList.add("open");
 
-cartRender();
+  renderCart();
 
 }
+
 
 function closeCart(){
 
-document.getElementById("cartModal")
-.classList.remove("open");
+  document
+    .getElementById("cartModal")
+    .classList.remove("open");
 
 }
 
-function cartRender(){
 
-let b=document.getElementById("cartBody");
+function renderCart(){
 
-if(!cart.length){
+  const body =
+    document.getElementById("cartBody");
 
-b.innerHTML=
-'<div style="text-align:center;padding:35px;color:#777">Your cart is empty.</div>';
+  const footer =
+    document.getElementById("cartFooter");
 
-document.getElementById("cartFoot").innerHTML="";
 
-return;
+  if(!cart.length){
 
-}
+    body.innerHTML = `
+      <div style="
+        text-align:center;
+        padding:40px;
+        color:#777
+      ">
+        Your cart is empty.
+      </div>
+    `;
 
-let total=0;
+    footer.innerHTML="";
 
-b.innerHTML=cart.map(x=>{
+    return;
 
-let p=get(x.id);
+  }
 
-total+=p[3]*x.q;
 
-return `
-<div class="cartRow">
+  let total=0;
 
-<div class="mini">
-${svg(p[8],visualIndex(p[0]))}
-</div>
 
-<div>
+  body.innerHTML =
 
-<b>${p[1]}</b>
+    cart.map(item=>{
 
-<div>
-₹${p[3]} × ${x.q}
-</div>
+      const p =
+        findProduct(item.id);
 
-<div class="qty">
+      if(!p)
+        return "";
 
-<button onclick="qty('${x.id}',-1)">
-−
-</button>
+      total +=
+        p[3]*item.quantity;
 
-<span>${x.q}</span>
 
-<button onclick="qty('${x.id}',1)">
-+
-</button>
+      return `
 
-</div>
+      <div class="cart-row">
 
-</div>
+        <div class="mini-image">
+          ${productImage(p,Number(p[0]))}
+        </div>
 
-<button
-onclick="removeCart('${x.id}')"
-style="border:0;background:none;color:#c00">
-Remove
-</button>
+        <div>
 
-</div>
-`;
+          <strong>
+            ${escapeHtml(p[1])}
+          </strong>
 
-}).join("");
+          <div>
+            ₹${p[3]}
+            ×
+            ${item.quantity}
+          </div>
 
-document.getElementById("cartFoot").innerHTML=`
+          <div class="qty">
 
-<h3>Total: ₹${total}</h3>
+            <button
+              onclick="changeQuantity('${p[0]}',-1)"
+            >
+              −
+            </button>
 
-<button
-class="pinkBtn"
-style="width:100%"
-onclick="toast('Checkout will be added with the backend')">
-Checkout
-</button>
+            <span>
+              ${item.quantity}
+            </span>
 
-`;
+            <button
+              onclick="changeQuantity('${p[0]}',1)"
+            >
+              +
+            </button>
 
-}
+          </div>
 
-function qty(id,d){
+        </div>
 
-let x=cart.find(a=>a.id===id);
+        <button
+          onclick="removeFromCart('${p[0]}')"
+          style="
+            border:0;
+            background:none;
+            color:#c00;
+          "
+        >
+          Remove
+        </button>
 
-x.q+=d;
+      </div>
 
-if(x.q<=0)
-cart=cart.filter(a=>a.id!==id);
+      `;
 
-update();
-cartRender();
+    }).join("");
 
-}
 
-function removeCart(id){
+  footer.innerHTML = `
 
-cart=cart.filter(a=>a.id!==id);
+    <h3>
+      Total: ₹${total}
+    </h3>
 
-update();
-cartRender();
+    <button
+      class="btn"
+      style="width:100%"
+      onclick="showToast('Checkout will be added later')"
+    >
+      Checkout
+    </button>
 
-}
-
-function openWish(){
-
-document.getElementById("wishModal")
-.classList.add("open");
-
-let b=document.getElementById("wishBody");
-
-b.innerHTML=
-wish.length
-
-?
-
-wish.map(id=>{
-
-let p=get(id);
-
-return `
-<div class="cartRow">
-
-<div class="mini">
-${svg(p[8],visualIndex(p[0]))}
-</div>
-
-<div>
-<b>${p[1]}</b>
-<div>₹${p[3]}</div>
-</div>
-
-<button
-class="add"
-onclick="addCart('${id}')">
-Add
-</button>
-
-</div>
-`;
-
-}).join("")
-
-:
-
-'<div style="text-align:center;padding:35px;color:#777">Your wishlist is empty.</div>';
+  `;
 
 }
 
-function closeWish(){
 
-document.getElementById("wishModal")
-.classList.remove("open");
+/* =========================================
+   WISHLIST
+========================================= */
 
-}
+function toggleWishlist(id){
 
-document.getElementById("drawer").onclick=e=>{
-if(e.target.id==="drawer")
-closeDrawer();
-};
+  const index =
+    wishlist.indexOf(id);
 
-document.getElementById("cartModal").onclick=e=>{
-if(e.target.id==="cartModal")
-closeCart();
-};
+  if(index>=0){
 
-document.getElementById("wishModal").onclick=e=>{
-if(e.target.id==="wishModal")
-closeWish();
-};
+    wishlist.splice(
+      index,
+      1
+    );
 
-function bindSearch(id){
+  }else{
 
-document.getElementById(id)
-.addEventListener("input",e=>{
+    wishlist.push(id);
 
-query=e.target.value;
+  }
 
-active="All";
-only99=false;
+  saveData();
 
-document.getElementById(
-id==="search"?"msearch":"search"
-).value=query;
-
-render();
-
-});
+  renderProducts();
 
 }
 
-bindSearch("search");
-bindSearch("msearch");
 
-render();
+function openWishlist(){
+
+  document
+    .getElementById("wishlistModal")
+    .classList.add("open");
+
+  renderWishlist();
+
+}
+
+
+function closeWishlist(){
+
+  document
+    .getElementById("wishlistModal")
+    .classList.remove("open");
+
+}
+
+
+function renderWishlist(){
+
+  const body =
+    document.getElementById(
+      "wishlistBody"
+    );
+
+
+  if(!wishlist.length){
+
+    body.innerHTML = `
+      <div style="
+        text-align:center;
+        padding:40px;
+        color:#777
+      ">
+        Your wishlist is empty.
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  body.innerHTML =
+
+    wishlist.map(id=>{
+
+      const p =
+        findProduct(id);
+
+      if(!p)
+        return "";
+
+      return `
+
+      <div class="cart-row">
+
+        <div class="mini-image">
+          ${productImage(p,Number(p[0]))}
+        </div>
+
+        <div>
+
+          <strong>
+            ${escapeHtml(p[1])}
+          </strong>
+
+          <div>
+            ₹${p[3]}
+          </div>
+
+        </div>
+
+        <button
+          class="add"
+          onclick="addToCart('${p[0]}')"
+        >
+          Add
+        </button>
+
+      </div>
+
+      `;
+
+    }).join("");
+
+}
+
+
+/* =========================================
+   DRAWER
+========================================= */
+
+function openDrawer(){
+
+  document
+    .getElementById("drawer")
+    .classList.add("open");
+
+}
+
+
+function closeDrawer(){
+
+  document
+    .getElementById("drawer")
+    .classList.remove("open");
+
+}
+
+
+/* =========================================
+   STORAGE
+========================================= */
+
+function saveData(){
+
+  localStorage.setItem(
+    "kavan_cart_v2",
+    JSON.stringify(cart)
+  );
+
+  localStorage.setItem(
+    "kavan_wish_v2",
+    JSON.stringify(wishlist)
+  );
+
+  updateCounts();
+
+}
+
+
+function updateCounts(){
+
+  const cartTotal =
+    cart.reduce(
+      (sum,item)=>
+        sum+item.quantity,
+      0
+    );
+
+
+  document.getElementById(
+    "cartCount"
+  ).textContent=cartTotal;
+
+  document.getElementById(
+    "mobileCartCount"
+  ).textContent=cartTotal;
+
+  document.getElementById(
+    "wishlistCount"
+  ).textContent=wishlist.length;
+
+  document.getElementById(
+    "mobileWishlistCount"
+  ).textContent=wishlist.length;
+
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+  const toast =
+    document.getElementById("toast");
+
+  toast.textContent =
+    message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer =
+    setTimeout(
+      ()=>{
+        toast.classList.remove("show");
+      },
+      1600
+    );
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+function searchProducts(value){
+
+  searchText =
+    value;
+
+  activeCategory="All";
+  offersOnly=false;
+
+  document.getElementById(
+    "desktopSearch"
+  ).value=value;
+
+  document.getElementById(
+    "mobileSearch"
+  ).value=value;
+
+  renderProducts();
+
+}
+
+
+document
+  .getElementById("desktopSearch")
+  .addEventListener(
+    "input",
+    e=>searchProducts(e.target.value)
+  );
+
+
+document
+  .getElementById("mobileSearch")
+  .addEventListener(
+    "input",
+    e=>searchProducts(e.target.value)
+  );
+
+
+/* =========================================
+   MODAL BACKDROP
+========================================= */
+
+document
+  .getElementById("drawer")
+  .addEventListener(
+    "click",
+    e=>{
+      if(e.target.id==="drawer")
+        closeDrawer();
+    }
+  );
+
+
+document
+  .getElementById("cartModal")
+  .addEventListener(
+    "click",
+    e=>{
+      if(e.target.id==="cartModal")
+        closeCart();
+    }
+  );
+
+
+document
+  .getElementById("wishlistModal")
+  .addEventListener(
+    "click",
+    e=>{
+      if(e.target.id==="wishlistModal")
+        closeWishlist();
+    }
+  );
+
+
+/* =========================================
+   START
+========================================= */
+
+renderProducts();
+
+updateCounts();
 
 </script>
 
