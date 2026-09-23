@@ -320,6 +320,96 @@ h1,h2,h3{font-family:var(--serif)}
 .c4{width:70px;height:70px;left:28%;top:62%;background:#fff2c8}
 .c5{width:88px;height:88px;left:76%;top:64%;background:#ffe0ea}
 
+/* AD BANNER STYLES */
+.adBanner{
+  margin:28px 0 36px;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.adBannerContent{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:0;
+}
+
+.adBannerImage{
+  position:relative;
+  overflow:hidden;
+  background:var(--blush);
+  min-height:420px;
+}
+
+.adBannerImage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.3s;
+}
+
+.adBanner:hover .adBannerImage img{
+  transform:scale(1.05);
+}
+
+.adBannerText{
+  padding:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.adBannerKicker{
+  color:var(--gold);
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.3px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+  display:block;
+}
+
+.adBannerTitle{
+  font-family:var(--serif);
+  font-size:32px;
+  font-weight:600;
+  color:var(--wine-dark);
+  margin:0 0 16px;
+  line-height:1.3;
+}
+
+.adBannerDesc{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+  margin:0 0 24px;
+}
+
+.adBannerFeatures{
+  display:grid;
+  gap:12px;
+  margin-bottom:24px;
+}
+
+.feature{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+  color:var(--text);
+}
+
+.featureIcon{
+  font-size:20px;
+}
+
+.adBannerBtn{
+  width:fit-content;
+}
+
 .trust{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -684,8 +774,375 @@ h1,h2,h3{font-family:var(--serif)}
   background:var(--wine-dark);
 }
 
+/* BRAND OFFER BANNER */
+.brandOfferBanner{
+  margin:32px 0;
+  background:linear-gradient(135deg, var(--rose) 0%, #e34a80 100%);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 12px 32px rgba(200,20,87,.2);
+  animation:slideIn .6s ease-out;
+}
+
+@keyframes slideIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.brandOfferContent{
+  display:grid;
+  grid-template-columns:1fr 1.2fr 1fr;
+  align-items:center;
+  padding:28px 32px;
+  gap:24px;
+}
+
+.brandOfferLeft{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brandOfferIcon{
+  font-size:48px;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%, 100%{ transform:scale(1); }
+  50%{ transform:scale(1.1); }
+}
+
+.brandOfferText h3{
+  margin:0 0 4px;
+  color:#fff;
+  font-size:18px;
+  font-weight:700;
+  font-family:var(--serif);
+  letter-spacing:.5px;
+}
+
+.brandOfferText p{
+  margin:0;
+  color:#fff0f6;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.3px;
+}
+
+.brandOfferMiddle{
+  text-align:center;
+}
+
+.offerChip{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  padding:16px 24px;
+  border-radius:8px;
+  border:2px solid rgba(255,255,255,.3);
+}
+
+.offerPercent{
+  color:#fff;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:.2px;
+  font-family:var(--sans);
+}
+
+.offerDesc{
+  color:#fff0f6;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.3px;
+}
+
+.brandOfferRight{
+  text-align:right;
+}
+
+.brandOfferBtn{
+  background:#fff;
+  color:var(--rose);
+  border:0;
+  padding:12px 28px;
+  border-radius:6px;
+  font-weight:700;
+  font-size:14px;
+  cursor:pointer;
+  transition:.3s;
+  letter-spacing:.3px;
+  font-family:var(--sans);
+}
+
+.brandOfferBtn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(0,0,0,.2);
+  background:#fffaf5;
+}
+
+.brandOfferBtn:active{
+  transform:translateY(0);
+}
+
+@media(max-width:1100px){
+  .brandOfferContent{
+    grid-template-columns:1fr;
+    padding:20px 24px;
+    gap:16px;
+  }
+
+  .brandOfferLeft{
+    justify-content:center;
+  }
+
+  .brandOfferRight{
+    text-align:center;
+  }
+
+  .brandOfferIcon{
+    font-size:40px;
+  }
+
+  .brandOfferText h3{
+    font-size:16px;
+  }
+
+  .offerChip{
+    padding:14px 20px;
+  }
+
+  .offerPercent{
+    font-size:20px;
+  }
+
+  .brandOfferBtn{
+    padding:10px 24px;
+    font-size:13px;
+  }
+
+  .adBannerContent{
+    grid-template-columns:1fr;
+  }
+
+  .adBannerImage{
+    min-height:300px;
+  }
+
+  .adBannerText{
+    padding:40px;
+  }
+
+  .adBannerTitle{
+    font-size:28px;
+  }
+}
+
+@media(max-width:768px){
+  .brandOfferBanner{
+    margin:24px 0;
+  }
+
+  .brandOfferContent{
+    grid-template-columns:1fr;
+    padding:16px;
+    gap:12px;
+  }
+
+  .brandOfferIcon{
+    font-size:36px;
+  }
+
+  .brandOfferText h3{
+    font-size:14px;
+  }
+
+  .brandOfferText p{
+    font-size:10px;
+  }
+
+  .offerChip{
+    padding:12px 16px;
+    gap:3px;
+  }
+
+  .offerPercent{
+    font-size:18px;
+  }
+
+  .offerDesc{
+    font-size:10px;
+  }
+
+  .brandOfferBtn{
+    width:100%;
+    padding:10px 16px;
+    font-size:12px;
+  }
+
+  .adBanner{
+    margin:20px 0 28px;
+  }
+
+  .adBannerImage{
+    min-height:240px;
+  }
+
+  .adBannerText{
+    padding:24px;
+  }
+
+  .adBannerTitle{
+    font-size:22px;
+  }
+
+  .adBannerDesc{
+    font-size:12px;
+    margin-bottom:18px;
+  }
+
+  .adBannerFeatures{
+    margin-bottom:18px;
+  }
+
+  .feature{
+    font-size:12px;
+  }
+
+  .adBannerBtn{
+    width:100%;
+  }
+}
+
+/* HELP & CONTACT BANNER */
+.helpBanner{
+  margin:40px 0 30px;
+  background:linear-gradient(135deg, var(--wine) 0%, #8c1548 100%);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(122,15,61,.15);
+}
+
+.helpBannerContent{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:24px 32px;
+  gap:24px;
+}
+
+.helpSection{
+  text-align:center;
+}
+
+.helpTitle{
+  display:block;
+  color:#fff;
+  font-family:var(--serif);
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+.helpText{
+  color:#f0d9e2;
+  font-size:12px;
+  margin:0 0 12px;
+}
+
+.helpPhone{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--gold-light);
+  color:var(--wine-dark);
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  transition:.2s;
+}
+
+.helpPhone:hover{
+  background:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.helpDivider{
+  width:1px;
+  height:60px;
+  background:rgba(233,205,147,.3);
+}
+
+.offerSection{
+  text-align:center;
+}
+
+.offerTitle{
+  display:block;
+  color:#fff;
+  font-family:var(--serif);
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+.offerText{
+  color:#f0d9e2;
+  font-size:12px;
+  margin:0;
+  line-height:1.5;
+}
+
+@media(max-width:900px){
+  .helpBannerContent{
+    grid-template-columns:1fr;
+    padding:20px;
+    gap:16px;
+  }
+
+  .helpDivider{
+    display:none;
+  }
+
+  .helpSection,
+  .offerSection{
+    text-align:center;
+  }
+
+  .helpTitle{
+    font-size:16px;
+  }
+
+  .offerTitle{
+    font-size:14px;
+  }
+
+  .helpText,
+  .offerText{
+    font-size:11px;
+  }
+
+  .helpPhone{
+    font-size:13px;
+    padding:9px 14px;
+  }
+}
+
 .footer{
-  margin-top:50px;
+  margin-top:30px;
   background:var(--wine-dark);
   color:#f0d9e2;
   padding:34px 20px;
@@ -1408,6 +1865,16 @@ h1,h2,h3{font-family:var(--serif)}
     font-size:10px;
   }
 
+  .helpBannerContent{
+    grid-template-columns:1fr;
+    padding:16px;
+    gap:12px;
+  }
+
+  .helpDivider{
+    display:none;
+  }
+
   .footer{
     margin-bottom:65px;
   }
@@ -1415,6 +1882,10 @@ h1,h2,h3{font-family:var(--serif)}
   .footerInner{
     display:block;
     text-align:center;
+  }
+
+  .footerInner div:last-child strong:first-of-type{
+    font-size:13px;
   }
 
   .mobileBottom{
@@ -1606,6 +2077,70 @@ h1,h2,h3{font-family:var(--serif)}
   font-size:10px;
   font-weight:800;
 }
+.adminPhotoBox{
+  grid-column:1/-1;
+  border:1px solid var(--line);
+  background:#fffaf5;
+  border-radius:6px;
+  padding:12px;
+}
+.adminPhotoLabel{
+  display:block;
+  color:var(--wine-dark);
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.adminPhotoModes{
+  display:flex;
+  gap:16px;
+  margin-bottom:10px;
+}
+.adminPhotoMode{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:var(--text);
+  font-size:11px;
+  font-weight:700;
+}
+.adminPhotoBox input[type="file"],
+.adminPhotoBox input[type="url"]{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:9px;
+  background:#fff;
+  font-size:12px;
+}
+.adminPhotoBox small{
+  display:block;
+  color:var(--muted);
+  font-size:10px;
+  margin-top:6px;
+}
+.adminPhotoPreview{
+  width:92px;
+  height:92px;
+  margin-top:10px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  overflow:hidden;
+  background:var(--blush);
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:var(--muted);
+  font-size:9px;
+}
+.adminPhotoPreview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+@media(max-width:900px){
+  .adminPhotoBox{grid-column:auto}
+}
 @media(max-width:900px){
   .adminToolsHead{align-items:stretch;flex-direction:column}
   .adminOpenBtn{width:100%}
@@ -1756,6 +2291,38 @@ h1,h2,h3{font-family:var(--serif)}
 
 </section>
 
+<section class="adBanner">
+  <div class="adBannerContent">
+    <div class="adBannerImage">
+      <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" alt="KAVAN BAZAAR - Beautiful Accessories Collection" loading="lazy">
+    </div>
+    <div class="adBannerText">
+      <span class="adBannerKicker">Featured Collection</span>
+      <h2 class="adBannerTitle">Elevate Your Beauty</h2>
+      <p class="adBannerDesc">
+        Discover our handpicked collection of premium accessories that perfectly complement your style. From elegant earrings to trendy hair clips, find everything you love.
+      </p>
+      <div class="adBannerFeatures">
+        <div class="feature">
+          <span class="featureIcon">✨</span>
+          <span class="featureText">Premium Quality</span>
+        </div>
+        <div class="feature">
+          <span class="featureIcon">💫</span>
+          <span class="featureText">Trendy Designs</span>
+        </div>
+        <div class="feature">
+          <span class="featureIcon">🎁</span>
+          <span class="featureText">Perfect Gifting</span>
+        </div>
+      </div>
+      <button class="primaryBtn adBannerBtn" onclick="setCat('Women')">
+        Shop Women's Collection
+      </button>
+    </div>
+  </div>
+</section>
+
 <section class="trust">
 
   <div class="trustItem">
@@ -1803,6 +2370,29 @@ h1,h2,h3{font-family:var(--serif)}
 
 </section>
 
+<section class="brandOfferBanner">
+  <div class="brandOfferContent">
+    <div class="brandOfferLeft">
+      <div class="brandOfferIcon">✨</div>
+      <div class="brandOfferText">
+        <h3>KAVAN BAZAAR Exclusive</h3>
+        <p>Elevate Your Style</p>
+      </div>
+    </div>
+    <div class="brandOfferMiddle">
+      <div class="offerChip">
+        <span class="offerPercent">UP TO 50%</span>
+        <span class="offerDesc">OFF on Selected Items</span>
+      </div>
+    </div>
+    <div class="brandOfferRight">
+      <button class="brandOfferBtn" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
+        Shop Now →
+      </button>
+    </div>
+  </div>
+</section>
+
 <section class="adminTools" id="adminTools">
   <div class="adminToolsHead">
     <div>
@@ -1832,7 +2422,41 @@ h1,h2,h3{font-family:var(--serif)}
     </select>
     <input id="adminPrice" type="number" min="0" placeholder="Selling price">
     <input id="adminMrp" type="number" min="0" placeholder="MRP">
-    <input id="adminPhoto" placeholder="Actual product photo URL">
+
+    <div class="adminPhotoBox">
+      <label class="adminPhotoLabel">Product Photo</label>
+
+      <div class="adminPhotoModes">
+        <label class="adminPhotoMode">
+          <input type="radio" name="photoMode" value="upload" checked onchange="togglePhotoMode()">
+          Upload Image
+        </label>
+        <label class="adminPhotoMode">
+          <input type="radio" name="photoMode" value="url" onchange="togglePhotoMode()">
+          Photo URL
+        </label>
+      </div>
+
+      <div id="photoUploadWrap">
+        <input id="adminPhotoFile"
+               type="file"
+               accept="image/*"
+               onchange="previewAdminPhoto()">
+        <small>Choose JPG, PNG or WEBP. The image will be saved to Google Drive.</small>
+      </div>
+
+      <div id="photoUrlWrap" style="display:none">
+        <input id="adminPhoto"
+               type="url"
+               placeholder="https://example.com/product-image.jpg">
+        <small>Paste a direct image URL.</small>
+      </div>
+
+      <div class="adminPhotoPreview" id="adminPhotoPreview">
+        <span>No image selected</span>
+      </div>
+    </div>
+
     <div class="adminFormActions">
       <button class="primaryBtn" onclick="saveAdminProduct()">Save Product</button>
       <button class="adminCancel" onclick="resetAdminForm()">Cancel</button>
@@ -1995,6 +2619,24 @@ h1,h2,h3{font-family:var(--serif)}
 </main>
 
 
+<section class="helpBanner">
+  <div class="helpBannerContent">
+    <div class="helpSection">
+      <strong class="helpTitle">Need Help?</strong>
+      <p class="helpText">We're here to assist you</p>
+      <a href="tel:+919025186124" class="helpPhone">
+        <span>📞</span>
+        +91 9025186124
+      </a>
+    </div>
+    <div class="helpDivider"></div>
+    <div class="offerSection">
+      <strong class="offerTitle">✨ Limited Time Offers</strong>
+      <p class="offerText">Free delivery on orders over ₹499 • Use code KAVAN15 for 15% off</p>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
 
   <div class="footerInner">
@@ -2017,7 +2659,19 @@ h1,h2,h3{font-family:var(--serif)}
       <br>
 
       <small>
-        Serving Tamil Nadu with love
+        Serving Tamil Nadu with love ♡
+      </small>
+
+      <br><br>
+
+      <strong style="color:var(--gold-light); font-size:14px">
+        📞 +91 9025186124
+      </strong>
+
+      <br>
+
+      <small style="color:#cf9fb2">
+        Available Mon-Fri, 10AM-6PM
       </small>
     </div>
 
@@ -2576,10 +3230,26 @@ function allProducts(){
   return seed.concat(custom);
 }
 
-async function saveGoogleProduct(item){
+async function saveGoogleProduct(item, photoFile=null){
   if(!GOOGLE_SHEET_API) return true;
 
   try{
+    const payload = {
+      action:"save",
+      product:{
+        id:String(item.id),
+        name:item.name,
+        cat:item.category,
+        price:Number(item.price),
+        mrp:Number(item.mrp)||Number(item.price),
+        photo:item.photo||""
+      }
+    };
+
+    if(photoFile){
+      payload.photoFile = photoFile;
+    }
+
     const response = await fetch(
       GOOGLE_SHEET_API,
       {
@@ -2587,28 +3257,25 @@ async function saveGoogleProduct(item){
         headers:{
           "Content-Type":"text/plain;charset=utf-8"
         },
-        body:JSON.stringify({
-          action:"save",
-          product:{
-            id:String(item.id),
-            name:item.name,
-            cat:item.category,
-            price:Number(item.price),
-            mrp:Number(item.mrp)||Number(item.price),
-            photo:item.photo||""
-          }
-        })
+        body:JSON.stringify(payload)
       }
     );
 
-    if(!response.ok){
-      toast("Google Sheet save failed");
+    const data = await response.json().catch(()=>({}));
+
+    if(!response.ok || data.success === false){
+      toast(data.error || "Google Sheet save failed");
       return false;
+    }
+
+    if(data.photoUrl){
+      item.photo = data.photoUrl;
     }
 
     return true;
 
   }catch(error){
+    console.error(error);
     toast("Google Sheet unavailable");
     return false;
   }
@@ -4135,6 +4802,24 @@ function closeAdmin(){
   if(panel) panel.classList.remove("open");
 }
 
+function getPhotoMode(){
+  return document.querySelector('input[name="photoMode"]:checked')?.value || "upload";
+}
+
+function togglePhotoMode(){
+  const mode = getPhotoMode();
+  const uploadWrap = document.getElementById("photoUploadWrap");
+  const urlWrap = document.getElementById("photoUrlWrap");
+  if(uploadWrap) uploadWrap.style.display = mode === "upload" ? "block" : "none";
+  if(urlWrap) urlWrap.style.display = mode === "url" ? "block" : "none";
+  previewAdminPhoto();
+}
+
+function resetPhotoPreview(){
+  const preview = document.getElementById("adminPhotoPreview");
+  if(preview) preview.innerHTML = "<span>No image selected</span>";
+}
+
 function resetAdminForm(){
   document.getElementById("adminId").value = "";
   document.getElementById("adminName").value = "";
@@ -4142,6 +4827,114 @@ function resetAdminForm(){
   document.getElementById("adminPrice").value = "";
   document.getElementById("adminMrp").value = "";
   document.getElementById("adminPhoto").value = "";
+  document.getElementById("adminPhotoFile").value = "";
+  document.querySelector('input[name="photoMode"][value="upload"]').checked = true;
+  togglePhotoMode();
+  resetPhotoPreview();
+}
+
+function previewAdminPhoto(){
+  const preview = document.getElementById("adminPhotoPreview");
+  if(!preview) return;
+
+  const mode = getPhotoMode();
+
+  if(mode === "url"){
+    const url = document.getElementById("adminPhoto").value.trim();
+    if(!url){
+      resetPhotoPreview();
+      return;
+    }
+    preview.innerHTML = `<img src="${url.replace(/"/g,"&quot;")}" alt="Preview" onerror="this.parentElement.innerHTML='<span>Image could not load</span>'">`;
+    return;
+  }
+
+  const file = document.getElementById("adminPhotoFile").files[0];
+  if(!file){
+    resetPhotoPreview();
+    return;
+  }
+
+  if(!file.type.startsWith("image/")){
+    preview.innerHTML = "<span>Please choose an image file</span>";
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = e => {
+    preview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function compressImageFile(file){
+  return new Promise((resolve,reject)=>{
+    const reader = new FileReader();
+
+    reader.onerror = () => reject(new Error("Could not read image"));
+    reader.onload = event => {
+      const img = new Image();
+
+      img.onerror = () => reject(new Error("Could not decode image"));
+      img.onload = () => {
+        const maxSize = 1400;
+        let width = img.width;
+        let height = img.height;
+
+        if(width > maxSize || height > maxSize){
+          const scale = Math.min(maxSize / width, maxSize / height);
+          width = Math.round(width * scale);
+          height = Math.round(height * scale);
+        }
+
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img,0,0,width,height);
+
+        const dataUrl = canvas.toDataURL("image/jpeg",0.82);
+        resolve({
+          name:(file.name || "product-image").replace(/\.[^.]+$/,"") + ".jpg",
+          type:"image/jpeg",
+          data:dataUrl.split(",")[1]
+        });
+      };
+
+      img.src = event.target.result;
+    };
+
+    reader.readAsDataURL(file);
+  });
+}
+
+async function getAdminPhotoValue(existingPhoto=""){
+  const mode = getPhotoMode();
+
+  if(mode === "url"){
+    const url = document.getElementById("adminPhoto").value.trim();
+    return {
+      photo:url || existingPhoto,
+      photoFile:null
+    };
+  }
+
+  const file = document.getElementById("adminPhotoFile").files[0];
+
+  if(!file){
+    return {
+      photo:existingPhoto || "",
+      photoFile:null
+    };
+  }
+
+  const photoFile = await compressImageFile(file);
+
+  return {
+    photo:"",
+    photoFile
+  };
 }
 
 function editAdminProduct(id){
@@ -4149,12 +4942,29 @@ function editAdminProduct(id){
   if(!p) return;
 
   openAdmin();
+
   document.getElementById("adminId").value = p.id;
   document.getElementById("adminName").value = p.name;
   document.getElementById("adminCategory").value = p.category;
   document.getElementById("adminPrice").value = p.price;
   document.getElementById("adminMrp").value = p.mrp;
+
   document.getElementById("adminPhoto").value = p.photo || "";
+  document.getElementById("adminPhotoFile").value = "";
+
+  const urlRadio = document.querySelector('input[name="photoMode"][value="url"]');
+  const uploadRadio = document.querySelector('input[name="photoMode"][value="upload"]');
+
+  if(p.photo){
+    urlRadio.checked = true;
+    uploadRadio.checked = false;
+  }else{
+    uploadRadio.checked = true;
+    urlRadio.checked = false;
+  }
+
+  togglePhotoMode();
+  previewAdminPhoto();
 }
 
 async function saveAdminProduct(){
@@ -4178,59 +4988,75 @@ async function saveAdminProduct(){
       document.getElementById("adminMrp").value
     ) || price;
 
-  const photo =
-    document.getElementById("adminPhoto").value.trim();
-
   if(!name || !price){
     toast("Enter product name and price");
     return;
   }
 
-  const item = {
-    id,
-    name,
-    category,
-    price,
-    mrp,
-    photo,
-    badge:"New",
-    type:"beauty"
-  };
+  const oldProduct = adminProducts.find(x => x.id === id);
+  const saveBtn = document.querySelector(".adminFormActions .primaryBtn");
 
-  /*
-    Save only the new/admin product.
-    Existing seed products are never changed.
-  */
-  const sheetSaved =
-    await saveGoogleProduct(item);
-
-  if(!sheetSaved)
-    return;
-
-  const index =
-    adminProducts.findIndex(
-      x => x.id === id
-    );
-
-  if(index >= 0){
-    adminProducts[index] = item;
-  }else{
-    adminProducts.push(item);
+  if(saveBtn){
+    saveBtn.disabled = true;
+    saveBtn.textContent = "Saving...";
   }
 
-  localStorage.setItem(
-    "kavan_admin_products_v1",
-    JSON.stringify(adminProducts)
-  );
+  try{
+    const photoData = await getAdminPhotoValue(oldProduct?.photo || "");
 
-  resetAdminForm();
-  renderAdminList();
-  render();
+    const item = {
+      id,
+      name,
+      category,
+      price,
+      mrp,
+      photo:photoData.photo,
+      badge:"New",
+      type:"beauty"
+    };
 
-  toast("Product saved to Google Sheet ♡");
+    const sheetSaved =
+      await saveGoogleProduct(item, photoData.photoFile);
+
+    if(!sheetSaved)
+      return;
+
+    const index =
+      adminProducts.findIndex(
+        x => x.id === id
+      );
+
+    if(index >= 0){
+      adminProducts[index] = item;
+    }else{
+      adminProducts.push(item);
+    }
+
+    localStorage.setItem(
+      "kavan_admin_products_v1",
+      JSON.stringify(adminProducts)
+    );
+
+    resetAdminForm();
+    renderAdminList();
+    render();
+
+    toast("Product saved to Google Sheet ♡");
+
+  }catch(error){
+    console.error(error);
+    toast(error.message || "Image upload failed");
+  }finally{
+    if(saveBtn){
+      saveBtn.disabled = false;
+      saveBtn.textContent = "Save Product";
+    }
+  }
 }
 
-function deleteAdminProduct(id){
+async function deleteAdminProduct(id){
+  await deleteGoogleProduct(id);
+
   adminProducts =
     adminProducts.filter(x => x.id !== id);
 
@@ -4267,15 +5093,6 @@ function renderAdminList(){
     </div>
   `).join("");
 }
-
-/* =========================================
-   ACCOUNT
-========================================= */
-
-function account(){
-  openAdmin();
-}
-
 
 /* =========================================
    FILTER
